@@ -5,14 +5,13 @@ const DragBackground = () => {
     <>
       <img
         src="/inside.webp"
-        alt="inside computer"
-        className="absolute top-0 left-0 w-[100vw] h-[100vh] z-[0]"
+        className=" top-0 left-0 w-[100vw] h-[100vh] z-[0] fixed noselect pointer-events-none"
       ></img>
 
       <motion.div
         drag
         dragMomentum={false}
-        className="absolute top-0 left-0  w-[100vw] h-[100vh]"
+        className="top-0 left-0  w-[100vw] h-[100vh] fixed"
       >
         <div className="font-mono absolute inline top-0 left-0 w-[100vw] h-[100vh] text-sm 2xl:text-md p-4 overflow-hidden bg-blue z-[0]">
           <div className="bg-white absolute top-0 left-0  w-[100vw] h-[100vh] z-[-9]"></div>
@@ -245,12 +244,12 @@ const DragBackground = () => {
         </div>
       </motion.div>
 
-      {/* <div className="absolute top-1/2 left-1/2 transform rounded -translate-x-1/2 -translate-y-[59%] w-[90vw] sm:w-[85vw] md:w-[80vw] lg:w-[76vw] xl:w-[65vw] 2xl:w-[61vw] h-[55vh] lg:h-[53vh] xl:h-[55vh] opacity-[0.4] bg-white z-[0] pointer-events-none"></div> */}
+      {/* <div className="absolute top-1/2 left-1/2 transform rounded -translate-x-1/2 -translate-y-[57%] w-[91vw] sm:w-[88vw] md:w-[76vw] lg:w-[70vw] xl:w-[63vw] 2xl:w-[60vw] h-[45%] xl:h-[43%] 2xl:h-[55%] opacity-[0.4] bg-white z-[0] pointer-events-none"></div> */}
 
       <motion.div
         drag
         dragMomentum={false}
-        className="absolute top-0 left-0 bg-[#e9ebf0] w-[100vw] h-[100vh]"
+        className="fixed top-0 left-0 bg-[#e9ebf0] w-[100vw] h-[100vh]"
       ></motion.div>
     </>
   );

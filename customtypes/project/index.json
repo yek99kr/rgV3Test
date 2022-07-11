@@ -1,0 +1,61 @@
+{
+  "id": "project",
+  "label": "project",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "Uid",
+          "placeholder": ""
+        }
+      },
+      "year": {
+        "type": "Number",
+        "config": {
+          "label": "Year",
+          "placeholder": ""
+        }
+      },
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "Title",
+          "placeholder": ""
+        }
+      },
+      "thumbnails": {
+        "type": "Group",
+        "config": {
+          "label": "Thumbnails",
+          "fields": {
+            "thumbnail": {
+              "type": "Image",
+              "config": {
+                "label": "Thumbnail",
+                "constraint": {},
+                "thumbnails": []
+              }
+            }
+          }
+        }
+      },
+      "ask": {
+        "type": "Text",
+        "config": {
+          "label": "Ask",
+          "placeholder": ""
+        }
+      },
+      "approach": {
+        "type": "Text",
+        "config": {
+          "label": "Approach",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}

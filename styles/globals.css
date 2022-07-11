@@ -7,9 +7,13 @@ body {
   padding: 0;
   margin: 0;
   font-family: Helvetica, sans-serif;
-  /* font-family: "Inter", sans-serif; */
-  overflow: hidden;
+  overflow-x: hidden;
   background-color: #e9ebf0;
+}
+
+body {
+  width: 100%;
+  overflow: hidden;
 }
 
 a {
@@ -58,19 +62,6 @@ a {
 
   100% {
     top: 0.15em;
-  }
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(360deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
   }
 }
 
@@ -126,58 +117,6 @@ a {
   animation: bounce 1s ease infinite 0.8s;
 }
 
-.wiggleMobile1 {
-  position: relative;
-  display: inline-block;
-  animation: bounce 1s ease infinite;
-}
-
-.wiggleMobile2 {
-  position: relative;
-  display: inline-block;
-  animation: bounce 1s ease infinite 0.1s;
-}
-.wiggleMobile3 {
-  position: relative;
-  display: inline-block;
-  animation: bounce 1s ease infinite 0.2s;
-}
-
-.wiggleMobile4 {
-  position: relative;
-  display: inline-block;
-  animation: bounce 1s ease infinite 0.3s;
-}
-
-.wiggleMobile5 {
-  position: relative;
-  display: inline-block;
-  animation: bounce 1s ease infinite 0.4s;
-}
-
-.wiggleMobile6 {
-  position: relative;
-  display: inline-block;
-  animation: bounce 1s ease infinite 0.5s;
-}
-
-.wiggleMobile7 {
-  position: relative;
-  display: inline-block;
-  animation: bounce 1s ease infinite 0.6s;
-}
-.wiggleMobile8 {
-  position: relative;
-  display: inline-block;
-  animation: bounce 1s ease infinite 0.7s;
-}
-
-.wiggleMobile9 {
-  position: relative;
-  display: inline-block;
-  animation: bounce 1s ease infinite 0.8s;
-}
-
 .wiggle1:hover {
   transform: scaleX(-1) scaleY(1);
 }
@@ -212,4 +151,11 @@ select {
 
 ::selection {
   background: #d9dbe1;
+}
+
+.fade {
+  opacity: 0;
+}
+.fadeIn {
+  opacity: 1;
 }

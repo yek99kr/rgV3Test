@@ -1,15 +1,12 @@
-import Hands from "./Hands";
 import Ad from "./Ad";
 import DragBackground from "./DragBackground";
 import About from "./About";
-import { useState, useCallback, useEffect } from "react";
 import { motion } from "framer-motion";
-import useMediaQueryHeight from "../utils/useMediaQueryHeight";
-import useMediaQueryWidth from "../utils/useMediaQueryWidth";
-import useIsTouch from "../utils/useIsTouch";
+import useMediaQueryHeight from "../../utils/useMediaQueryHeight";
+import useMediaQueryWidth from "../../utils/useMediaQueryWidth";
+import useIsTouch from "../../utils/useIsTouch";
 
 const HomePage = ({ router }) => {
-  const isSmallWidth = useMediaQueryWidth(750);
   const isSmallerWidth = useMediaQueryWidth(638);
   // const isSmallestWidth = useMediaQueryWidth(210);
 
@@ -18,24 +15,10 @@ const HomePage = ({ router }) => {
   const isSmallestHeight = useMediaQueryHeight(349);
   const isTouch = useIsTouch();
 
-  let hand;
-
-  if (
-    isSmallestHeight ||
-    (!isSmallerWidth && isSmallHeight) ||
-    (isSmallWidth && !isSmallHeight) ||
-    isSmallerWidth ||
-    isTouch
-  ) {
-    hand = null;
-  } else {
-    hand = <Hands />;
-  }
-
   // w214 h379
 
   return (
-    <>
+    <div className=" w-[100vw] h-[100vh]">
       {isSmallerHeight || isSmallerWidth || isTouch ? (
         <div className="absolute top-0 left-0 bg-[#e9ebf0] w-[100vw] h-[100vh]"></div>
       ) : (
@@ -60,8 +43,16 @@ const HomePage = ({ router }) => {
         <About router={router} isSmallestHeight={isSmallestHeight} />
       </motion.div>
 
-      {hand}
-    </>
+      {/* {isSmallestHeight || (isSmallestHeight && !isSmallestWidth) ? null : (
+        <>
+          <ProjectList />
+          <div className="relative grid place-items-center w-[100vw] grid-cols-1 mb-[20vh]">
+
+            <img className="w-[60vw]" src="/projectThumb/client.png"></img>
+          </div>
+        </>
+      )} */}
+    </div>
   );
 };
 

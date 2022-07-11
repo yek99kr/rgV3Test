@@ -1,9 +1,9 @@
 import * as THREE from "three";
 import React, { useEffect, useState, useMemo, useRef } from "react";
-import { useGLTF, useTexture, useAnimations } from "@react-three/drei";
+import { useGLTF, useTexture } from "@react-three/drei";
 import { useGraph, useFrame } from "@react-three/fiber";
 import { SkeletonUtils } from "three-stdlib";
-import { getMouseDegrees } from "../utils/getMouseDegrees";
+import { getMouseDegrees } from "../../utils/getMouseDegrees";
 
 function moveJoint(mouse, joint, degreeLimit = 40) {
   let degrees = getMouseDegrees(-mouse.y + 400, mouse.x, degreeLimit);
@@ -31,12 +31,16 @@ export default function Hand({
   pose,
   mouseP,
   textureMap,
+  hoveredProject,
+  router,
   ...props
 }) {
   const group = useRef();
-  const { scene, materials, animations } = useGLTF("/hand.glb");
 
-  const { ref, actions, names } = useAnimations(animations, group);
+  const { scene } = useGLTF(
+    `/hand${hoveredProject === "BMW" ? "withP" : ""}.glb`
+  );
+  // console.log(hoveredProject);
 
   const clone = useMemo(() => SkeletonUtils.clone(scene), [scene]);
   const { nodes } = useGraph(clone);
@@ -61,9 +65,6 @@ export default function Hand({
     };
   }, [setX, setY]);
 
-  const fx = firstPosition[0];
-  const px = secondPosition[0];
-
   ////MousePositionEnd
   useFrame((state, delta) => {
     const mouse = {
@@ -74,12 +75,16 @@ export default function Hand({
 
     moveJoint(mouse, nodes.Thumb1);
     moveJoint(mouse, nodes.Wrist);
-    movePosition({ x: x * mouseP, y }, nodes.Shoulder);
+    movePosition({ x: x * mouseP * 1.4, y }, nodes.Shoulder);
 
     group.current.position.x = THREE.MathUtils.lerp(
       group.current.position.x,
-      px,
-      0.1
+      router.pathname.includes("/projects/")
+        ? firstPosition[0]
+        : secondPosition[0],
+      // secondPosition[0],
+      // firstPosition[0],
+      0.05
     );
   });
 
@@ -89,7 +94,6 @@ export default function Hand({
       <skinnedMesh
         geometry={nodes.FpsArms3.geometry}
         skeleton={nodes.FpsArms3.skeleton}
-        action={actions}
       >
         <meshStandardMaterial
           map={texture}
@@ -103,3 +107,4 @@ export default function Hand({
 }
 
 useGLTF.preload("/hand.glb");
+useGLTF.preload("/handwithP.glb");

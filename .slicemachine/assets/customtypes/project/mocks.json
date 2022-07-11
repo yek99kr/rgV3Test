@@ -1,0 +1,57 @@
+{
+  "id": "47b53867-73e7-4c2d-bd51-eb2ad5d61d88",
+  "uid": "mollitia-nostrum-blanditiis",
+  "type": "project",
+  "data": {
+    "year": 4007,
+    "title": "productize visionary methodologies",
+    "ask": "utilize open-source e-services",
+    "approach": "evolve synergistic methodologies",
+    "thumbnails": [
+      {
+        "thumbnail": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9?w=900&h=500&fit=crop"
+        }
+      },
+      {
+        "thumbnail": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&h=500&fit=crop"
+        }
+      },
+      {
+        "thumbnail": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1551739440-5dd934d3a94a?w=900&h=500&fit=crop"
+        }
+      },
+      {
+        "thumbnail": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea?w=900&h=500&fit=crop"
+        }
+      }
+    ]
+  }
+}
