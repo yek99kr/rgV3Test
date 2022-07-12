@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import ProjectDetail2 from "../../components/Project/ProjectDetail";
+import ProjectDetail2 from "../../components/Project/ProjectDetail2";
 
-const project = ({ router, project }) => {
+const project = ({ router }) => {
   return (
     <>
       <motion.div

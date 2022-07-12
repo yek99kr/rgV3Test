@@ -3,7 +3,7 @@ import Player from "../Player/Player";
 const ProjectDetail = ({ project }) => {
   return (
     <div className="relative grid place-items-center w-[100vw] grid-cols-2 md:grid-cols-5 gap-y-[2vw] pt-[10vh] ">
-      <div className="md:col-start-3  relative md:p-0  p-[7%] text-[40px] text-center">
+      <div className="md:col-start-3 relative md:p-0  p-[7%] text-[40px] text-center">
         <h2 className="relative text-[16px] bg-white/50 w-[60px] text-center rounded-full top-[3vh]">
           {project.data.year}
         </h2>
