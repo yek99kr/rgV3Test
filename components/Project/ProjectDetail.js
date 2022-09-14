@@ -22,7 +22,7 @@ const ProjectDetail = ({ project }) => {
       </div>
 
       <div className="col-start-3 md:p-0  w-[90vw] rounded">
-        {/* <img src="/video1.jpg" className="rounded"></img> */}
+        <img src="/video1.jpg" className="rounded"></img>
         {/* <Image
           src="/video1.jpg"
           layout="responsive"
@@ -45,8 +45,8 @@ const ProjectDetail = ({ project }) => {
       </div>
 
       <div className="col-start-1 w-[28vw] relative rounded place-self-start left-[5vw]">
-        <Player url="https://vimeo.com/453616618" ratio="square" />
-        {/* <img className=" w-full " src="/video4.jpg"></img> */}
+        {/* <Player url="https://vimeo.com/453616618" ratio="square" /> */}
+        <img className=" w-full " src="/video4.jpg"></img>
       </div>
       <div className="col-start-3 w-[28vw] h-[28vw]  rounded">
         <img className="w-full h-full" src="/video2.jpg"></img>
