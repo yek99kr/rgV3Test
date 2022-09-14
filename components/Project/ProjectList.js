@@ -55,6 +55,24 @@ const ProjectList = ({ projects }) => {
       >
         <ProjectThumbnail project={projects[0]} />
       </div>
+
+      <div
+        className={`
+            col-start-5
+           relative pointer-events-auto w-[26vw] `}
+        key={projects[1].data.title}
+      >
+        <ProjectThumbnail project={projects[1]} />
+      </div>
+
+      <div
+        className={`
+            col-start-3
+           relative pointer-events-auto w-[26vw] `}
+        key={projects[2].data.title}
+      >
+        <ProjectThumbnail project={projects[2]} />
+      </div>
       {/* {projects.map((project, i) => (
         // <div
         //   className={`col-start-${
