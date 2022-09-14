@@ -36,7 +36,8 @@ function MyApp({ Component, pageProps, router }) {
   return (
     <>
       {/* <GoogleAnalytics strategy="lazyOnload" /> */}
-      <Nav />
+
+      {!isSmallestHeight && <Nav />}
       <PrismicProvider
         linkResolver={linkResolver}
         internalLinkComponent={({ href, children, ...props }) => (

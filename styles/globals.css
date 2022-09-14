@@ -159,3 +159,29 @@ select {
 .fadeIn {
   opacity: 1;
 }
+
+.unblur {
+  animation: unblur 0.5s linear;
+}
+
+@keyframes unblur {
+  from {
+    filter: blur(20px);
+  }
+  to {
+    filter: blur(0);
+  }
+}
+.notvisible {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.visible {
+  opacity: 1;
+}
+input[type="range"] {
+  overflow: hidden;
+  width: 80px;
+  -webkit-appearance: none;
+  background-color: #9a905d;
+}

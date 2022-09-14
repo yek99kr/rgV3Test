@@ -5,7 +5,7 @@ const Nav = () => {
   const router = useRouter();
 
   return (
-    <div className="fixed m-2 z-[2] text-[2.8vw] sm:text-[2vw] md:text-[1.6vw] lg:text-[1.4vw] xl:text-[1.2vw] 2xl:text-[1vw] flex justify-center items-center w-screen noselect ">
+    <div className="fixed m-2 z-[2] text-[2.8vw] sm:text-[2vw] md:text-[1.6vw] lg:text-[1.4vw] xl:text-[1.2vw] 2xl:text-[1vw] flex justify-center items-center w-screen noselect">
       <div className="bg-white/60 rounded m-3 mr-2 p-2.5 pl-3 pr-3 backdrop-blur-sm">
         <Link href="/" passHref scroll={false}>
           <a className="thumbcursor">

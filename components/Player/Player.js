@@ -17,7 +17,7 @@ const Player = ({ width, url, ratio }) => {
     playing: true,
     controls: false,
     autoplay: true,
-    volume: 0.8,
+    volume: 1,
     light: true,
     muted: true,
     played: 0,
@@ -60,7 +60,7 @@ const Player = ({ width, url, ratio }) => {
 
   return (
     <div
-      className={`relative grid row justify-center content-center w-full aspect-video rounded opacity-[${player.visible}]  transition duration-200`}
+      className={`relative bg-[#eef1f4] grid row justify-center content-center w-full aspect-${ratio} rounded opacity-[${player.visible}] transition duration-200`}
       onMouseOver={() => {
         setHover(true);
       }}
@@ -84,36 +84,52 @@ const Player = ({ width, url, ratio }) => {
         }}
       ></ReactPlayer>
 
-      <div className="absolute w-full h-full" onClick={handlePlayPause}></div>
-      {/* {hover && ( */}
-      <>
-        {!player.playing && (
-          <BsPlayFill
-            onClick={handlePlayPause}
-            className="relative w-[8vw] h-[8vw] text-white"
-          />
-        )}
+      <div
+        className={`absolute w-full h-full notvisible ${hover && "visible"}`}
+        onClick={handlePlayPause}
+      ></div>
 
-        <div className="absolute bottom-0">
-          <TbRectangle
-            onClick={handleFullscreen}
+      {!player.playing && (
+        <BsPlayFill
+          onClick={handlePlayPause}
+          className="relative w-[8vw] h-[8vw] text-white drop-shadow-md"
+        />
+      )}
+
+      <div
+        className={`absolute bottom-0 drop-shadow-md notvisible ${
+          hover && "visible"
+        }`}
+      >
+        <input
+          type="range"
+          min={0}
+          max={0.999999}
+          className="w-[80%]"
+          step="any"
+          // value={played}
+          // onMouseDown={this.handleSeekMouseDown}
+          // onChange={this.handleSeekChange}
+          // onMouseUp={this.handleSeekMouseUp}
+        />
+
+        <TbRectangle
+          onClick={handleFullscreen}
+          className="w-[2.5vw] h-[2.5vw] text-white"
+        />
+
+        {!player.muted ? (
+          <FiVolume2
+            onClick={handleMuted}
             className="w-[2.5vw] h-[2.5vw] text-white"
           />
-
-          {!player.muted ? (
-            <FiVolume2
-              onClick={handleMuted}
-              className="w-[2.5vw] h-[2.5vw] text-white"
-            />
-          ) : (
-            <FiVolumeX
-              onClick={handleMuted}
-              className="w-[2.5vw] h-[2.5vw] text-white"
-            />
-          )}
-        </div>
-      </>
-      {/* )} */}
+        ) : (
+          <FiVolumeX
+            onClick={handleMuted}
+            className="w-[2.5vw] h-[2.5vw] text-white"
+          />
+        )}
+      </div>
     </div>
   );
 };

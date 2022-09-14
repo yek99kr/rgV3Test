@@ -1,4 +1,5 @@
 import Player from "../Player/Player";
+import Image from "next/image";
 
 const ProjectDetail = ({ project }) => {
   return (
@@ -16,12 +17,19 @@ const ProjectDetail = ({ project }) => {
         </p>
       </div>
 
-      {/* <div className="col-start-3 md:p-0  w-[90vw] rounded">
-        <Player url="https://vimeo.com/698795994/762b614500" ratio="video" />
-      </div> */}
+      <div className="col-start-3 md:p-0  w-[90vw] rounded">
+        <Player url="https://vimeo.com/407328691" ratio="video" />
+      </div>
 
       <div className="col-start-3 md:p-0  w-[90vw] rounded">
-        <img src="/video1.jpg" className="rounded"></img>
+        {/* <img src="/video1.jpg" className="rounded"></img> */}
+        {/* <Image
+          src="/video1.jpg"
+          layout="responsive"
+          blurDataURL="data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+          alt="Picture of the author"
+          placeholder="blur"
+        /> */}
       </div>
 
       {/* <div className="md:col-start-1  relative md:p-0  p-[7%] text-[22px] text-start italic place-self-start w-[50vw] mt-[5vh] mb-[5vh] ml-[5vw]">
@@ -36,8 +44,9 @@ const ProjectDetail = ({ project }) => {
         </p>
       </div>
 
-      <div className="col-start-1 w-[28vw] h-[28vw] relative rounded place-self-start left-[5vw]">
-        <img className=" w-full " src="/video4.jpg"></img>
+      <div className="col-start-1 w-[28vw] relative rounded place-self-start left-[5vw]">
+        <Player url="https://vimeo.com/453616618" ratio="square" />
+        {/* <img className=" w-full " src="/video4.jpg"></img> */}
       </div>
       <div className="col-start-3 w-[28vw] h-[28vw]  rounded">
         <img className="w-full h-full" src="/video2.jpg"></img>

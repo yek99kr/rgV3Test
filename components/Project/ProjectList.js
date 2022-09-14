@@ -39,16 +39,7 @@ import ProjectThumbnail from "./ProjectThumbnail";
 // }
 
 const ProjectList = ({ projects }) => {
-  const classes = [
-    "col-start-1",
-    "col-start-5",
-    "col-start-3",
-    "col-start-2",
-    "col-start-5",
-    "col-start-1",
-    "col-start-4",
-    "col-start-3",
-  ];
+  const classes = ["col-start-1", "col-start-5", "col-start-3"];
 
   // const classes = ["col-start-1", "col-start-3", "col-start-2"];
 
@@ -56,7 +47,15 @@ const ProjectList = ({ projects }) => {
 
   return (
     <div className="relative grid place-items-center w-[100vw]  grid-cols-5 pt-[15vh] pb-[15vh] pl-[26vw] pr-[26vw] pointer-events-none">
-      {projects.map((project, i) => (
+      <div
+        className={`
+            col-start-1
+           relative pointer-events-auto w-[26vw] `}
+        key={projects[0].data.title}
+      >
+        <ProjectThumbnail project={projects[0]} />
+      </div>
+      {/* {projects.map((project, i) => (
         // <div
         //   className={`col-start-${
         //     i % 3 === 0 ? 1 : i % 3 === 1 ? 3 : 2
@@ -66,12 +65,12 @@ const ProjectList = ({ projects }) => {
         <div
           className={`${
             classes[i % classes.length]
-          } relative pointer-events-auto w-[24vw] `}
+          } relative pointer-events-auto w-[26vw] `}
           key={project.data.title}
         >
           <ProjectThumbnail project={project} />
         </div>
-      ))}
+      ))} */}
 
       {/* <h1 className="col-start-2 p-0 ">Our Works</h1> */}
 
