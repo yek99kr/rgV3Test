@@ -28,7 +28,7 @@ const projects = ({ router, projects }) => {
         transition={{ duration: 0.5 }}
         className="overflow-hidden"
       >
-        <ProjectList projects={projects} />
+        {/* <ProjectList projects={projects} /> */}
       </motion.div>
     </>
   );

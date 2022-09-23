@@ -37,10 +37,11 @@ export default function Hand({
 }) {
   const group = useRef();
 
-  const { scene } = useGLTF(
-    `/hand${hoveredProject === "BMW" ? "withP" : ""}.glb`
-  );
-  // console.log(hoveredProject);
+  // const { scene } = useGLTF(
+  //   `/hand${hoveredProject === "BMW" ? "withP" : ""}.glb`
+  // );
+
+  const { scene } = useGLTF("/hand.glb");
 
   const clone = useMemo(() => SkeletonUtils.clone(scene), [scene]);
   const { nodes } = useGraph(clone);
@@ -77,13 +78,14 @@ export default function Hand({
     moveJoint(mouse, nodes.Wrist);
     movePosition({ x: x * mouseP * 1.4, y }, nodes.Shoulder);
 
+    // group.current.position.x = THREE.MathUtils.lerp(
+    //   group.current.position.x,
+    //   router.pathname === "/" ? secondPosition[0] : firstPosition[0],
+    //   0.05
+    // );
     group.current.position.x = THREE.MathUtils.lerp(
       group.current.position.x,
-      router.pathname.includes("/projects/")
-        ? firstPosition[0]
-        : secondPosition[0],
-      // secondPosition[0],
-      // firstPosition[0],
+      secondPosition[0],
       0.05
     );
   });
@@ -107,4 +109,4 @@ export default function Hand({
 }
 
 useGLTF.preload("/hand.glb");
-useGLTF.preload("/handwithP.glb");
+// useGLTF.preload("/handwithP.glb");

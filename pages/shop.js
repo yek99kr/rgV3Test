@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
-import StoreList from "../components/Store/StoreList";
+import ProductList from "../components/Shop/ProductList";
+import { getProductsInCollection } from "../lib/shopify";
 
-const store = ({ router }) => {
+const store = ({ router, products }) => {
   return (
     <>
       <motion.div
@@ -12,10 +13,17 @@ const store = ({ router }) => {
         transition={{ duration: 0.5 }}
         className="overflow-hidden"
       >
-        <StoreList />
+        <ProductList products={products} />
       </motion.div>
     </>
   );
 };
 
 export default store;
+
+export async function getStaticProps() {
+  const products = await getProductsInCollection();
+  return {
+    props: { products },
+  };
+}

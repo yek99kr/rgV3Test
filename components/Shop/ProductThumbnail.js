@@ -1,13 +1,31 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { formatter } from "../../utils/helpers";
 
-const StoreThumbnail = () => {
+const ProductThumbnail = ({ product }) => {
   const [moveImg, setMoveImg] = useState(0);
+  // console.log(product);
+  const { handle, title } = product.node;
+  const price = product.node.priceRange.minVariantPrice.amount;
+  const { altText, originalSrc } = product.node.images.edges[0].node;
 
   return (
-    <Link href={`/store/product`}>
-      <div className="w-[55vw] h-[55vw] lg:w-[30vw] lg:h-[30vw] rounded-full bg-gray-300 thumbcursor"></div>
+    <Link href={`/shop/${handle}`} passHref scroll={false}>
+      <a className="group thumbcursor">
+        <div className="overflow-hidden thumbcursor ">
+          <div className="relative w-[45vw] h-[45vw] sm:w-[45vw] sm:h-[45vw] md:w-[30vw] md:h-[30vw] xl:w-[24vw] xl:h-[24vw]">
+            <Image
+              src={originalSrc}
+              objectFit="cover"
+              alt={altText}
+              layout="fill"
+            />
+          </div>
+        </div>
+        <h1 className="mt-1 text-sm center text-center">{title}</h1>
+        <p className="mt-1 text-sm text-center">{formatter.format(price)}</p>
+      </a>
     </Link>
     // <Link href={`/projects/title`}>
     //   <a className="group thumbcursor">
@@ -62,4 +80,4 @@ const StoreThumbnail = () => {
   );
 };
 
-export default StoreThumbnail;
+export default ProductThumbnail;

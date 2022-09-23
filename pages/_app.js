@@ -11,6 +11,7 @@ import useMediaQueryHeight from "../utils/useMediaQueryHeight";
 import useMediaQueryWidth from "../utils/useMediaQueryWidth";
 import useIsTouch from "../utils/useIsTouch";
 import Hands from "../components/Hands/Hands";
+import ShopProvider from "../context/shopContext";
 
 function MyApp({ Component, pageProps, router }) {
   const isSmallWidth = useMediaQueryWidth(750);
@@ -36,28 +37,29 @@ function MyApp({ Component, pageProps, router }) {
   return (
     <>
       {/* <GoogleAnalytics strategy="lazyOnload" /> */}
-
-      {!isSmallestHeight && <Nav />}
-      <PrismicProvider
-        linkResolver={linkResolver}
-        internalLinkComponent={({ href, children, ...props }) => (
-          <Link href={href}>
-            <a {...props}>{children}</a>
-          </Link>
-        )}
-      >
-        <PrismicPreview repositoryName={repositoryName}>
-          {hand}
-          <AppContextProvider>
-            <AnimatePresence
-              exitBeforeEnter
-              onExitComplete={() => window.scrollTo(0, 0)}
-            >
-              <Component {...pageProps} key={router.asPath} router={router} />
-            </AnimatePresence>
-          </AppContextProvider>
-        </PrismicPreview>
-      </PrismicProvider>
+      <ShopProvider>
+        {!isSmallestHeight && <Nav />}
+        <PrismicProvider
+          linkResolver={linkResolver}
+          internalLinkComponent={({ href, children, ...props }) => (
+            <Link href={href}>
+              <a {...props}>{children}</a>
+            </Link>
+          )}
+        >
+          <PrismicPreview repositoryName={repositoryName}>
+            {/* {hand} */}
+            <AppContextProvider>
+              <AnimatePresence
+                exitBeforeEnter
+                onExitComplete={() => window.scrollTo(0, 0)}
+              >
+                <Component {...pageProps} key={router.asPath} router={router} />
+              </AnimatePresence>
+            </AppContextProvider>
+          </PrismicPreview>
+        </PrismicProvider>
+      </ShopProvider>
     </>
   );
 }

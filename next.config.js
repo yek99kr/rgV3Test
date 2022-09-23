@@ -24,47 +24,15 @@
 // };
 
 module.exports = {
+  env: {
+    SHOPIFY_STORE_DOMAIN: process.env.SHOPIFY_STORE_DOMAIN,
+    SHOPIFY_STOREFRONT_ACCESSTOKEN: process.env.SHOPIFY_STOREFRONT_ACCESSTOKEN,
+  },
   i18n: {
     locales: ["en-US"],
     defaultLocale: "en-US",
   },
-  // basePath: '/docs',
-  reactStrictMode: true,
-  // async rewrites() {
-  //   return {
-  //     fallback: [
-  //       {
-  //         source: "/deck",
-  //         destination: `https://realgooddecktest.netlify.app`,
-  //         basePath: false,
-  //       },
-  //     ],
-  //   };
-  // },
+  images: {
+    domains: ["cdn.shopify.com"],
+  },
 };
-
-// module.exports = {
-//   i18n: {
-//     locales: ["en-US"],
-//     defaultLocale: "en-US",
-//   },
-//   reactStrictMode: false,
-//   async rewrites() {
-//     return [
-//       {
-//         source: "/deck",
-//         destination: "https://deck.realgood.tv",
-//       },
-//     ];
-//   },
-// };
-
-// module.exports = {
-//   env: {
-//     SHOPIFY_STORE_DOMAIN: process.env.SHOPIFY_STORE_DOMAIN,
-//     SHOPIFY_STOREFRONT_ACCESSTOKEN: process.env.SHOPIFY_STOREFRONT_ACCESSTOKEN,
-//   },
-//   images: {
-//     domains: ["cdn.shopify.com"],
-//   },
-// };

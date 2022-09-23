@@ -1,5 +1,6 @@
 import HomePage from "../components/Home/HomePage";
 import { motion } from "framer-motion";
+import Hands from "../components/Hands/Hands";
 
 export default function Home({ router }) {
   return (
@@ -21,7 +22,7 @@ export default function Home({ router }) {
         }}
       >
         <HomePage router={router} />
-        <div className="w-[100vw] h-[50vw] relative"> hello</div>
+        {/* <div className="w-[100vw] h-[50vw] relative"> hello</div> */}
       </motion.div>
     </div>
   );
