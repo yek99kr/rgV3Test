@@ -18,7 +18,7 @@ const Nav = () => {
 
   return (
     <>
-      <div className="fixed m-1.5 z-[2] text-[2.9vw] sm:text-sm md:text-base flex justify-center items-center w-screen noselect">
+      <div className="fixed top-0 m-1.5 z-[2] text-[2.9vw] sm:text-sm md:text-base flex justify-center items-center w-screen noselect">
         <div className="bg-white/60 backdrop-blur-sm rounded m-0 mr-2 p-[0.7rem] pl-3 pr-3 ">
           <Link href="/" passHref scroll={false}>
             <a className="thumbcursor">
