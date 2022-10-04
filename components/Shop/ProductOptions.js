@@ -7,7 +7,7 @@ export default function ProductOptions({
   setOptions,
 }) {
   return (
-    <fieldset className="mt-3 ">
+    <fieldset className="mt-1">
       <legend className="text-[2.9vw] sm:text-base">{name}</legend>
       <div className="inline-flex items-center flex-wrap">
         {values.map((value) => {
