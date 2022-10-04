@@ -29,13 +29,13 @@ export default function ProductOptions({
               />
               <div
                 style={{ transition: " 0.3s" }}
-                className={`thumbcursor p-2 mt-3 text-lg rounded block mr-3 hover:bg-white/90  backdrop-blur-md ${
+                className={`thumbcursor p-2 mt-3 text-lg rounded block mr-3 hover:bg-white/90  backdrop-blur-md   ${
                   checked
                     ? "bg-white/100 text-black"
                     : "bg-white/60  text-gray-300"
-                } text-[2.9vw] sm:text-base`}
+                }`}
               >
-                <span className="px-2">{value}</span>
+                <span className="px-2 text-[2.9vw] sm:text-base ">{value}</span>
               </div>
             </label>
           );
