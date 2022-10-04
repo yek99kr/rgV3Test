@@ -22,6 +22,8 @@ const ProductThumbnail = ({ product }) => {
               objectFit="cover"
               alt={altText}
               layout="fill"
+              placeholder="blur"
+              blurDataURL={`/_next/image?url=${originalSrc}&w=16&q=1`}
             />
           </div>
         </div>
