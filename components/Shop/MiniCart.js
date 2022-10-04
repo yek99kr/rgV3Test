@@ -186,6 +186,7 @@ export default function MiniCart({ cart }) {
                                   <a
                                     href={checkoutUrl}
                                     target="_blank"
+                                    rel="noreferrer"
                                     className={`flex justify-center items-center px-3 py-2 rounded text-[2.9vw] sm:text-sm md:text-base text-gray-900 font-medium bg-white/60 backdrop-blur-md thumbcursor ${
                                       cartLoading
                                         ? "cursor-not-allowed"
