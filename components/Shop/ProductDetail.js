@@ -100,8 +100,8 @@ export default function ProductPageContent({ product }) {
 
   return (
     <>
-      <div className="grid grid-cols-1 lg:grid-cols-2 mt-[10vh] lg:mt-[15vh] xl:mt-[10vh]">
-        <div className="flex flex-col pl-[5vw] pr-[5vw] lg:ml-[5vw] lg:p-0 ">
+      <div className="grid grid-cols-1 lg:grid-cols-2 mt-[10vh] lg:mt-[15vh] xl:mt-[8vh]">
+        <div className="flex flex-col pl-[5vw] pr-[5vw] lg:ml-[5vw] lg:p-0">
           <div>
             <div
               ref={sliderRef}
