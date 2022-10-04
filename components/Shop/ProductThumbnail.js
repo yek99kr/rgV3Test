@@ -23,6 +23,7 @@ const ProductThumbnail = ({ product }) => {
               alt={altText}
               layout="fill"
               placeholder="blur"
+              priority={true}
               blurDataURL={`/_next/image?url=${originalSrc}&w=16&q=1`}
             />
           </div>

@@ -116,7 +116,7 @@ export default function ProductPageContent({ product }) {
                     <Image
                       src={image.node.originalSrc}
                       alt={image.node.altText}
-                      // priority={true}
+                      priority={true}
                       placeholder="blur"
                       blurDataURL={`/_next/image?url=${image.node.originalSrc}&w=16&q=1`}
                       layout="fill"
