@@ -1,120 +1,153 @@
-// import ProductForm from "./ProductForm";
-
-// const ProductDetail = ({ product }) => {
-//   return (
-//     <>
-//       {/* <div className="relative grid place-items-center w-[100vw] grid-cols-2 md:grid-cols-5 gap-y-[2vw] pt-[10vh] "> */}
-//       <div className="flex pt-[10vh] flex-col justify-center items-center space-y-8 md:flex-row md:items-start md:space-y-0 md:space-x-4 lg:space-x-8 max-w-6xl w-11/12 mx-auto">
-//         <div className="w-full bg-white md:w-1/2 pointer-events-none">
-//           <div className="relative h-[40vw]  w-[50vw]">
-
-//           </div>
-//         </div>
-
-//         <ProductForm product={product} />
-//       </div>
-//     </>
-//   );
-// };
-
-// export default ProductDetail;
-
 import Image from "next/image";
 import ProductForm from "./ProductForm";
 import { useState } from "react";
-// import { Swiper, SwiperSlide } from "swiper/react";
-// // import SwiperCore, { Navigation, Pagination } from "swiper";
-// import { FreeMode, Scrollbar, Mousewheel } from "swiper";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper";
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
 
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/navigation";
-import "swiper/css/thumbs";
-import { FreeMode, Navigation, Thumbs } from "swiper";
+function ThumbnailPlugin(mainRef) {
+  return (slider) => {
+    function removeActive() {
+      slider.slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+    }
+    function addActive(idx) {
+      slider.slides[idx].classList.add("active");
+    }
+
+    function addClickEvents() {
+      slider.slides.forEach((slide, idx) => {
+        slide.addEventListener("click", () => {
+          if (mainRef.current) mainRef.current.moveToIdx(idx);
+        });
+      });
+    }
+
+    slider.on("created", () => {
+      if (!mainRef.current) return;
+      addActive(slider.track.details.rel);
+      addClickEvents();
+      mainRef.current.on("animationStarted", (main) => {
+        removeActive();
+        const next = main.animator.targetIdx || 0;
+        addActive(main.track.absToRel(next));
+        slider.moveToIdx(next);
+      });
+    });
+  };
+}
 
 export default function ProductPageContent({ product }) {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
-
-  const images = [];
-  const thumbnails = [];
-
-  product.images.edges.map((image, i) => {
-    images.push(
-      <SwiperSlide key={`slide-${i}`}>
-        {/* <Image
-          src={image.node.originalSrc}
-          alt={image.node.altText}
-          layout="fill"
-          objectFit="cover"
-          placeholder="blur"
-        /> */}
-
-        <img
-          src={image.node.originalSrc}
-          alt={image.node.altText}
-          className="w-full "
-        />
-      </SwiperSlide>
-    );
+  const [sliderRef, instanceRef] = useKeenSlider({
+    initial: 0,
+    loop: true,
+    slides: {
+      perView: 1,
+      spacing: 0,
+    },
   });
+  // console.log(instanceRef);
+  const [thumbnailRef] = useKeenSlider(
+    {
+      initial: 0,
+      slides: {
+        perView: 8,
+        spacing: 10,
+      },
+    },
+    [ThumbnailPlugin(instanceRef)]
+  );
 
-  product.images.edges.map((image, i) => {
-    thumbnails.push(
-      <SwiperSlide key={`slide-${i}`} className=" z-[500] pointer-events-auto">
-        {/* <Image
-          src={image.node.originalSrc}
-          alt={image.node.altText}
-          layout="fill"
-          objectFit="cover"
-          placeholder="blur"
-        /> */}
+  // product.images.edges.map((image, i) => {
+  //   images.push(
+  //     <SwiperSlide key={`slide-${i}`}>
+  //       <Image
+  //         src={image.node.originalSrc}
+  //         alt={image.node.altText}
+  //         priority={true}
+  //         placeholder="blur"
+  //         blurDataURL={`/_next/image?url=${image.node.originalSrc}&w=16&q=1`}
+  //         layout="fill"
+  //         objectFit="cover"
+  //       />
 
-        <img
-          src={image.node.originalSrc}
-          alt={image.node.altText}
-          className="w-full bg-black"
-        />
-      </SwiperSlide>
-    );
-  });
+  //     </SwiperSlide>
+  //   );
+  // });
 
-  // SwiperCore.use([Navigation, Pagination]);
+  // product.images.edges.map((image, i) => {
+  //   thumbnails.push(
+  //     <SwiperSlide key={`slide-${i}`} className=" z-[500] pointer-events-auto">
+  //       <Image
+  //         src={image.node.originalSrc}
+  //         alt={image.node.altText}
+  //         priority={true}
+  //         placeholder="blur"
+  //         blurDataURL={`/_next/image?url=${image.node.originalSrc}&w=16&q=1`}
+  //         layout="fill"
+  //         objectFit="cover"
+  //       />
+  //       {/*
+  //       <img
+  //         src={image.node.originalSrc}
+  //         alt={image.node.altText}
+  //         className="w-full bg-black"
+  //       /> */}
+  //     </SwiperSlide>
+  //   );
+  // });
 
   return (
     <>
-      <div className="flex flex-col justify-center items-center md:flex-row md:items-start md:space-y-0 md:space-x-4 lg:space-x-8 mx-auto mt-[6vh]">
-        {/* <div className="h-[80vw]"> */}
-        <div className="w-[90vw] h-[90vw] md:w-[50vw] md:h-[50vw] m-5 rounded">
-          <Swiper
-            style={{
-              "--swiper-navigation-color": "#fff",
-              "--swiper-pagination-color": "#fff",
-            }}
-            spaceBetween={10}
-            navigation={false}
-            thumbs={{ swiper: thumbsSwiper }}
-            modules={[FreeMode, Navigation, Thumbs]}
-            className="mySwiper2 w-full h-full"
-          >
-            {images}
-          </Swiper>
-        </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 mt-[10vh] lg:mt-[15vh] xl:mt-[10vh]">
+        <div className="flex flex-col pl-[5vw] pr-[5vw] lg:ml-[5vw] lg:p-0 ">
+          <div>
+            <div
+              ref={sliderRef}
+              className="keen-slider max-w-[90vw] w-[90vw] h-[90vw] lg:max-w-[45vw] lg:w-[45vw] lg:h-[45vw] rounded block bg-black"
+            >
+              {product.images.edges.map((image, i) => {
+                return (
+                  <div
+                    key={`number-slide${i}`}
+                    className={`keen-slider__slide number-slide${i} w-full h-full`}
+                  >
+                    <Image
+                      src={image.node.originalSrc}
+                      alt={image.node.altText}
+                      // priority={true}
+                      placeholder="blur"
+                      blurDataURL={`/_next/image?url=${image.node.originalSrc}&w=16&q=1`}
+                      layout="fill"
+                      objectFit="cover"
+                    />
+                  </div>
+                );
+              })}
+            </div>
 
-        {/* <Swiper
-            onSwiper={setThumbsSwiper}
-            spaceBetween={10}
-            slidesPerView={4}
-            freeMode={true}
-            watchSlidesProgress={true}
-            modules={[FreeMode, Navigation, Thumbs]}
-            className="mySwiper w-[45vw] h-[10vw] z-[100 mt-[10vw] pointer-events-auto"
-          >
-            {thumbnails}
-          </Swiper> */}
-        {/* </div> */}
+            <div
+              ref={thumbnailRef}
+              className="keen-slider max-w-[90vw] lg:max-w-[45vw] thumbnail rounded thumbcursor mb-[2vh] lg:mb-[5vh]"
+            >
+              {product.images.edges.map((image, i) => {
+                return (
+                  <div
+                    key={`number-slide${i}`}
+                    className={`keen-slider__slide number-slide${i} flex justify-center items-center]`}
+                  >
+                    <img
+                      src={image.node.originalSrc}
+                      alt={image.node.altText}
+                      // className="bg-gray-100"
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
 
         <ProductForm product={product} />
       </div>

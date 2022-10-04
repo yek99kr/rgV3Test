@@ -8,37 +8,16 @@ import { PrismicProvider } from "@prismicio/react";
 import { PrismicPreview } from "@prismicio/next";
 import { linkResolver, repositoryName } from "../prismicio";
 import useMediaQueryHeight from "../utils/useMediaQueryHeight";
-import useMediaQueryWidth from "../utils/useMediaQueryWidth";
-import useIsTouch from "../utils/useIsTouch";
-import Hands from "../components/Hands/Hands";
+
 import ShopProvider from "../context/shopContext";
 
 function MyApp({ Component, pageProps, router }) {
-  const isSmallWidth = useMediaQueryWidth(750);
-  const isSmallerWidth = useMediaQueryWidth(638);
-
-  const isSmallHeight = useMediaQueryHeight(639);
   const isSmallestHeight = useMediaQueryHeight(349);
-  const isTouch = useIsTouch();
 
-  let hand;
-
-  if (
-    isSmallestHeight ||
-    (!isSmallerWidth && isSmallHeight) ||
-    (isSmallWidth && !isSmallHeight) ||
-    isSmallerWidth ||
-    isTouch
-  ) {
-    hand = null;
-  } else {
-    hand = <Hands router={router} />;
-  }
   return (
     <>
       {/* <GoogleAnalytics strategy="lazyOnload" /> */}
       <ShopProvider>
-        {!isSmallestHeight && <Nav />}
         <PrismicProvider
           linkResolver={linkResolver}
           internalLinkComponent={({ href, children, ...props }) => (
@@ -48,7 +27,7 @@ function MyApp({ Component, pageProps, router }) {
           )}
         >
           <PrismicPreview repositoryName={repositoryName}>
-            {/* {hand} */}
+            {!isSmallestHeight && <Nav />}
             <AppContextProvider>
               <AnimatePresence
                 exitBeforeEnter

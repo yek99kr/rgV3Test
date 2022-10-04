@@ -78,16 +78,16 @@ export default function Hand({
     moveJoint(mouse, nodes.Wrist);
     movePosition({ x: x * mouseP * 1.4, y }, nodes.Shoulder);
 
-    // group.current.position.x = THREE.MathUtils.lerp(
-    //   group.current.position.x,
-    //   router.pathname === "/" ? secondPosition[0] : firstPosition[0],
-    //   0.05
-    // );
     group.current.position.x = THREE.MathUtils.lerp(
       group.current.position.x,
-      secondPosition[0],
+      router.pathname === "/" ? secondPosition[0] : firstPosition[0],
       0.05
     );
+    // group.current.position.x = THREE.MathUtils.lerp(
+    //   group.current.position.x,
+    //   secondPosition[0],
+    //   0.1
+    // );
   });
 
   return (

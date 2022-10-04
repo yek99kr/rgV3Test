@@ -99,13 +99,13 @@ export default function ProductForm({ product }) {
   }, [productInventory, selectedVariant]);
 
   return (
-    <div className="flex flex-col w-full md:w-[38vw] pl-10 pr-10 pb-10 md:p-4 md:pt-[20vh]">
-      <h2 className="text-md">{product.title}</h2>
+    <div className="flex flex-col w-full lg:w-[38vw] pl-[5vw] pr-[5vw] pb-10 lg:p-4 lg:pt-[14%] text-[2.9vw] sm:text-base mt-5 lg:ml-[3vw] ">
+      <h2 className="text-[3.2vw] sm:text-lg">{product.title}</h2>
       <span className="pb-3">
         {formatter.format(product.variants.edges[0].node.priceV2.amount)}
       </span>
 
-      <span className="pb-3 text-sm md:w-[30vw]">{product.description}</span>
+      <span className="pb-3">{product.description}</span>
 
       {product.options.map(({ name, values }) => (
         <ProductOptions
@@ -124,13 +124,13 @@ export default function ProductForm({ product }) {
           onClick={() => {
             addToCart(selectedVariant);
           }}
-          className="bg-white/60 text-gray-500 backdrop-blur-md  rounded px-2 py-3 mt-3 hover:bg-white/100 hover:text-black  md:w-[20vw] thumbcursor"
+          className="bg-white/60 text-gray-500 backdrop-blur-md  rounded px-2 py-3 mt-3 hover:bg-white/100 hover:text-black  lg:w-[25vw] thumbcursor text-[2.9vw] sm:text-sm md:text-base "
           style={{ transition: "0.3s" }}
         >
-          Add To Card
+          Add To Cart
         </button>
       ) : (
-        <button className="rounded-lg px-2 py-3 mt-3 bg-white/60 backdrop-blur-md text-gray-300 cursor-not-allowed md:w-[20vw]">
+        <button className="rounded-lg px-2 py-3 mt-3 bg-white/60 backdrop-blur-md text-gray-300 cursor-not-allowed lg:w-[25vw] text-[2.9vw] sm:text-base ">
           Sold out!
         </button>
       )}
