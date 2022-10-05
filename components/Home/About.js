@@ -158,7 +158,7 @@ const About = (props) => {
                 </span>
               </a>{" "}
               with some work and a{" "}
-              <Link href="/deck">
+              <Link href="https://deck.realgood.tv/">
                 <a>
                   <span className="deck inline-block noselect thumbcursor">
                     <span className="wiggle1 text-purple-500">d</span>
