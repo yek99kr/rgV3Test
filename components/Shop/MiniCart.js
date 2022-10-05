@@ -284,9 +284,9 @@ export default function MiniCart({ cart }) {
                   ></div>
                   <div className="flex flex-col h-full overflow-x-hidden overflow-y-scrol items-center lg:items-stretch">
                     <div className="flex-1 px-4 py-6 overflow-x-hidden overflow-y-auto sm:px-6">
-                      <div className="flex-1 lg:block w-[97vw] sm:w-[520px] md:w-[570px] lg:w-[400px]">
+                      <div className="flex-1 lg:block w-[97vw] sm:w-[520px] md:w-[570px] lg:w-[400px] mt-[7vw] sm:mt-[2.3rem] lg:mt-0">
                         <div className="flow-root">
-                          <div className="hidden lg:flex place-content-end mr-3 h-8">
+                          <div className="hidden lg:flex place-content-end mr-3 h-8 lg:mb-5">
                             <button
                               ref={cancelButtonRef}
                               type="button"
@@ -305,7 +305,7 @@ export default function MiniCart({ cart }) {
                               {cart.map((product) => (
                                 <li
                                   key={product.id + Math.random()}
-                                  className="relative flex py-4 bg-white/60 backdrop-blur-md rounded pl-5 pr-5 m-[2.3vw] sm:m-3 mt-[10vw] sm:mt-[3.5rem] lg:mt-5"
+                                  className="relative flex py-4 bg-white/60 backdrop-blur-md rounded pl-5 pr-5 m-[2.3vw] sm:m-3 mt-[4vw] sm:mt-5"
                                 >
                                   <div
                                     className={`top-0 left-0 right-0 z-1000 w-full h-full absolute ${
@@ -414,7 +414,7 @@ export default function MiniCart({ cart }) {
                             </ul>
                           ) : (
                             <div
-                              className="thumbcursor rounded m-[2.5vw] sm:m-3 mt-[9.5vw]  sm:mt-[3rem] lg:mt-5 p-[2.5vw] sm:p-3 bg-white/60 backdrop-blur-md text-[2.9vw] sm:text-sm md:text-base"
+                              className="thumbcursor rounded m-[2.5vw] sm:m-3 p-[2.5vw] sm:p-3 bg-white/60 backdrop-blur-md text-[2.9vw] sm:text-sm md:text-base"
                               onClick={() => setCartOpen(false)}
                             >
                               <p>Nothing in your cart!</p>
