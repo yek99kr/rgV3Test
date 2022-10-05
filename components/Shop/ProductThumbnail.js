@@ -34,21 +34,23 @@ const ProductThumbnail = ({ product }) => {
               priority={true}
               blurDataURL={`/_next/image?url=${originalSrc}&w=16&q=1`}
             />
-
+            {/* 
             {hovered && (
               <div className="absolute left-1/2 top-1/2 translate-x-[-50%] bg-white">
-                <h1 className="mt-1 text-sm center text-center hidden lg:block">
+                <h1 className="mt-1 text-sm center text-center hidden lg:block ">
                   {title}
                 </h1>
                 <p className="mt-1 text-sm text-center hidden lg:block">
                   {formatter.format(price)}
                 </p>
               </div>
-            )}
+            )} */}
           </div>
         </div>
-        <h1 className="mt-1 text-sm center text-center lg:hidden">{title}</h1>
-        <p className="mt-1 text-sm text-center lg:hidden">
+        <h1 className="mt-0.5 center text-center  text-[2.9vw] sm:text-sm md:text-base">
+          {title}
+        </h1>
+        <p className=" text-center  text-[2.9vw] sm:text-sm md:text-base">
           {formatter.format(price)}
         </p>
       </a>

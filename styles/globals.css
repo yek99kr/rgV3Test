@@ -204,14 +204,3 @@ input[type="range"] {
   /* border: 2px dashed black; */
   filter: blur(0);
 }
-@media only screen and (max-width: 1024px) {
-  div {
-    overflow-y: scroll;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-  div::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-  }
-}

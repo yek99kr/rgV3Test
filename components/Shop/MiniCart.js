@@ -239,193 +239,224 @@ export default function MiniCart({ cart }) {
   });
 
   return (
-    <Transition.Root show={cartOpen} as={Fragment}>
-      <Dialog
-        initialFocus={cancelButtonRef}
-        as="div"
-        className="fixed inset-0 z-[100] overflow-hidden"
-        onClose={() => {
-          setCartOpen(!cartOpen);
-        }}
-      >
-        <div
-          className="absolute inset-0 overflow-hidden"
-          // onClick={() => setCartOpen(false)}
+    <>
+      <Transition.Root show={cartOpen} as={Fragment}>
+        <Dialog
+          initialFocus={cancelButtonRef}
+          as="div"
+          className="fixed inset-0 z-[100] overflow-hidden"
+          onClose={() => {
+            setCartOpen(!cartOpen);
+          }}
         >
-          <Transition.Child
-            as={Fragment}
-            enter="ease-in-out duration-500"
-            enterFrom="opacity-0"
-            enterTo="opacity-100"
-            leave="ease-in-out duration-500"
-            leaveFrom="opacity-100"
-            leaveTo="opacity-0"
+          <div
+            className="absolute inset-0 overflow-hidden"
+            // onClick={() => setCartOpen(false)}
           >
-            <Dialog.Overlay className="absolute inset-0 transition-opacity" />
-          </Transition.Child>
-
-          {/* flex justify-center items-center w-screen  lg:block  */}
-
-          <div className="fixed inset-y-0 lg:right-0 flex lg:max-w-full lg:pl-10 ">
             <Transition.Child
               as={Fragment}
-              enter="transform transition ease-in-out duration-500 sm:duration-700"
-              enterFrom="translate-x-full"
-              enterTo="translate-x-0"
-              leave="transform transition ease-in-out duration-500 sm:duration-700"
-              leaveFrom="translate-x-0"
-              leaveTo="translate-x-full"
+              enter="ease-in-out duration-500"
+              enterFrom="opacity-0"
+              enterTo="opacity-100"
+              leave="ease-in-out duration-500"
+              leaveFrom="opacity-100"
+              leaveTo="opacity-0"
             >
-              <div className="w-screen lg:max-w-[430px] overflow-x-hidden">
-                <div
-                  className="absolute w-full h-full z-[0]"
-                  onClick={() => setCartOpen(false)}
-                ></div>
-                <div className="flex flex-col h-full overflow-x-hidden overflow-y-scrol items-center lg:items-stretch">
-                  <div className="flex-1 px-4 py-6 overflow-x-hidden overflow-y-auto sm:px-6">
-                    <div className="mt-0 flex-1 lg:block w-[97vw] sm:w-[520px] md:w-[570px] lg:w-[400px]">
-                      <div className="flow-root">
-                        <div className="flex place-content-end mr-3 h-8">
-                          <button
-                            ref={cancelButtonRef}
-                            type="button"
-                            className="text-gray-400 hover:text-gray-500 bg-white/60 backdrop-blur-md rounded px-1 py-1 thumbcursor hidden lg:block "
-                            onClick={() => setCartOpen(false)}
-                          >
-                            <span className="sr-only">Close panel</span>
-                            <RiCloseFill
-                              className="h-6 w-6"
-                              aria-hidden="true"
-                            />
-                          </button>
-                        </div>
-                        {cart.length > 0 ? (
-                          <ul role="list" className="-my-1">
-                            {cart.map((product) => (
-                              <li
-                                key={product.id + Math.random()}
-                                className="relative flex py-4 bg-white/60 backdrop-blur-md rounded pl-5 pr-5 m-3 mt-5"
-                              >
-                                <div
-                                  className={`top-0 left-0 right-0 z-1000 w-full h-full absolute ${
-                                    cartLoading
-                                      ? "bg-white opacity-60"
-                                      : "hidden"
-                                  }`}
-                                ></div>
-                                <div className="relative flex-shrink-0 w-[14vw] h-[14vw] md:w-12 md:h-12 overflow-hidden rounded ">
-                                  <Image
-                                    src={product.image}
-                                    alt={product.title}
-                                    layout="fill"
-                                    objectFit="cover"
-                                  />
-                                </div>
+              <Dialog.Overlay className="absolute inset-0 transition-opacity" />
+            </Transition.Child>
 
-                                <div className="flex flex-col flex-1 ml-4">
-                                  <div>
-                                    <div className="flex justify-between text-[2.9vw] sm:text-sm md:text-base text-gray-900">
-                                      <h3>
-                                        <Link
-                                          href={`/products/${product.handle}`}
-                                          passHref
-                                        >
-                                          <a
-                                            className="thumbcursor"
-                                            onClick={() => setCartOpen(false)}
+            {/* flex justify-center items-center w-screen  lg:block  */}
+
+            <div className="fixed inset-y-0 lg:right-0 flex lg:max-w-full lg:pl-10 overflow-x-hidden">
+              <Transition.Child
+                as={Fragment}
+                enter="transform transition ease-in-out duration-500 sm:duration-700"
+                enterFrom="translate-x-full"
+                enterTo="translate-x-0"
+                leave="transform transition ease-in-out duration-500 sm:duration-700"
+                leaveFrom="translate-x-0"
+                leaveTo="translate-x-full"
+              >
+                <div className="w-screen lg:max-w-[430px] overflow-x-hidden">
+                  <div
+                    className="absolute w-full h-full z-[0]"
+                    onClick={() => setCartOpen(false)}
+                  ></div>
+                  <div className="flex flex-col h-full overflow-x-hidden overflow-y-scrol items-center lg:items-stretch">
+                    <div className="flex-1 px-4 py-6 overflow-x-hidden overflow-y-auto sm:px-6">
+                      <div className="mt-0 flex-1 lg:block w-[97vw] sm:w-[520px] md:w-[570px] lg:w-[400px]">
+                        <div className="flow-root">
+                          <div className="flex place-content-end mr-3 h-[3vw] 2xs:h-7 xs:h-8 sm:h-8">
+                            <button
+                              ref={cancelButtonRef}
+                              type="button"
+                              className="text-gray-400 hover:text-gray-500 bg-white/60 backdrop-blur-md rounded px-1 py-1 thumbcursor hidden lg:block "
+                              onClick={() => setCartOpen(false)}
+                            >
+                              <span className="sr-only">Close panel</span>
+                              <RiCloseFill
+                                className="h-6 w-6"
+                                aria-hidden="true"
+                              />
+                            </button>
+                          </div>
+                          {cart.length > 0 ? (
+                            <ul role="list" className="-my-1">
+                              {cart.map((product) => (
+                                <li
+                                  key={product.id + Math.random()}
+                                  className="relative flex py-4 bg-white/60 backdrop-blur-md rounded pl-5 pr-5 m-3 mt-5"
+                                >
+                                  <div
+                                    className={`top-0 left-0 right-0 z-1000 w-full h-full absolute ${
+                                      cartLoading
+                                        ? "bg-white opacity-60"
+                                        : "hidden"
+                                    }`}
+                                  ></div>
+                                  <div className="relative flex-shrink-0 w-[14vw] h-[14vw] md:w-12 md:h-12 overflow-hidden rounded ">
+                                    <Image
+                                      src={product.image}
+                                      alt={product.title}
+                                      layout="fill"
+                                      objectFit="cover"
+                                    />
+                                  </div>
+
+                                  <div className="flex flex-col flex-1 ml-4">
+                                    <div>
+                                      <div className="flex justify-between text-[2.9vw] sm:text-sm md:text-base text-gray-900">
+                                        <h3>
+                                          <Link
+                                            href={`/products/${product.handle}`}
+                                            passHref
                                           >
-                                            {product.title}
-                                          </a>
-                                        </Link>
-                                      </h3>
-                                      <p className="ml-4">
-                                        {formatter.format(product.variantPrice)}
+                                            <a
+                                              className="thumbcursor"
+                                              onClick={() => setCartOpen(false)}
+                                            >
+                                              {product.title}
+                                            </a>
+                                          </Link>
+                                        </h3>
+                                        <p className="ml-4 ">
+                                          {formatter.format(
+                                            product.variantPrice
+                                          )}
+                                        </p>
+                                      </div>
+                                      <p className="mt-1 text-[2.4vw] sm:text-xs md:text-sm text-gray-500  ">
+                                        {product.variantTitle}
                                       </p>
                                     </div>
-                                    <p className="mt-1 text-sm text-gray-500">
-                                      {product.variantTitle}
-                                    </p>
-                                  </div>
-                                  <div className="flex items-end justify-between flex-1 text-sm">
-                                    <div className={`border`}>
-                                      <button
-                                        className="px-2 thumbcursor"
-                                        onClick={() =>
-                                          decrementCartItem(product)
-                                        }
-                                        disabled={cartLoading}
-                                      >
-                                        -
-                                      </button>
-                                      <span className="px-2 border-l border-r">
-                                        {product.variantQuantity}
-                                      </span>
-                                      <button
-                                        className="px-2 thumbcursor"
-                                        onClick={() =>
-                                          incrementCartItem(product)
-                                        }
-                                        disabled={cartLoading}
-                                      >
-                                        +
-                                      </button>
-                                    </div>
-                                    <div className="flex text-[2.6vw] sm:text-xs md:text-sm">
-                                      <button
-                                        onClick={() =>
-                                          removeCartItem(product.id)
-                                        }
-                                        type="button"
-                                        className="text-gray-500 hover:text-gray-800 thumbcursor"
-                                        disabled={cartLoading}
-                                      >
-                                        Remove
-                                      </button>
+                                    <div className="flex items-end justify-between flex-1 text-[2.9vw] sm:text-sm md:text-base">
+                                      <div className={`border`}>
+                                        <button
+                                          className="px-2 thumbcursor"
+                                          onClick={() =>
+                                            decrementCartItem(product)
+                                          }
+                                          disabled={cartLoading}
+                                        >
+                                          -
+                                        </button>
+                                        <span className="px-2 border-l border-r">
+                                          {product.variantQuantity}
+                                        </span>
+                                        <button
+                                          className="px-2 thumbcursor"
+                                          onClick={() =>
+                                            incrementCartItem(product)
+                                          }
+                                          disabled={cartLoading}
+                                        >
+                                          +
+                                        </button>
+                                      </div>
+                                      <div className="flex text-[2.6vw] sm:text-xs md:text-sm">
+                                        <button
+                                          onClick={() =>
+                                            removeCartItem(product.id)
+                                          }
+                                          type="button"
+                                          className="text-gray-500 hover:text-gray-800 thumbcursor"
+                                          disabled={cartLoading}
+                                        >
+                                          Remove
+                                        </button>
+                                      </div>
                                     </div>
                                   </div>
+                                </li>
+                              ))}
+                              <div className="mt-6 m-3  bg-white/60 backdrop-blur-md rounded px-3 py-3">
+                                <div className="flex p-1 justify-between text-[2.9vw] sm:text-sm md:text-base  text-gray-900">
+                                  <p>Subtotal</p>
+                                  <p>{formatter.format(cartTotal)}</p>
                                 </div>
-                              </li>
-                            ))}
-                            <div className="mt-6 m-3  bg-white/60 backdrop-blur-md rounded px-3 py-3">
-                              <div className="flex p-1 justify-between text-[2.9vw] sm:text-sm md:text-base  text-gray-900">
-                                <p>Subtotal</p>
-                                <p>{formatter.format(cartTotal)}</p>
+                                <p className="p-1 text-gray-500 text-[2.5vw] sm:text-xs md:text-xs">
+                                  Shipping and taxes calculated at checkout.
+                                </p>
                               </div>
-                              <p className="p-1 text-xs text-gray-500">
-                                Shipping and taxes calculated at checkout.
-                              </p>
-                            </div>
 
-                            <div className="mt-6  m-3">
-                              <a
-                                href={checkoutUrl}
-                                className={`flex items-center justify-center px-6 py-3 text-[2.9vw] sm:text-sm md:text-base  bg-white/60 backdrop-blur-md rounded thumbcursor ${
-                                  cartLoading
-                                    ? "cursor-not-allowed"
-                                    : "cursor-pointer"
-                                }`}
-                              >
-                                Checkout
-                              </a>
+                              <div className="mt-6  m-3">
+                                <a
+                                  href={checkoutUrl}
+                                  className={`flex items-center justify-center px-6 py-3 text-[2.9vw] sm:text-sm md:text-base  bg-white/60 backdrop-blur-md rounded thumbcursor ${
+                                    cartLoading
+                                      ? "cursor-not-allowed"
+                                      : "cursor-pointer"
+                                  }`}
+                                >
+                                  Checkout
+                                </a>
+                              </div>
+                            </ul>
+                          ) : (
+                            <div
+                              className="thumbcursor rounded m-3 p-3 bg-white/60 backdrop-blur-md text-[2.9vw] sm:text-sm md:text-base"
+                              onClick={() => setCartOpen(false)}
+                            >
+                              <p>Nothing in your cart!</p>
                             </div>
-                          </ul>
-                        ) : (
-                          <div
-                            className="thumbcursor rounded m-3 p-3 bg-white/60 backdrop-blur-md text-[2.9vw] sm:text-sm md:text-base"
-                            onClick={() => setCartOpen(false)}
-                          >
-                            <p>Nothing in your cart!</p>
-                          </div>
-                        )}
+                          )}
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </Transition.Child>
+              </Transition.Child>
+            </div>
           </div>
-        </div>
-      </Dialog>
-    </Transition.Root>
+        </Dialog>
+      </Transition.Root>
+      <style jsx>{`
+ @media only screen and (max-width: 1024px) {
+  div {
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  div::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+`}</style>
+    </>
   );
+}
+
+{
+  /* <style jsx>{`
+ @media only screen and (max-width: 1024px) {
+  div {
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  div::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+`}</style> */
 }
