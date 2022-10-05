@@ -5,8 +5,8 @@ import { formatter } from "../../utils/helpers";
 
 const ProductThumbnail = ({ product }) => {
   const [moveImg, setMoveImg] = useState(0);
-  const [loaded, setLoaded] = useState(false);
-  // console.log(product);
+  const [hovered, setHovered] = useState(false);
+
   const { handle, title } = product.node;
   const price = product.node.priceRange.minVariantPrice.amount;
 
@@ -15,8 +15,16 @@ const ProductThumbnail = ({ product }) => {
   return (
     <Link href={`/shop/${handle}`} passHref scroll={false}>
       <a className="group thumbcursor">
-        <div className="overflow-hidden thumbcursor ">
-          <div className="relative w-[45vw] h-[45vw] sm:w-[45vw] sm:h-[45vw] md:w-[30vw] md:h-[30vw] xl:w-[24vw] xl:h-[24vw]">
+        <div
+          className="overflow-hidden thumbcursor"
+          onMouseOver={() => {
+            setHovered(true);
+          }}
+          onMouseLeave={() => {
+            setHovered(false);
+          }}
+        >
+          <div className="relative w-[45vw] h-[45vw] sm:w-[45vw] sm:h-[45vw] md:w-[30vw] md:h-[30vw] xl:w-[24vw] xl:h-[24vw] select-none">
             <Image
               src={originalSrc}
               objectFit="cover"
@@ -26,10 +34,23 @@ const ProductThumbnail = ({ product }) => {
               priority={true}
               blurDataURL={`/_next/image?url=${originalSrc}&w=16&q=1`}
             />
+
+            {hovered && (
+              <div className="absolute left-1/2 top-1/2 translate-x-[-50%] bg-white">
+                <h1 className="mt-1 text-sm center text-center hidden lg:block">
+                  {title}
+                </h1>
+                <p className="mt-1 text-sm text-center hidden lg:block">
+                  {formatter.format(price)}
+                </p>
+              </div>
+            )}
           </div>
         </div>
-        <h1 className="mt-1 text-sm center text-center">{title}</h1>
-        <p className="mt-1 text-sm text-center">{formatter.format(price)}</p>
+        <h1 className="mt-1 text-sm center text-center lg:hidden">{title}</h1>
+        <p className="mt-1 text-sm text-center lg:hidden">
+          {formatter.format(price)}
+        </p>
       </a>
     </Link>
     // <Link href={`/shop/${handle}`} passHref scroll={false}>

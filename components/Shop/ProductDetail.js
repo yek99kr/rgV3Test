@@ -46,6 +46,9 @@ export default function ProductPageContent({ product }) {
       perView: 1,
       spacing: 0,
     },
+    destroyed: () => {
+      console.log("a");
+    },
   });
   // console.log(instanceRef);
   const [thumbnailRef] = useKeenSlider(
