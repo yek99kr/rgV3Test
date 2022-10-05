@@ -50,7 +50,7 @@ export default function ProductPageContent({ product }) {
       console.log("a");
     },
   });
-  // console.log(instanceRef);
+
   const [thumbnailRef] = useKeenSlider(
     {
       initial: 0,

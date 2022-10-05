@@ -276,7 +276,7 @@ export default function MiniCart({ cart }) {
               leaveFrom="translate-x-0"
               leaveTo="translate-x-full"
             >
-              <div className="w-screen lg:max-w-md overflow-x-hidden">
+              <div className="w-screen lg:max-w-[430px] overflow-x-hidden">
                 <div
                   className="absolute w-full h-full z-[0]"
                   onClick={() => setCartOpen(false)}
