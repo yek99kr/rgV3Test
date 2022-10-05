@@ -282,7 +282,7 @@ export default function MiniCart({ cart }) {
                   onClick={() => setCartOpen(false)}
                 ></div>
                 <div className="flex flex-col h-full overflow-x-hidden overflow-y-scrol items-center lg:items-stretch">
-                  <div className="flex-1 px-4 py-6 overflow-y-auto sm:px-6">
+                  <div className="flex-1 px-4 py-6 overflow-x-hidden overflow-y-auto sm:px-6">
                     <div className="mt-0 flex-1 lg:block w-[97vw] sm:w-[520px] md:w-[570px] lg:w-[400px]">
                       <div className="flow-root">
                         <div className="flex place-content-end mr-3 h-8">
