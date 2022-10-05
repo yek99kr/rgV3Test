@@ -132,7 +132,7 @@ export default function ProductPageContent({ product }) {
 
             <div
               ref={thumbnailRef}
-              className="keen-slider max-w-[90vw] lg:max-w-[45vw] thumbnail rounded thumbcursor mb-[2vh] lg:mb-[5vh]"
+              className="keen-slider max-w-[90vw] lg:max-w-[45vw] thumbnail rounded mb-[2vh] lg:mb-[5vh]"
             >
               {product.images.edges.map((image, i) => {
                 return (
@@ -143,6 +143,7 @@ export default function ProductPageContent({ product }) {
                     <img
                       src={image.node.originalSrc}
                       alt={image.node.altText}
+                      className="thumbcursor"
                       // className="bg-gray-100"
                     />
                   </div>
