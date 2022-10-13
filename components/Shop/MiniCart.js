@@ -279,7 +279,7 @@ export default function MiniCart({ cart }) {
               >
                 <div className="w-screen lg:max-w-[430px] overflow-x-hidden">
                   <div
-                    className="absolute w-full h-full z-[0]"
+                    className="absolute w-full h-full z-[0] "
                     onClick={() => setCartOpen(false)}
                   ></div>
                   <div className="flex flex-col h-full overflow-x-hidden overflow-y-scrol items-center lg:items-stretch">
@@ -402,6 +402,8 @@ export default function MiniCart({ cart }) {
                               <div className="mt-6   m-[2.3vw] sm:m-3">
                                 <a
                                   href={checkoutUrl}
+                                  target="_blank"
+                                  rel="noreferrer"
                                   className={`flex items-center justify-center px-6 py-3 text-[2.9vw] sm:text-sm md:text-base  bg-white/60 backdrop-blur-md rounded thumbcursor ${
                                     cartLoading
                                       ? "cursor-not-allowed"

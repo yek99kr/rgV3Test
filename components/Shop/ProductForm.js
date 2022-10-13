@@ -37,7 +37,7 @@ export default function ProductForm({ product }) {
       id: variant.node.id,
       title: product.title,
       handle: product.handle,
-      image: variant.node.image?.originalSrc,
+      image: variant.node.image?.url,
       options: allOptions,
       variantTitle: variant.node.title,
       variantPrice: variant.node.priceV2.amount,
@@ -99,13 +99,16 @@ export default function ProductForm({ product }) {
   }, [productInventory, selectedVariant]);
 
   return (
-    <div className="flex flex-col w-full lg:w-[38vw] pl-[5vw] pr-[5vw] pb-10 lg:p-4 lg:pt-[14%] text-[2.9vw] sm:text-base mt-5 lg:ml-[3vw] ">
-      <h2 className="text-[3.2vw] sm:text-lg">{product.title}</h2>
-      <span className="pb-3">
+    <div className="flex flex-col w-full lg:w-[38vw] xl:w-[28vw] pl-[5vw] pr-[5vw] pb-4 lg:pb-10 lg:p-4 lg:pt-[14%] text-[2.9vw] sm:text-base mt-10 lg:ml-[3vw] ">
+      <h2 className="text-[4vw] pb-0.5 sm:text-2xl">{product.title}</h2>
+      <span className="pb-0 lg:pb-0 ">Real Good X Person</span>
+      <span className="pb-4 lg:pb-10">
         {formatter.format(product.variants.edges[0].node.priceV2.amount)}
       </span>
 
-      <span className="pb-3">{product.description}</span>
+      <span className="pb-1 lg:pb-1">Details</span>
+
+      <span className=" pb-4 lg:pb-10">{product.description}</span>
 
       {product.options.map(({ name, values }) => (
         <ProductOptions
@@ -124,7 +127,7 @@ export default function ProductForm({ product }) {
           onClick={() => {
             addToCart(selectedVariant);
           }}
-          className="bg-white/60 text-gray-500 backdrop-blur-md  rounded px-2 py-3 mt-3 hover:bg-white/100 hover:text-black  lg:w-[25vw] thumbcursor text-[2.9vw] sm:text-sm md:text-base "
+          className="bg-white/60 text-gray-500 backdrop-blur-md  rounded px-2 py-3 mt-3 hover:bg-white/100 hover:text-black  w-[90vw]  lg:w-[400px] xl:w-[455px]  thumbcursor text-[2.9vw] sm:text-sm md:text-base "
           style={{ transition: "0.3s" }}
         >
           Add To Cart

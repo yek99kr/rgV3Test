@@ -4,6 +4,7 @@ import { useState } from "react";
 
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
+import Recommend from "./Recommend";
 
 function ThumbnailPlugin(mainRef) {
   return (slider) => {
@@ -46,9 +47,6 @@ export default function ProductPageContent({ product }) {
       perView: 1,
       spacing: 0,
     },
-    destroyed: () => {
-      console.log("a");
-    },
   });
 
   const [thumbnailRef] = useKeenSlider(
@@ -66,11 +64,11 @@ export default function ProductPageContent({ product }) {
   //   images.push(
   //     <SwiperSlide key={`slide-${i}`}>
   //       <Image
-  //         src={image.node.originalSrc}
+  //         src={image.node.url}
   //         alt={image.node.altText}
   //         priority={true}
   //         placeholder="blur"
-  //         blurDataURL={`/_next/image?url=${image.node.originalSrc}&w=16&q=1`}
+  //         blurDataURL={`/_next/image?url=${image.node.url}&w=16&q=1`}
   //         layout="fill"
   //         objectFit="cover"
   //       />
@@ -83,17 +81,17 @@ export default function ProductPageContent({ product }) {
   //   thumbnails.push(
   //     <SwiperSlide key={`slide-${i}`} className=" z-[500] pointer-events-auto">
   //       <Image
-  //         src={image.node.originalSrc}
+  //         src={image.node.url}
   //         alt={image.node.altText}
   //         priority={true}
   //         placeholder="blur"
-  //         blurDataURL={`/_next/image?url=${image.node.originalSrc}&w=16&q=1`}
+  //         blurDataURL={`/_next/image?url=${image.node.url}&w=16&q=1`}
   //         layout="fill"
   //         objectFit="cover"
   //       />
   //       {/*
   //       <img
-  //         src={image.node.originalSrc}
+  //         src={image.node.url}
   //         alt={image.node.altText}
   //         className="w-full bg-black"
   //       /> */}
@@ -101,9 +99,12 @@ export default function ProductPageContent({ product }) {
   //   );
   // });
 
+  const slicedArray = product.images.edges.slice(4);
+  // console.log(slicedArray);
+
   return (
     <>
-      <div className="grid grid-cols-1 lg:grid-cols-2 mt-[10vh] lg:mt-[15vh] xl:mt-[8vh]">
+      <div className="lg:ml-[5vw] grid grid-cols-1 lg:grid-cols-2 mt-[10vh] lg:mt-[15vh] xl:mt-[8vh]">
         <div className="flex flex-col pl-[5vw] pr-[5vw] lg:ml-[5vw] lg:p-0">
           <div>
             <div
@@ -114,14 +115,14 @@ export default function ProductPageContent({ product }) {
                 return (
                   <div
                     key={`number-slide${i}`}
-                    className={`keen-slider__slide number-slide${i} w-full h-full`}
+                    className={`keen-slider__slide number-slide${i} w-full h-full `}
                   >
                     <Image
-                      src={image.node.originalSrc}
+                      src={image.node.url}
                       alt={image.node.altText}
                       priority={true}
                       placeholder="blur"
-                      blurDataURL={`/_next/image?url=${image.node.originalSrc}&w=16&q=1`}
+                      blurDataURL={`/_next/image?url=${image.node.url}&w=16&q=1`}
                       layout="fill"
                       objectFit="cover"
                     />
@@ -141,10 +142,9 @@ export default function ProductPageContent({ product }) {
                     className={`keen-slider__slide number-slide${i} flex justify-center items-center]`}
                   >
                     <img
-                      src={image.node.originalSrc}
+                      src={image.node.url}
                       alt={image.node.altText}
                       className="thumbcursor"
-                      // className="bg-gray-100"
                     />
                   </div>
                 );
@@ -155,6 +155,10 @@ export default function ProductPageContent({ product }) {
 
         <ProductForm product={product} />
       </div>
+      <Recommend
+        current={product.id}
+        products={product.collections.edges[0].node.products.edges}
+      />
     </>
   );
 }
