@@ -103,7 +103,7 @@ const Nav = () => {
         style={{ transition: "opacity 0.8s" }}
         onTransitionEnd={() => setCopyed(false)}
       >
-        <div className="bg-white/60 backdrop-blur-sm w-[65vw] sm:w-[300px] md:w-[340px] rounded text-center p-2.5 ">
+        <div className="bg-white/60 backdrop-blur-sm w-[65vw] sm:w-[300px] md:w-[400px] rounded text-center p-2.5 ">
           <span>hello@realgood.tv copyed to clipboard</span>
         </div>
       </div>
