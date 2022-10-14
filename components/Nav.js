@@ -97,15 +97,14 @@ const Nav = () => {
       </div>
 
       <div
-        className={`flex fixed w-screen justify-center items-center mt-[3.5vw] 2xs:mt-[4rem] xs:mt-[4.5rem] sm:mt-[4.5rem] text-[2.9vw] sm:text-sm md:text-base z-[1000] pointer-events-none duration-[0.8s] ${
+        className={`flex fixed w-screen justify-center items-center mt-[3.5vw] 2xs:mt-[4rem] xs:mt-[4.5rem] sm:mt-[4.5rem] text-[2.9vw] sm:text-sm md:text-base z-[1000] pointer-events-none ${
           copyed ? "opacity-100" : "opacity-0"
         }`}
+        style={{ transition: "opacity 0.8s" }}
         onTransitionEnd={() => setCopyed(false)}
       >
         <div className="bg-white/60 backdrop-blur-sm w-[65vw] sm:w-[300px] md:w-[340px] rounded text-center p-2.5 ">
-          <span className="opacity-100">
-            hello@realgood.tv copyed to clipboard
-          </span>
+          <span>hello@realgood.tv copyed to clipboard</span>
         </div>
       </div>
     </>
