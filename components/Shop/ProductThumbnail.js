@@ -11,6 +11,7 @@ const ProductThumbnail = ({ product }) => {
   const price = product.node.priceRange.minVariantPrice.amount;
 
   const { altText, originalSrc } = product.node.images.edges[moveImg].node;
+  console.log(product.node.images.edges[moveImg].node);
 
   return (
     <Link href={`/shop/${handle}`} passHref scroll={false}>
@@ -26,38 +27,38 @@ const ProductThumbnail = ({ product }) => {
         >
           <div
             className="relative w-[80vw] h-[80vw] sm:w-[80vw] sm:h-[80vw] md:w-[30vw] md:h-[30vw] xl:w-[26vw] xl:h-[26vw] "
-            onMouseMove={(e) => {
-              var rect = e.target.getBoundingClientRect();
-              var x = e.clientX - rect.left;
+            // onMouseMove={(e) => {
+            //   var rect = e.target.getBoundingClientRect();
+            //   var x = e.clientX - rect.left;
 
-              var percent = (rect.width * 20) / 100;
+            //   var percent = (rect.width * 20) / 100;
 
-              if (product.node.images.edges[1]) {
-                if (moveImg !== 0 && x > 0 && x <= percent) {
-                  setMoveImg(0);
-                } else if (moveImg !== 1 && x > percent && x <= percent * 2) {
-                  setMoveImg(1);
-                } else if (
-                  moveImg !== 2 &&
-                  x > rect.width - percent * 3 &&
-                  x <= rect.width - percent * 2
-                ) {
-                  setMoveImg(2);
-                } else if (
-                  moveImg !== 3 &&
-                  x > rect.width - percent * 2 &&
-                  x <= rect.width - percent
-                ) {
-                  setMoveImg(3);
-                } else if (
-                  moveImg !== 4 &&
-                  x > rect.width - percent &&
-                  x <= rect.width
-                ) {
-                  setMoveImg(4);
-                }
-              }
-            }}
+            //   if (product.node.images.edges[1]) {
+            //     if (moveImg !== 0 && x > 0 && x <= percent) {
+            //       setMoveImg(0);
+            //     } else if (moveImg !== 1 && x > percent && x <= percent * 2) {
+            //       setMoveImg(1);
+            //     } else if (
+            //       moveImg !== 2 &&
+            //       x > rect.width - percent * 3 &&
+            //       x <= rect.width - percent * 2
+            //     ) {
+            //       setMoveImg(2);
+            //     } else if (
+            //       moveImg !== 3 &&
+            //       x > rect.width - percent * 2 &&
+            //       x <= rect.width - percent
+            //     ) {
+            //       setMoveImg(3);
+            //     } else if (
+            //       moveImg !== 4 &&
+            //       x > rect.width - percent &&
+            //       x <= rect.width
+            //     ) {
+            //       setMoveImg(4);
+            //     }
+            //   }
+            // }}
           >
             <Image
               src={originalSrc}
@@ -83,7 +84,7 @@ const ProductThumbnail = ({ product }) => {
           </div>
         </div>
 
-        <div className="block sm:hidden">
+        <div className="block md:hidden">
           <h1 className="mt-0.5 center text-center text-[2.9vw] sm:text-xl">
             {title}
           </h1>
@@ -97,7 +98,7 @@ const ProductThumbnail = ({ product }) => {
 
         <div
           className={`opacity-0 ${
-            hovered ? "sm:opacity-100" : "sm:opacity-0"
+            hovered ? "md:opacity-100" : "md:opacity-0"
           } uppercase`}
         >
           <h1

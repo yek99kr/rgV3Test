@@ -130,8 +130,6 @@
 import Image from "next/image";
 import ProductForm from "./ProductForm";
 import Recommend from "./Recommend";
-import "@splidejs/react-splide/css";
-import "@splidejs/react-splide/css/core";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 
 export default function ProductPageContent({ product }) {
@@ -148,7 +146,6 @@ export default function ProductPageContent({ product }) {
                 rewind: true,
                 gap: "1rem",
               }}
-              aria-label="My Favorite Images"
             >
               {product.images.edges.map((image, i) => {
                 return (

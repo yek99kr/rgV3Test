@@ -8,6 +8,8 @@ import { PrismicProvider } from "@prismicio/react";
 import { PrismicPreview } from "@prismicio/next";
 import { linkResolver, repositoryName } from "../prismicio";
 import useMediaQueryHeight from "../utils/useMediaQueryHeight";
+import "@splidejs/react-splide/css";
+import "@splidejs/react-splide/css/core";
 
 import ShopProvider from "../context/shopContext";
 
