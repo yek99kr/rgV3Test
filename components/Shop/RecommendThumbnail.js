@@ -10,7 +10,7 @@ const RecommendThumbnail = ({ product }) => {
   const { handle, title } = product.node;
   const price = product.node.priceRange.minVariantPrice.amount;
 
-  const { altText, url } = product.node.images.edges[moveImg].node;
+  const { altText, originalSrc } = product.node.images.edges[moveImg].node;
 
   return (
     <Link href={`/shop/${handle}`} passHref scroll={false}>
@@ -26,13 +26,13 @@ const RecommendThumbnail = ({ product }) => {
         >
           <div className="relative sm:ml-0 w-[43vw] h-[43vw] lg:w-[21vw] lg:h-[21vw] select-none">
             <Image
-              src={url}
+              src={originalSrc}
               objectFit="cover"
               alt={altText}
               layout="fill"
               placeholder="blur"
               priority={true}
-              blurDataURL={`/_next/image?url=${url}&w=16&q=1`}
+              blurDataURL={`/_next/image?url=${originalSrc}&w=16&q=1`}
             />
 
             {/* {hovered && (

@@ -10,51 +10,9 @@ const ProductThumbnail = ({ product }) => {
   const { handle, title } = product.node;
   const price = product.node.priceRange.minVariantPrice.amount;
 
-  const { altText, url } = product.node.images.edges[moveImg].node;
+  const { altText, originalSrc } = product.node.images.edges[moveImg].node;
 
   return (
-    // <Link href={`/shop/${handle}`} passHref scroll={false}>
-    //   <a className="group thumbcursor">
-    //     <div
-    //       className="thumbcursor"
-    //       onMouseOver={() => {
-    //         setHovered(true);
-    //       }}
-    //       onMouseLeave={() => {
-    //         setHovered(false);
-    //       }}
-    //     >
-    //       <div className="relative ml-[5vw] sm:ml-0 w-[80vw] h-[80vw] md:w-[30vw] md:h-[30vw] xl:w-[26vw] xl:h-[26vw] select-none">
-    //         <Image
-    //           src={url}
-    //           objectFit="cover"
-    //           alt={altText}
-    //           layout="fill"
-    //           placeholder="blur"
-    //           priority={true}
-    //           blurDataURL={`/_next/image?url=${url}&w=16&q=1`}
-    //         />
-
-    //         {hovered && (
-    //           <div className="absolute left-1/2 top-1/2 translate-x-[-50%] bg-white">
-    //             <h1 className="text-sm center text-center hidden lg:block ">
-    //               {title}
-    //             </h1>
-    //             <p className="mt-1 text-sm text-center hidden lg:block">
-    //               {formatter.format(price)}
-    //             </p>
-    //           </div>
-    //         )}
-    //       </div>
-    //     </div>
-    //     {/* <h1 className="mt-0.5 center text-center text-[2.5vw] sm:text-sm lg:hidden">
-    //       {title}
-    //     </h1>
-    //     <p className=" text-center  text-[2.9vw] sm:text-sm lg:hidden">
-    //       {formatter.format(price)}
-    //     </p> */}
-    //   </a>
-    // </Link>
     <Link href={`/shop/${handle}`} passHref scroll={false}>
       <a className="group thumbcursor">
         <div
@@ -102,12 +60,12 @@ const ProductThumbnail = ({ product }) => {
             }}
           >
             <Image
-              src={url}
+              src={originalSrc}
               alt={altText}
               priority={true}
-              // loading="eager"
+              loading="eager"
               placeholder="blur"
-              blurDataURL={`/_next/image?url=${url}&w=16&q=1`}
+              blurDataURL={`/_next/image?url=${originalSrc}&w=16&q=1`}
               layout="fill"
               objectFit="cover"
             ></Image>
@@ -144,7 +102,7 @@ const ProductThumbnail = ({ product }) => {
         >
           <h1
             className="mt-0.5 center text-center  sm:text-base  m-[-0.1rem]"
-            style={{ "-webkit-text-stroke-width": "2px blue" }}
+            // style={{ WebkitTextStrokeWidth: "2px blue" }}
           >
             {title}
           </h1>
@@ -176,3 +134,46 @@ const ProductThumbnail = ({ product }) => {
 };
 
 export default ProductThumbnail;
+
+// <Link href={`/shop/${handle}`} passHref scroll={false}>
+//   <a className="group thumbcursor">
+//     <div
+//       className="thumbcursor"
+//       onMouseOver={() => {
+//         setHovered(true);
+//       }}
+//       onMouseLeave={() => {
+//         setHovered(false);
+//       }}
+//     >
+//       <div className="relative ml-[5vw] sm:ml-0 w-[80vw] h-[80vw] md:w-[30vw] md:h-[30vw] xl:w-[26vw] xl:h-[26vw] select-none">
+//         <Image
+//           src={url}
+//           objectFit="cover"
+//           alt={altText}
+//           layout="fill"
+//           placeholder="blur"
+//           priority={true}
+//           blurDataURL={`/_next/image?url=${url}&w=16&q=1`}
+//         />
+
+//         {hovered && (
+//           <div className="absolute left-1/2 top-1/2 translate-x-[-50%] bg-white">
+//             <h1 className="text-sm center text-center hidden lg:block ">
+//               {title}
+//             </h1>
+//             <p className="mt-1 text-sm text-center hidden lg:block">
+//               {formatter.format(price)}
+//             </p>
+//           </div>
+//         )}
+//       </div>
+//     </div>
+//     {/* <h1 className="mt-0.5 center text-center text-[2.5vw] sm:text-sm lg:hidden">
+//       {title}
+//     </h1>
+//     <p className=" text-center  text-[2.9vw] sm:text-sm lg:hidden">
+//       {formatter.format(price)}
+//     </p> */}
+//   </a>
+// </Link>

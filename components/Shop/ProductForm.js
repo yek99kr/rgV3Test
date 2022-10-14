@@ -37,7 +37,7 @@ export default function ProductForm({ product }) {
       id: variant.node.id,
       title: product.title,
       handle: product.handle,
-      image: variant.node.image?.url,
+      image: variant.node.image?.originalSrc,
       options: allOptions,
       variantTitle: variant.node.title,
       variantPrice: variant.node.priceV2.amount,
@@ -101,7 +101,7 @@ export default function ProductForm({ product }) {
   return (
     <div className="flex flex-col w-full lg:w-[38vw] xl:w-[28vw] pl-[5vw] pr-[5vw] pb-4 lg:pb-10 lg:p-4 lg:pt-[14%] text-[2.9vw] sm:text-base mt-10 lg:ml-[3vw] ">
       <h2 className="text-[4vw] pb-0.5 sm:text-2xl">{product.title}</h2>
-      <span className="pb-0 lg:pb-0 ">Real Good X Person</span>
+      <span className="pb-0 lg:pb-0">Real Good X Person</span>
       <span className="pb-4 lg:pb-10">
         {formatter.format(product.variants.edges[0].node.priceV2.amount)}
       </span>
