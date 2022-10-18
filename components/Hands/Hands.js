@@ -13,7 +13,7 @@ const Hands = ({ router }) => {
     "/texture/HandT4.jpg",
   ];
 
-  const hoveredProject = useProject();
+  // const hoveredProject = useProject();
 
   return (
     <div
@@ -36,7 +36,7 @@ const Hands = ({ router }) => {
             scale={[0.85, 0.85, 0.85]}
             mouseP={1}
             textureMap={texture[1]}
-            hoveredProject={hoveredProject}
+            // hoveredProject={hoveredProject}
             router={router}
           />
           <Hand
@@ -46,7 +46,7 @@ const Hands = ({ router }) => {
             scale={[0.85, 0.85, 0.85]}
             mouseP={1}
             textureMap={texture[2]}
-            hoveredProject={hoveredProject}
+            // hoveredProject={hoveredProject}
             router={router}
           />
 
@@ -57,7 +57,7 @@ const Hands = ({ router }) => {
             scale={[0.85, 0.85, 0.85]}
             mouseP={1}
             textureMap={texture[0]}
-            hoveredProject={hoveredProject}
+            // hoveredProject={hoveredProject}
             router={router}
           />
 
@@ -68,7 +68,7 @@ const Hands = ({ router }) => {
             scale={[-0.85, 0.85, 0.85]}
             mouseP={-1}
             textureMap={texture[2]}
-            hoveredProject={hoveredProject}
+            // hoveredProject={hoveredProject}
             router={router}
           />
 
@@ -79,7 +79,7 @@ const Hands = ({ router }) => {
             scale={[-0.85, 0.85, 0.85]}
             mouseP={-1}
             textureMap={texture[0]}
-            hoveredProject={hoveredProject}
+            // hoveredProject={hoveredProject}
             router={router}
           />
           <Hand
@@ -89,7 +89,7 @@ const Hands = ({ router }) => {
             scale={[-0.85, 0.85, 0.85]}
             mouseP={-1}
             textureMap={texture[3]}
-            hoveredProject={hoveredProject}
+            // hoveredProject={hoveredProject}
             router={router}
           />
         </Suspense>

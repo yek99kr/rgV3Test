@@ -1,6 +1,5 @@
 import Image from "next/image";
 import ProductForm from "./ProductForm";
-import { useState } from "react";
 
 import { useKeenSlider } from "keen-slider/react";
 
@@ -47,9 +46,6 @@ export default function ProductPageContent({ product }) {
       perView: 1,
       spacing: 0,
     },
-    created: () => {
-      // sliderRef.destroy();
-    },
   });
 
   const [thumbnailRef] = useKeenSlider(
@@ -64,7 +60,6 @@ export default function ProductPageContent({ product }) {
   );
 
   const slicedArray = product.images.edges.slice(4);
-  // console.log(slicedArray);
 
   return (
     <>
@@ -84,7 +79,6 @@ export default function ProductPageContent({ product }) {
                     <Image
                       src={image.node.originalSrc}
                       alt={image.node.altText}
-                      priority={true}
                       placeholder="blur"
                       blurDataURL={`/_next/image?url=${image.node.originalSrc}&w=16&q=1`}
                       layout="fill"

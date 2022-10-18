@@ -55,9 +55,9 @@ const ProjectDetail = ({ project }) => {
         <img className="w-full" src="/video3.jpg"></img>
       </div>
 
-      {/* <div className="md:col-start-1  relative md:p-0  p-[7%] text-[22px] text-start italic place-self-start w-[50vw] mt-[5vh] mb-[5vh] ml-[5vw]">
-        <p className="text-left">Our Approach</p>
-      </div> */}
+      <div className="md:col-start-1  relative md:p-0  p-[7%] text-[22px] text-start italic place-self-start  mt-[5vh] mb-[5vh] ml-[5vw] bg-white w-[10vw]  rounded">
+        <p className="text-left p-2">Our Approach</p>
+      </div>
 
       <div className="md:col-start-3  relative md:p-0 text-[22px] text-center w-[50vw] mb-[5vh] mt-[5vh] ">
         {/* <h1 className="mb-[0.5em]">Our Approach</h1> */}

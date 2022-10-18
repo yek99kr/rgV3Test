@@ -8,7 +8,6 @@ import useIsTouch from "../utils/useIsTouch";
 export default function Home({ router }) {
   const isSmallWidth = useMediaQueryWidth(750);
   const isSmallerWidth = useMediaQueryWidth(638);
-
   const isSmallHeight = useMediaQueryHeight(639);
   const isSmallestHeight = useMediaQueryHeight(349);
   const isTouch = useIsTouch();

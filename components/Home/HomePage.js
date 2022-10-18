@@ -8,9 +8,6 @@ import useIsTouch from "../../utils/useIsTouch";
 
 const HomePage = ({ router }) => {
   const isSmallerWidth = useMediaQueryWidth(638);
-  // const isSmallestWidth = useMediaQueryWidth(210);
-
-  const isSmallHeight = useMediaQueryHeight(639);
   const isSmallerHeight = useMediaQueryHeight(550);
   const isSmallestHeight = useMediaQueryHeight(349);
   const isTouch = useIsTouch();
@@ -40,7 +37,7 @@ const HomePage = ({ router }) => {
           },
         }}
       >
-        <About router={router} isSmallestHeight={isSmallestHeight} />
+        <About router={router} />
       </motion.div>
 
       {/* {isSmallestHeight || (isSmallestHeight && !isSmallestWidth) ? null : (

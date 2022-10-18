@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { useState } from "react";
 import { CartContext } from "../context/shopContext";
 import MiniCart from "./Shop/MiniCart";
-import { getProductsInCollection } from "../lib/shopify";
+// import { getProductsInCollection } from "../lib/shopify";
 
 const Nav = () => {
   const router = useRouter();
@@ -26,6 +26,7 @@ const Nav = () => {
             <a className="thumbcursor">
               <img
                 src="/logoShort.png"
+                alt="logo"
                 className="w-[12.5vw] sm:w-[3.8rem] md:w-[4.55rem]"
               />
             </a>
@@ -67,7 +68,6 @@ const Nav = () => {
           </a>
 
           <a
-            // href="mailto: hello@realgood.tv"
             onClick={() => {
               navigator.clipboard.writeText("hello@realgood.tv");
               setCopyed(true);
@@ -97,7 +97,7 @@ const Nav = () => {
       </div>
 
       <div
-        className={`flex fixed w-screen justify-center items-center mt-[3.5vw] 2xs:mt-[4rem] xs:mt-[4.5rem] sm:mt-[4.5rem] text-[2.9vw] sm:text-sm md:text-base z-[1000] pointer-events-none ${
+        className={`flex fixed w-screen justify-center items-center mt-[3.5vw] 2xs:mt-[4rem] xs:mt-[4.5rem] sm:mt-[4.5rem] text-[2.9vw] sm:text-sm md:text-base z-[1000] pointer-events-none  ${
           copyed ? "opacity-100" : "opacity-0"
         }`}
         style={{ transition: "opacity 0.8s" }}

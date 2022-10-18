@@ -1,6 +1,13 @@
-import ProductThumbnail from "./ProductThumbnail";
-// "col-start-1", "col-start-3", "col-start-2"
+import useMediaQueryWidth from "../../utils/useMediaQueryWidth";
+import useIsTouch from "../../utils/useIsTouch";
+import ProductThumbnailDesktop from "./ProductThumbnailDesktop";
+import ProductThumbnailMobile from "./ProductThumbnailMobile";
+
 const ProductList = ({ products }) => {
+  const isSmallestHeight = useMediaQueryWidth(768);
+  const isTouch = useIsTouch();
+  const mouseAnimation = isSmallestHeight || isTouch;
+
   const classes = [
     "md:top-[2vw] md:rotate-[10deg] md:col-start-1 ",
     "md:top-[5vw] md:rotate-[-8deg] md:col-start-3",
@@ -18,24 +25,16 @@ const ProductList = ({ products }) => {
               classes[i % classes.length]
             } mb-1 md:mb-20 justify-self-center `}
           >
-            <ProductThumbnail key={product.node.id} product={product} />
+            {!mouseAnimation ? (
+              <ProductThumbnailDesktop
+                key={product.node.id}
+                product={product}
+              />
+            ) : (
+              <ProductThumbnailMobile key={product.node.id} product={product} />
+            )}
           </div>
         ))}
-        {/* <div className="p-[5%]">
-        <StoreThumbnail />
-      </div>
-      <div className="p-[5%]">
-        <StoreThumbnail />
-      </div>
-      <div className="p-[5%] ">
-        <StoreThumbnail />
-      </div>
-      <div className="p-[5%]">
-        <StoreThumbnail />
-      </div>
-      <div className="p-[5%]">
-        <StoreThumbnail />
-      </div> */}
       </div>
     </div>
   );

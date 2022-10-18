@@ -31,15 +31,11 @@ export default function Hand({
   pose,
   mouseP,
   textureMap,
-  hoveredProject,
+  // hoveredProject,
   router,
   ...props
 }) {
   const group = useRef();
-
-  // const { scene } = useGLTF(
-  //   `/hand${hoveredProject === "BMW" ? "withP" : ""}.glb`
-  // );
 
   const { scene } = useGLTF("/hand.glb");
 
@@ -109,4 +105,3 @@ export default function Hand({
 }
 
 useGLTF.preload("/hand.glb");
-// useGLTF.preload("/handwithP.glb");
