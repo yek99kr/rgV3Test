@@ -1,6 +1,6 @@
 import { createClient } from "../../prismicio";
 import { motion } from "framer-motion";
-// import ProjectDetail from "../../components/Project/ProjectDetail";
+import ProjectDetail from "../../components/Project/ProjectDetail";
 
 export async function getStaticProps({ params, locale, previewData }) {
   const client = createClient({ previewData });
@@ -39,7 +39,7 @@ const project = ({ router, project }) => {
       transition={{ duration: 0.5 }}
       className="overflow-hidden"
     >
-      {/* <ProjectDetail project={project} /> */}
+      <ProjectDetail project={project} />
     </motion.div>
   );
 };

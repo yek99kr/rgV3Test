@@ -51,11 +51,11 @@ function MyApp({ Component, pageProps, router }) {
                         <span className="thumbcursor">
                           <span>hello@realgood.tv</span>
 
-                          <img
+                          {/* <img
                             src="email.png"
                             alt="email"
                             className="w-[1.3em] inline m-2 noselect"
-                          />
+                          /> */}
                         </span>
                       </a>
                     </p>

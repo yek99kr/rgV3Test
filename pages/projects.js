@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { createClient } from "../prismicio";
-// import ProjectList from "../components/Project/ProjectList";
+import ProjectList from "../components/Project/ProjectList";
 
 export async function getStaticProps({ params, previewData }) {
   const client = createClient({ previewData });
@@ -28,7 +28,7 @@ const projects = ({ router, projects }) => {
         transition={{ duration: 0.5 }}
         className="overflow-hidden"
       >
-        {/* <ProjectList projects={projects} /> */}
+        <ProjectList projects={projects} />
       </motion.div>
     </>
   );

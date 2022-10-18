@@ -1,4 +1,4 @@
-import Player from "../Player/Player";
+// import Player from "../Player/Player";
 import Image from "next/image";
 
 const ProjectDetail = ({ project }) => {
@@ -18,7 +18,7 @@ const ProjectDetail = ({ project }) => {
       </div>
 
       <div className="col-start-3 md:p-0  w-[90vw] rounded">
-        <Player url="https://vimeo.com/407328691" ratio="video" />
+        {/* <Player url="https://vimeo.com/407328691" ratio="video" /> */}
       </div>
 
       <div className="col-start-3 md:p-0  w-[90vw] rounded">
