@@ -67,7 +67,7 @@ const ProductThumbnailDesktop = ({ product }) => {
                 priority={true}
                 loading="eager"
                 placeholder="blur"
-                blurDataURL={`/_next/image?url=${originalSrc}&w=16&q=1`}
+                blurDataURL={`/_next/image?url=/shop/test/test${moveImg}.webp&w=16&q=1`}
                 layout="fill"
                 objectFit="cover"
               ></Image>
