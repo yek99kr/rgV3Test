@@ -11,15 +11,7 @@ const RecommendThumbnail = ({ product }) => {
   return (
     <Link href={`/shop/${handle}`} passHref scroll={false}>
       <a className="group thumbcursor">
-        <div
-          className="overflow-hidden thumbcursor"
-          onMouseOver={() => {
-            setHovered(true);
-          }}
-          onMouseLeave={() => {
-            setHovered(false);
-          }}
-        >
+        <div className="overflow-hidden thumbcursor">
           <div className="relative sm:ml-0 w-[43vw] h-[43vw] lg:w-[21vw] lg:h-[21vw] select-none">
             <Image
               src={originalSrc}
