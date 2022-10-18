@@ -133,7 +133,7 @@ export default function ProductForm({ product }) {
           Add To Cart
         </button>
       ) : (
-        <button className="rounded-lg px-2 py-3 mt-3 bg-white/60 backdrop-blur-md text-gray-300 cursor-not-allowed lg:w-[25vw] text-[2.9vw] sm:text-base ">
+        <button className="rounded-lg px-2 py-3 mt-3 bg-white/60 backdrop-blur-md text-gray-300 cursor-not-allowed  w-[90vw]  lg:w-[400px] xl:w-[455px]  text-[2.9vw] sm:text-base ">
           Sold out!
         </button>
       )}
