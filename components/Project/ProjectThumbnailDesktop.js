@@ -56,6 +56,8 @@ const ProjectThumbnailDesktop = ({ project }) => {
               alt={project.uid}
               priority={true}
               loading="eager"
+              placeholder="blur"
+              blurDataURL={`/_next/image?url=/shop/test-1/test${moveImg}.webp&w=16&q=1`}
               layout="fill"
               objectFit="cover"
             ></Image>
