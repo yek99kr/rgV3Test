@@ -26,7 +26,7 @@ const ProductThumbnailDesktop = ({ product }) => {
             setHovered(false);
           }}
         >
-          <MouseAnimation image={handle} originalSrc={originalSrc} />
+          <MouseAnimation image={handle} folder={"shop"} />
         </div>
 
         <div

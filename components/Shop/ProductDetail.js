@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ProductForm from "./ProductForm";
+import Link from "next/link";
 
 import { useKeenSlider } from "keen-slider/react";
 
@@ -63,7 +64,7 @@ export default function ProductPageContent({ product }) {
 
   return (
     <>
-      <div className="lg:ml-[5vw] grid grid-cols-1 lg:grid-cols-2 mt-[10vh] lg:mt-[15vh] xl:mt-[8vh]">
+      <div className="lg:ml-[5vw] grid grid-cols-1 lg:grid-cols-2 mt-[16vw] md:mt-[95px]  lg:mt-[120px] xl:mt-[80px]">
         <div className="flex flex-col pl-[5vw] pr-[5vw] lg:ml-[5vw] lg:p-0">
           <div>
             <div
@@ -91,7 +92,7 @@ export default function ProductPageContent({ product }) {
 
             <div
               ref={thumbnailRef}
-              className="keen-slider max-w-[90vw] lg:max-w-[45vw] thumbnail rounded mb-[2vh] lg:mb-[5vh]"
+              className="keen-slider max-w-[90vw] lg:max-w-[45vw] thumbnail rounded mb-[4vw] sm:mb-[20px] lg:mb-[50px]"
             >
               {product.images.edges.map((image, i) => {
                 return (
@@ -117,6 +118,15 @@ export default function ProductPageContent({ product }) {
         current={product.id}
         products={product.collections.edges[0].node.products.edges}
       />
+      <Link href="/shop" passHref scroll={false}>
+        <a>
+          <div className="flex relative w-screen justify-center items-center text-[2.9vw] sm:text-sm md:text-base thumbcursor mb-[2.5rem] md:pb-[1.5rem]">
+            <div className="bg-white/60 backdrop-blur-sm w-[90vw] lg:w-[400px] xl:w-[455px] rounded text-center p-3 ">
+              Back to Shop
+            </div>
+          </div>
+        </a>
+      </Link>
     </>
   );
 }

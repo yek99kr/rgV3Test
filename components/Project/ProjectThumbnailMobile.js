@@ -13,8 +13,8 @@ const ProjectThumbnailMobile = ({ project }) => {
                 // alt={altText}
                 priority={true}
                 loading="eager"
-                // placeholder="blur"
-                // blurDataURL={`/_next/image?url=${originalSrc}&w=16&q=1`}
+                placeholder="blur"
+                blurDataURL={`/_next/image?url=/shop/test-1/test0.webp&w=16&q=1`}
                 layout="fill"
                 objectFit="cover"
               ></Image>

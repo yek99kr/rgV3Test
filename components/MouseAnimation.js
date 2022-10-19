@@ -157,15 +157,15 @@
 
 // export default MouseAnimation;
 
-import { useRef, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 
-const MouseAnimation = ({ originalSrc, image }) => {
+const MouseAnimation = ({ folder, image }) => {
   const [moveImg, setMoveImg] = useState(0);
 
   return (
     <div
-      className="relative w-[80vw] h-[80vw] sm:w-[80vw] sm:h-[80vw] md:w-[26vw] md:h-[26vw] xl:w-[22vw] xl:h-[22vw]"
+      className="relative w-[80vw] h-[80vw] sm:w-[80vw] sm:h-[80vw] md:w-[24vw] md:h-[24vw] xl:w-[21vw] xl:h-[21vw]"
       onMouseMove={(e) => {
         var rect = e.target.getBoundingClientRect();
 
@@ -202,60 +202,60 @@ const MouseAnimation = ({ originalSrc, image }) => {
     >
       <div className={`${moveImg === 0 ? "block" : "hidden"}`}>
         <Image
-          src={`/shop/${image}/test0.webp`}
+          src={`/${folder}/${image}/test0.webp`}
           alt={image}
           priority={true}
           loading="eager"
           placeholder="blur"
-          blurDataURL={`/_next/image?url=/shop/${image}/test0.webp&w=16&q=1`}
+          blurDataURL={`/_next/image?url=/${folder}/${image}/test0.webp&w=16&q=1`}
           layout="fill"
           objectFit="cover"
         />
       </div>
       <div className={`${moveImg === 1 ? "block" : "hidden"}`}>
         <Image
-          src={`/shop/${image}/test1.webp`}
+          src={`/${folder}/${image}/test1.webp`}
           alt={image}
           priority={true}
           loading="eager"
           placeholder="blur"
-          blurDataURL={`/_next/image?url=/shop/${image}/test0.webp&w=16&q=1`}
+          blurDataURL={`/_next/image?url=/${folder}/${image}/test0.webp&w=16&q=1`}
           layout="fill"
           objectFit="cover"
         />
       </div>
       <div className={`${moveImg === 2 ? "block" : "hidden"}`}>
         <Image
-          src={`/shop/${image}/test2.webp`}
+          src={`/${folder}/${image}/test2.webp`}
           alt={image}
           priority={true}
           loading="eager"
           placeholder="blur"
-          blurDataURL={`/_next/image?url=/shop/${image}/test0.webp&w=16&q=1`}
+          blurDataURL={`/_next/image?url=/${folder}/${image}/test0.webp&w=16&q=1`}
           layout="fill"
           objectFit="cover"
         />
       </div>
       <div className={`${moveImg === 3 ? "block" : "hidden"}`}>
         <Image
-          src={`/shop/${image}/test3.webp`}
+          src={`/${folder}/${image}/test3.webp`}
           alt={image}
           priority={true}
           loading="eager"
           placeholder="blur"
-          blurDataURL={`/_next/image?url=/shop/${image}/test0.webp&w=16&q=1`}
+          blurDataURL={`/_next/image?url=/${folder}/${image}/test0.webp&w=16&q=1`}
           layout="fill"
           objectFit="cover"
         />
       </div>
       <div className={`${moveImg === 4 ? "block" : "hidden"}`}>
         <Image
-          src={`/shop/${image}/test4.webp`}
+          src={`/${folder}/${image}/test4.webp`}
           alt={image}
           priority={true}
           loading="eager"
           placeholder="blur"
-          blurDataURL={`/_next/image?url=/shop/${image}/test0.webp&w=16&q=1`}
+          blurDataURL={`/_next/image?url=/${folder}/${image}/test0.webp&w=16&q=1`}
           layout="fill"
           objectFit="cover"
         />

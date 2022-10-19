@@ -1,5 +1,4 @@
 import RecommendThumbnail from "./RecommendThumbnail";
-import Link from "next/link";
 
 const Recommend = ({ products, current }) => {
   const notCurrent = products.filter((product, i) => {
@@ -20,16 +19,6 @@ const Recommend = ({ products, current }) => {
           ))}
         </div>
       </div>
-
-      <Link href="/shop" passHref scroll={false}>
-        <a>
-          <div className="flex relative w-screen justify-center items-center text-[2.9vw] sm:text-sm md:text-base thumbcursor mb-[2.5rem] md:pb-[1.5rem]">
-            <div className="bg-white/60 backdrop-blur-sm w-[90vw] lg:w-[400px] xl:w-[455px] rounded text-center p-3 ">
-              Back to shop
-            </div>
-          </div>
-        </a>
-      </Link>
     </>
   );
 };
