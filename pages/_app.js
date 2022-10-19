@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-import { GoogleAnalytics } from "nextjs-google-analytics";
+// import { GoogleAnalytics } from "nextjs-google-analytics";
 import { AnimatePresence } from "framer-motion";
 import { AppContextProvider } from "../context/AppContext";
 import Nav from "../components/Nav";

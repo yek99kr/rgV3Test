@@ -16,8 +16,6 @@ const ProjectList = ({ projects }) => {
     "md:top-[1vw] md:rotate-[-4deg] md:col-start-4 md:-mr-20 ",
   ];
 
-  // const classes = ["col-start-1", "col-start-3", "col-start-2"];
-
   return (
     <div className="mx-auto py-16 px-5 sm:py-24 sm:px-6 lg:px-0 lg:-mt-[4rem] md:w-[90vw] lg:w-[80vw] xl:w-[75vw] ">
       <div className="grid grid-cols-1 gap-y-0 md:gap-x-1 md:grid-cols-5">

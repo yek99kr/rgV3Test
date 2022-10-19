@@ -59,7 +59,7 @@ export default function ProductPageContent({ product }) {
     [ThumbnailPlugin(instanceRef)]
   );
 
-  const slicedArray = product.images.edges.slice(4);
+  // const slicedArray = product.images.edges.slice(4);
 
   return (
     <>
