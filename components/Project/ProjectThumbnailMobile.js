@@ -9,7 +9,7 @@ const ProjectThumbnailMobile = ({ project }) => {
           <div className="w-full overflow-hidden">
             <div className="relative w-[80vw] h-[80vw]">
               <Image
-                src={`/shop/test/test0.webp`}
+                src={`/shop/test-1/test0.webp`}
                 // alt={altText}
                 priority={true}
                 loading="eager"

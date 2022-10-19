@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 // import { GoogleAnalytics } from "nextjs-google-analytics";
+import Head from "next/head";
 import { AnimatePresence } from "framer-motion";
 import { AppContextProvider } from "../context/AppContext";
 import Nav from "../components/Nav";
@@ -16,6 +17,28 @@ function MyApp({ Component, pageProps, router }) {
 
   return (
     <>
+      <Head>
+        <meta charSet="utf-8" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <title>Real Good Studio</title>
+
+        <link
+          rel="icon"
+          type="image/png"
+          href="/favicon/favicon-32x32.png"
+          sizes="32x32"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          href="/favicon/favicon-16x16.png"
+          sizes="16x16"
+        />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+        />
+      </Head>
       {/* <GoogleAnalytics strategy="lazyOnload" /> */}
       <ShopProvider>
         <PrismicProvider
@@ -51,11 +74,11 @@ function MyApp({ Component, pageProps, router }) {
                         <span className="thumbcursor">
                           <span>hello@realgood.tv</span>
 
-                          {/* <img
-                            src="email.png"
+                          <img
+                            src="/email.png"
                             alt="email"
                             className="w-[1.3em] inline m-2 noselect"
-                          /> */}
+                          />
                         </span>
                       </a>
                     </p>

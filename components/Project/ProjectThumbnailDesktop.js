@@ -21,40 +21,38 @@ const ProjectThumbnailDesktop = ({ project }) => {
           <div
             className="relative w-[80vw] h-[80vw] sm:w-[80vw] sm:h-[80vw] md:w-[26vw] md:h-[26vw] xl:w-[22vw] xl:h-[22vw]"
             onMouseMove={(e) => {
-              var rect = e.target.getBoundingClientRect();
-              var x = e.clientX - rect.left;
-
-              var percent = (rect.width * 20) / 100;
-
-              if (`/shop/test/test1.webp`) {
-                if (moveImg !== 0 && x > 0 && x <= percent) {
-                  setMoveImg(0);
-                } else if (moveImg !== 1 && x > percent && x <= percent * 2) {
-                  setMoveImg(1);
-                } else if (
-                  moveImg !== 2 &&
-                  x > rect.width - percent * 3 &&
-                  x <= rect.width - percent * 2
-                ) {
-                  setMoveImg(2);
-                } else if (
-                  moveImg !== 3 &&
-                  x > rect.width - percent * 2 &&
-                  x <= rect.width - percent
-                ) {
-                  setMoveImg(3);
-                } else if (
-                  moveImg !== 4 &&
-                  x > rect.width - percent &&
-                  x <= rect.width
-                ) {
-                  setMoveImg(4);
-                }
-              }
+              // var rect = e.target.getBoundingClientRect();
+              // var x = e.clientX - rect.left;
+              // var percent = (rect.width * 20) / 100;
+              // if (`/shop/test/test1.webp`) {
+              //   if (moveImg !== 0 && x > 0 && x <= percent) {
+              //     setMoveImg(0);
+              //   } else if (moveImg !== 1 && x > percent && x <= percent * 2) {
+              //     e.currentTarget.src = "/shop/test/test1.webp";
+              //   } else if (
+              //     moveImg !== 2 &&
+              //     x > rect.width - percent * 3 &&
+              //     x <= rect.width - percent * 2
+              //   ) {
+              //     setMoveImg(2);
+              //   } else if (
+              //     moveImg !== 3 &&
+              //     x > rect.width - percent * 2 &&
+              //     x <= rect.width - percent
+              //   ) {
+              //     setMoveImg(3);
+              //   } else if (
+              //     moveImg !== 4 &&
+              //     x > rect.width - percent &&
+              //     x <= rect.width
+              //   ) {
+              //     setMoveImg(4);
+              //   }
+              // }
             }}
           >
             <Image
-              src={`/shop/test/test${moveImg}.webp`}
+              src={`/shop/test-1/test${moveImg}.webp`}
               alt={project.uid}
               priority={true}
               loading="eager"
