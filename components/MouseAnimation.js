@@ -10,9 +10,7 @@ const MouseAnimation = ({ thumbnails }) => {
       className="relative w-[80vw] h-[80vw] sm:w-[80vw] sm:h-[80vw] md:w-[24vw] md:h-[24vw] xl:w-[21vw] xl:h-[21vw]"
       onMouseMove={(e) => {
         var rect = e.target.getBoundingClientRect();
-
         var x = e.clientX - rect.left;
-
         var percent = (rect.width * 20) / 100;
 
         if (thumbnails[1]) {
