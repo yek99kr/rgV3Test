@@ -9,7 +9,6 @@ const ProjectThumbnailDesktop = ({ project }) => {
   const thumbnails = project.data.thumbnails.map((url) => {
     return url.thumbnail.url;
   });
-  // console.log(thumbnails);
 
   return (
     <>
@@ -24,10 +23,7 @@ const ProjectThumbnailDesktop = ({ project }) => {
               setHovered(false);
             }}
           >
-            <div
-              className="relative w-[80vw] h-[80vw] sm:w-[80vw] sm:h-[80vw] md:w-[26vw] md:h-[26vw] xl:w-[22vw] xl:h-[22vw]"
-              onMouseMove={(e) => {}}
-            >
+            <div className="">
               {/* <Image
                 src={thumbnails[0]}
                 //   alt={thumbnails[0]}
@@ -45,13 +41,13 @@ const ProjectThumbnailDesktop = ({ project }) => {
           <div
             className={`opacity-0 ${
               hovered ? "md:opacity-100" : "md:opacity-0"
-            } uppercase`}
+            } `}
             style={{ transition: "opacity 0.2s" }}
           >
-            <h1 className="mt-0.5 center text-center  sm:text-base  m-[-0.1rem]">
+            <h1 className="mt-0.5 text-center  sm:text-base  m-[-0.1rem]">
               {project.data.year}
             </h1>
-            <p className="stroke-cyan-500 text-center sm:text-base  m-[-0.1rem]">
+            <p className="text-center md:text-xl lg:text-2xl m-[-0.1rem]">
               {project.data.client}
             </p>
           </div>

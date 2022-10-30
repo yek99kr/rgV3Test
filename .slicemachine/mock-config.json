@@ -1,5 +1,12 @@
 {
   "_cts": {
     "project": {}
+  },
+  "slices": {
+    "DetailText": {
+      "default": {
+        "primary": {}
+      }
+    }
   }
 }

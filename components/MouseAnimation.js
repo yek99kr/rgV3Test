@@ -7,7 +7,7 @@ const MouseAnimation = ({ thumbnails }) => {
 
   return (
     <div
-      className="relative w-[80vw] h-[80vw] sm:w-[80vw] sm:h-[80vw] md:w-[24vw] md:h-[24vw] xl:w-[21vw] xl:h-[21vw]"
+      className="relative w-[80vw] h-[80vw] sm:w-[80vw] sm:h-[80vw] md:w-[24vw] md:h-[24vw] xl:w-[23vw] xl:h-[23vw]"
       onMouseMove={(e) => {
         var rect = e.target.getBoundingClientRect();
         var x = e.clientX - rect.left;

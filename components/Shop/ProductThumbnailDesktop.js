@@ -38,16 +38,16 @@ const ProductThumbnailDesktop = ({ product }) => {
         <div
           className={`opacity-0 ${
             hovered ? "md:opacity-100" : "md:opacity-0"
-          } uppercase`}
+          } `}
           style={{ transition: "opacity 0.2s" }}
         >
-          <h1 className="mt-0.5 center text-center  sm:text-base  m-[-0.1rem]">
+          <h1 className="mt-0.5 text-center  sm:text-base  m-[-0.1rem]">
             {title}
           </h1>
           <p className="stroke-cyan-500 text-center sm:text-base  m-[-0.1rem]">
             Real Good X Person
           </p>
-          <p className=" text-center m-[-0.2rem] text-[2.9vw] sm:text-2xl">
+          <p className=" text-center m-[-0.2rem] md:text-xl lg:text-2xl">
             {formatter.format(price)}
           </p>
         </div>

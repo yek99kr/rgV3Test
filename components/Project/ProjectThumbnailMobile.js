@@ -25,7 +25,7 @@ const ProjectThumbnailMobile = ({ project }) => {
             {" "}
             {project.data.year}
           </h1>
-          <p className=" text-center  text-[3.5vw] sm:text-xl">
+          <p className=" text-center  text-[4.2vw] sm:text-xl">
             {" "}
             {project.data.client}
           </p>
