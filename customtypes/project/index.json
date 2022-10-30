@@ -19,6 +19,13 @@
           "placeholder": ""
         }
       },
+      "client": {
+        "type": "Text",
+        "config": {
+          "label": "Client",
+          "placeholder": ""
+        }
+      },
       "title": {
         "type": "Text",
         "config": {
@@ -42,17 +49,25 @@
           }
         }
       },
-      "ask": {
-        "type": "Text",
+      "MobileThumbnail": {
+        "type": "Image",
         "config": {
-          "label": "Ask",
+          "label": "Mobile Thumbnail",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "bgColor": {
+        "type": "Color",
+        "config": {
+          "label": "Bg Color",
           "placeholder": ""
         }
       },
-      "approach": {
-        "type": "Text",
+      "textColor": {
+        "type": "Color",
         "config": {
-          "label": "Approach",
+          "label": "Text Color",
           "placeholder": ""
         }
       }

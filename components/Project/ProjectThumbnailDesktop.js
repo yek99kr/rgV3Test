@@ -1,57 +1,62 @@
 import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
+
 import MouseAnimation from "../MouseAnimation";
 
 const ProjectThumbnailDesktop = ({ project }) => {
   const [hovered, setHovered] = useState(false);
 
+  const thumbnails = project.data.thumbnails.map((url) => {
+    return url.thumbnail.url;
+  });
+  // console.log(thumbnails);
+
   return (
     <>
-      {/* <Link href={`/projects/${project.uid}`} passHref scroll={false}> */}
-      <a className="group thumbcursor">
-        <div
-          className="w-full overflow-hidden "
-          onMouseOver={() => {
-            setHovered(true);
-          }}
-          onMouseLeave={() => {
-            setHovered(false);
-          }}
-        >
+      <Link href={`/projects/${project.uid}`} passHref scroll={false}>
+        <a className="group thumbcursor">
           <div
-            className="relative w-[80vw] h-[80vw] sm:w-[80vw] sm:h-[80vw] md:w-[26vw] md:h-[26vw] xl:w-[22vw] xl:h-[22vw]"
-            onMouseMove={(e) => {}}
+            className="w-full overflow-hidden "
+            onMouseOver={() => {
+              setHovered(true);
+            }}
+            onMouseLeave={() => {
+              setHovered(false);
+            }}
           >
-            <MouseAnimation image={"test-1"} folder={"project"} />
-            {/* <Image
-              src={`/shop/test-1/test${moveImg}.webp`}
-              alt={project.uid}
-              priority={true}
-              loading="eager"
-              placeholder="blur"
-              blurDataURL={`/_next/image?url=/shop/test-1/test${moveImg}.webp&w=16&q=1`}
-              layout="fill"
-              objectFit="cover"
-            ></Image> */}
+            <div
+              className="relative w-[80vw] h-[80vw] sm:w-[80vw] sm:h-[80vw] md:w-[26vw] md:h-[26vw] xl:w-[22vw] xl:h-[22vw]"
+              onMouseMove={(e) => {}}
+            >
+              {/* <Image
+                src={thumbnails[0]}
+                //   alt={thumbnails[0]}
+                priority={true}
+                loading="eager"
+                placeholder="blur"
+                blurDataURL={`${thumbnails[0]}&blur=200`}
+                layout="fill"
+                objectFit="cover"
+              /> */}
+              <MouseAnimation thumbnails={thumbnails} />
+            </div>
           </div>
-        </div>
 
-        <div
-          className={`opacity-0 ${
-            hovered ? "md:opacity-100" : "md:opacity-0"
-          } uppercase`}
-          style={{ transition: "opacity 0.2s" }}
-        >
-          <h1 className="mt-0.5 center text-center  sm:text-base  m-[-0.1rem]">
-            Year
-          </h1>
-          <p className="stroke-cyan-500 text-center sm:text-base  m-[-0.1rem]">
-            Title
-          </p>
-        </div>
-      </a>
-      {/* </Link> */}
+          <div
+            className={`opacity-0 ${
+              hovered ? "md:opacity-100" : "md:opacity-0"
+            } uppercase`}
+            style={{ transition: "opacity 0.2s" }}
+          >
+            <h1 className="mt-0.5 center text-center  sm:text-base  m-[-0.1rem]">
+              {project.data.year}
+            </h1>
+            <p className="stroke-cyan-500 text-center sm:text-base  m-[-0.1rem]">
+              {project.data.client}
+            </p>
+          </div>
+        </a>
+      </Link>
     </>
   );
 };

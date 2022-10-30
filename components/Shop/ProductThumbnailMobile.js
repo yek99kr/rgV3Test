@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import LoadImage from "../LoadImage";
 import { formatter } from "../../utils/helpers";
 
 const ProductThumbnailMobile = ({ product }) => {
@@ -12,16 +12,14 @@ const ProductThumbnailMobile = ({ product }) => {
         {
           <div className="w-full overflow-hidden">
             <div className="relative w-[80vw] h-[80vw]">
-              <Image
+              <LoadImage
                 src={`/shop/test-1/test0.webp`}
                 // alt={altText}
                 priority={true}
                 loading="eager"
-                placeholder="blur"
-                blurDataURL={`/_next/image?url=/shop/test-1/test0.webp&w=16&q=1`}
                 layout="fill"
                 objectFit="cover"
-              ></Image>
+              />
             </div>
           </div>
         }

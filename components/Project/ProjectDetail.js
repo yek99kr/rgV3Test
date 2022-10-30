@@ -1,26 +1,32 @@
 // import Player from "../Player/Player";
 import Image from "next/image";
 import Link from "next/link";
+import Vimeo from "@u-wave/react-vimeo";
 
 const ProjectDetail = ({ project }) => {
   return (
-    <>
-      <div className="relative grid place-items-center w-[100vw] grid-cols-2 md:grid-cols-5 gap-y-[2vw] pt-[10vh] ">
-        <div className="md:col-start-3 relative md:p-0  p-[7%] text-[40px] text-center">
-          <h2 className="relative text-[16px] bg-white/50 w-[60px] text-center rounded-full top-[3vh]">
+    <div className={`bg-[${project.bgColor}] text-[${project.textColor}]`}>
+      <div className="relative grid place-items-center w-[100vw] grid-cols-2 md:grid-cols-5 gap-y-[1.1rem] pt-[100px]">
+        <div className="md:col-start-3 relative md:p-0  p-[10%] text-[40px] text-center">
+          <h2 className="relative text-[18px] bg-white/50 w-[70px] text-center rounded top-[15px] text-black">
             {project.data.year}
           </h2>
         </div>
         <div className="md:col-start-3  inline relative md:p-0  p-[7%] text-[40px] text-center w-[100vw]">
-          <h1 className="">{project.data.title}</h1>
+          <h1 className="">{project.data.client}</h1>
 
           <p className="italic relative top-[-0.5vh] text-[25px] ">
-            Year of the Tiger Campaign
+            {project.data.title}
           </p>
         </div>
 
         <div className="col-start-3 md:p-0  w-[90vw] rounded">
-          {/* <Player url="https://vimeo.com/407328691" ratio="video" /> */}
+          <Vimeo
+            // className="w-[50vw] h-[50vw]"
+            ligth="true"
+            video="396630830"
+            autoplay
+          />
         </div>
 
         <div className="col-start-3 md:p-0  w-[90vw] rounded">
@@ -96,16 +102,17 @@ const ProjectDetail = ({ project }) => {
           </p>
         </div>
       </div>
-      <Link href="/projects" passHref scroll={false}>
-        <a>
-          <div className="flex relative w-screen justify-center items-center text-[2.9vw] sm:text-sm md:text-base thumbcursor mb-[2.5rem] md:pb-[1.5rem]">
-            <div className="bg-white/60 backdrop-blur-sm w-[90vw] lg:w-[400px] xl:w-[455px] rounded text-center p-3 ">
+
+      <div className="flex relative w-screen justify-center items-center text-[2.9vw] sm:text-sm md:text-base  pb-[2.5rem] md:pb-[4rem]">
+        <Link href="/projects" passHref scroll={false}>
+          <a>
+            <div className="bg-white/60 backdrop-blur-sm w-[90vw] lg:w-[400px] xl:w-[455px] rounded text-center p-3 thumbcursor text-black">
               Back to Projects
             </div>
-          </div>
-        </a>
-      </Link>
-    </>
+          </a>
+        </Link>
+      </div>
+    </div>
   );
 };
 

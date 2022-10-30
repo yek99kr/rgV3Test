@@ -33,6 +33,11 @@ module.exports = {
     defaultLocale: "en-US",
   },
   images: {
-    domains: ["cdn.shopify.com"],
+    domains: [
+      "cdn.shopify.com",
+      `prismic-templates-website.cdn.prismic.io`,
+      "images.prismic.io",
+      "prismic-io.s3.amazonaws.com",
+    ],
   },
 };

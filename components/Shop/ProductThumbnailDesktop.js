@@ -1,18 +1,24 @@
 import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
 import { formatter } from "../../utils/helpers";
 import MouseAnimation from "../MouseAnimation";
 
 const ProductThumbnailDesktop = ({ product }) => {
-  const [moveImg, setMoveImg] = useState(0);
   const [hovered, setHovered] = useState(false);
 
   const { handle, title } = product.node;
   const price = product.node.priceRange.minVariantPrice.amount;
 
-  const { altText, originalSrc } = product.node.images.edges[moveImg].node;
-  // const originalSrc = `/shop/test/test${moveImg}.webp`;
+  // const { altText, originalSrc } = product.node.images.edges[0].node;
+  const thumbnails = [
+    `/shop/${handle}/test0.webp`,
+    `/shop/${handle}/test1.webp`,
+    `/shop/${handle}/test2.webp`,
+    `/shop/${handle}/test3.webp`,
+    `/shop/${handle}/test4.webp`,
+  ];
+
+  // `/${folder}/${image}/test0.webp`
 
   return (
     <Link href={`/shop/${handle}`} passHref scroll={false}>
@@ -26,7 +32,7 @@ const ProductThumbnailDesktop = ({ product }) => {
             setHovered(false);
           }}
         >
-          <MouseAnimation image={handle} folder={"shop"} />
+          <MouseAnimation thumbnails={thumbnails} />
         </div>
 
         <div

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import LoadImage from "../LoadImage";
 
 const ProjectThumbnailMobile = ({ project }) => {
   return (
@@ -7,26 +7,28 @@ const ProjectThumbnailMobile = ({ project }) => {
       <a className="group thumbcursor">
         {
           <div className="w-full overflow-hidden">
-            <div className="relative w-[80vw] h-[80vw]">
-              <Image
-                src={`/shop/test-1/test0.webp`}
-                // alt={altText}
+            <div className="relative w-[80vw] h-[80vw] mt-10 ">
+              <LoadImage
+                src={project.data.thumbnails[0].thumbnail.url}
+                alt={project.data.thumbnails[0].thumbnail.alt}
                 priority={true}
                 loading="eager"
-                placeholder="blur"
-                blurDataURL={`/_next/image?url=/shop/test-1/test0.webp&w=16&q=1`}
                 layout="fill"
                 objectFit="cover"
-              ></Image>
+              />
             </div>
           </div>
         }
 
-        <div className="block">
-          <h1 className="mt-0.5 center text-center text-[2.9vw] sm:text-xl">
-            Year
+        <div className="block mt-10">
+          <h1 className=" center text-center text-[3vw] sm:text-xl">
+            {" "}
+            {project.data.year}
           </h1>
-          <p className=" text-center  text-[2.9vw] sm:text-xl">Title</p>
+          <p className=" text-center  text-[3.5vw] sm:text-xl">
+            {" "}
+            {project.data.client}
+          </p>
         </div>
       </a>
     </Link>

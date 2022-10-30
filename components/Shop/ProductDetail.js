@@ -1,6 +1,6 @@
-import Image from "next/image";
 import ProductForm from "./ProductForm";
 import Link from "next/link";
+import LoadImage from "../LoadImage";
 
 import { useKeenSlider } from "keen-slider/react";
 
@@ -77,11 +77,9 @@ export default function ProductPageContent({ product }) {
                     key={`number-slide${i}`}
                     className={`keen-slider__slide number-slide${i} w-full h-full `}
                   >
-                    <Image
+                    <LoadImage
                       src={image.node.originalSrc}
                       alt={image.node.altText}
-                      placeholder="blur"
-                      blurDataURL={`/_next/image?url=${image.node.originalSrc}&w=16&q=1`}
                       layout="fill"
                       objectFit="cover"
                     />
@@ -98,11 +96,13 @@ export default function ProductPageContent({ product }) {
                 return (
                   <div
                     key={`number-slide${i}`}
-                    className={`keen-slider__slide number-slide${i} flex justify-center items-center]`}
+                    className={`keen-slider__slide number-slide${i} flex justify-center items-center w-[10vw] h-[10vw] lg:w-[4.5vw] lg:h-[4.5vw]`}
                   >
-                    <img
+                    <LoadImage
                       src={image.node.originalSrc}
                       alt={image.node.altText}
+                      layout="fill"
+                      objectFit="cover"
                       className="thumbcursor"
                     />
                   </div>
@@ -118,15 +118,16 @@ export default function ProductPageContent({ product }) {
         current={product.id}
         products={product.collections.edges[0].node.products.edges}
       />
-      <Link href="/shop" passHref scroll={false}>
-        <a>
-          <div className="flex relative w-screen justify-center items-center text-[2.9vw] sm:text-sm md:text-base thumbcursor mb-[2.5rem] md:pb-[1.5rem]">
-            <div className="bg-white/60 backdrop-blur-sm w-[90vw] lg:w-[400px] xl:w-[455px] rounded text-center p-3 ">
+
+      <div className="flex relative w-screen justify-center items-center text-[2.9vw] sm:text-sm md:text-base pb-[2.5rem] md:pb-[4rem]">
+        <Link href="/shop" passHref scroll={false}>
+          <a>
+            <div className="bg-white/60 backdrop-blur-sm w-[90vw] lg:w-[400px] xl:w-[455px] rounded text-center p-3  thumbcursor">
               Back to Shop
             </div>
-          </div>
-        </a>
-      </Link>
+          </a>
+        </Link>
+      </div>
     </>
   );
 }
