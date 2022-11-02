@@ -1,9 +1,21 @@
 {
   "_cts": {
-    "project": {}
+    "project": {
+      "test3": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    }
   },
   "slices": {
     "DetailText": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "DetailMedia": {
       "default": {
         "primary": {}
       }

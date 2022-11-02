@@ -12,19 +12,19 @@ const ProjectThumbnailDesktop = ({ project }) => {
 
   return (
     <>
-      {/* <Link href={`/projects/${project.uid}`} passHref scroll={false}>
-        <a className="group thumbcursor"> */}
-      <div
-        className="w-full overflow-hidden "
-        onMouseOver={() => {
-          setHovered(true);
-        }}
-        onMouseLeave={() => {
-          setHovered(false);
-        }}
-      >
-        <div className="">
-          {/* <Image
+      <Link href={`/projects/${project.uid}`} passHref scroll={false}>
+        <a className="group thumbcursor">
+          <div
+            className="w-full overflow-hidden "
+            onMouseOver={() => {
+              setHovered(true);
+            }}
+            onMouseLeave={() => {
+              setHovered(false);
+            }}
+          >
+            <div className="">
+              {/* <Image
                 src={thumbnails[0]}
                 //   alt={thumbnails[0]}
                 priority={true}
@@ -34,23 +34,25 @@ const ProjectThumbnailDesktop = ({ project }) => {
                 layout="fill"
                 objectFit="cover"
               /> */}
-          <MouseAnimation thumbnails={thumbnails} />
-        </div>
-      </div>
+              <MouseAnimation thumbnails={thumbnails} />
+            </div>
+          </div>
 
-      <div
-        className={`opacity-0 ${hovered ? "md:opacity-100" : "md:opacity-0"} `}
-        style={{ transition: "opacity 0.2s" }}
-      >
-        <h1 className="mt-0.5 text-center  sm:text-base  m-[-0.1rem]">
-          {project.data.year}
-        </h1>
-        <p className="text-center md:text-xl lg:text-2xl m-[-0.1rem]">
-          {project.data.client}
-        </p>
-      </div>
-      {/* </a>
-      </Link> */}
+          <div
+            className={`opacity-0 ${
+              hovered ? "md:opacity-100" : "md:opacity-0"
+            } `}
+            style={{ transition: "opacity 0.2s" }}
+          >
+            <h1 className="mt-0.5 text-center  sm:text-base  m-[-0.1rem]">
+              {project.data.year}
+            </h1>
+            <p className="text-center md:text-xl lg:text-2xl m-[-0.1rem]">
+              {project.data.client}
+            </p>
+          </div>
+        </a>
+      </Link>
     </>
   );
 };

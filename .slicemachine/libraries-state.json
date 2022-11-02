@@ -1,6 +1,58 @@
 {
   "slices": {
     "components": {
+      "detail_media": {
+        "library": "slices",
+        "id": "detail_media",
+        "name": "DetailMedia",
+        "description": "DetailMedia",
+        "model": {
+          "id": "detail_media",
+          "type": "SharedSlice",
+          "name": "DetailMedia",
+          "description": "DetailMedia",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "DetailMedia",
+              "primary": {
+                "media": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Media",
+                    "placeholder": "",
+                    "select": null
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "detail_media",
+            "items": [],
+            "primary": {
+              "media": {
+                "link_type": "Web",
+                "url": "http://google.com"
+              }
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
       "detail_text": {
         "library": "slices",
         "id": "detail_text",
@@ -29,7 +81,17 @@
                   }
                 }
               },
-              "items": {},
+              "items": {
+                "Credits": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Credits",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                }
+              },
               "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
@@ -39,12 +101,58 @@
             "variation": "default",
             "name": "Default",
             "slice_type": "detail_text",
-            "items": [],
+            "items": [
+              {
+                "Credits": [
+                  {
+                    "type": "paragraph",
+                    "text": "Sint velit irure commodo reprehenderit sit deserunt in non ullamco labore tempor id duis voluptate. Amet laboris do dolore duis ex reprehenderit adipisicing minim.",
+                    "spans": []
+                  }
+                ]
+              },
+              {
+                "Credits": [
+                  {
+                    "type": "paragraph",
+                    "text": "Minim eiusmod fugiat ipsum consectetur ut.",
+                    "spans": []
+                  }
+                ]
+              },
+              {
+                "Credits": [
+                  {
+                    "type": "paragraph",
+                    "text": "Non officia commodo occaecat et incididunt occaecat aliquip Lorem ipsum tempor commodo. Culpa dolore sunt pariatur laborum anim nostrud ullamco dolor. Incididunt occaecat reprehenderit nisi laborum dolore ullamco sint quis voluptate consequat proident adipisicing Lorem id.",
+                    "spans": []
+                  }
+                ]
+              },
+              {
+                "Credits": [
+                  {
+                    "type": "paragraph",
+                    "text": "Aute deserunt in nisi aute nisi duis consectetur proident ipsum culpa nulla. Non in in ipsum irure nostrud excepteur proident laborum ipsum cillum incididunt duis. Ipsum sit reprehenderit nisi nisi elit enim eiusmod.",
+                    "spans": []
+                  }
+                ]
+              },
+              {
+                "Credits": [
+                  {
+                    "type": "paragraph",
+                    "text": "Proident incididunt eu ut nostrud fugiat duis laboris consectetur incididunt duis reprehenderit mollit irure voluptate laborum. Pariatur officia tempor commodo pariatur duis ea reprehenderit eiusmod irure ullamco ad non exercitation labore et.",
+                    "spans": []
+                  }
+                ]
+              }
+            ],
             "primary": {
               "text": [
                 {
                   "type": "paragraph",
-                  "text": "Ex qui fugiat aliqua dolore incididunt adipisicing elit amet cillum id.",
+                  "text": "Non proident fugiat culpa nostrud nostrud cillum eiusmod fugiat irure commodo. Excepteur magna officia ipsum non dolore ut cillum sint consequat veniam quis deserunt ad sit sunt. Excepteur dolor est non incididunt aliquip officia laborum nostrud ea non anim nulla et reprehenderit.",
                   "spans": []
                 }
               ]
