@@ -1,37 +1,22 @@
 {
-  "id": "dfc222a8-6375-4669-aa0d-c04de847519f",
-  "uid": "qui-corporis-eum",
+  "id": "dfcc8134-71e8-4903-8769-76dade533004",
+  "uid": "tenetur-aut-adipisci",
   "type": "project",
   "data": {
-    "year": 7891,
-    "client": "unleash B2B portals",
-    "title": "disintermediate transparent infrastructures",
-    "MobileThumbnail": {
+    "year": 713,
+    "client": "drive vertical e-services",
+    "title": "enhance world-class methodologies",
+    "mobileThumbnail": {
       "dimensions": {
         "width": 900,
         "height": 500
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117?w=900&h=500&fit=crop"
     },
-    "bgColor": "#854aff",
-    "textColor": "#a0bcfd",
-    "test1": {
-      "link_type": "Web",
-      "url": "https://slicemachine.dev"
-    },
-    "test2": {
-      "link_type": "Web",
-      "url": "https://slicemachine.dev"
-    },
-    "test3": [
-      {
-        "type": "paragraph",
-        "text": "Eu excepteur elit labore enim aliquip enim qui aliqua Lorem dolore cupidatat aute incididunt.",
-        "spans": []
-      }
-    ],
+    "bgColor": "#83d1c3",
+    "textColor": "#11b0f6",
     "thumbnails": [
       {
         "thumbnail": {
@@ -41,7 +26,7 @@
           },
           "alt": "Placeholder image",
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a?w=900&h=500&fit=crop"
+          "url": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=900&h=500&fit=crop"
         }
       },
       {
@@ -52,7 +37,7 @@
           },
           "alt": "Placeholder image",
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da?w=900&h=500&fit=crop"
+          "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb?w=900&h=500&fit=crop"
         }
       },
       {
@@ -63,7 +48,7 @@
           },
           "alt": "Placeholder image",
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e?w=900&h=500&fit=crop"
+          "url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab?w=900&h=500&fit=crop"
         }
       },
       {
@@ -74,7 +59,7 @@
           },
           "alt": "Placeholder image",
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482?w=900&h=500&fit=crop"
+          "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=900&h=500&fit=crop"
         }
       },
       {
@@ -85,7 +70,7 @@
           },
           "alt": "Placeholder image",
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&h=500&fit=crop"
+          "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764?w=900&h=500&fit=crop"
         }
       }
     ]

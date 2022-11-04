@@ -1,24 +1,57 @@
 {
   "_cts": {
-    "project": {
-      "test3": {
-        "config": {
-          "patternType": "PARAGRAPH",
-          "blocks": 1
-        }
-      }
-    }
+    "project": {}
   },
   "slices": {
     "DetailText": {
       "default": {
-        "primary": {}
+        "primary": {
+          "text": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        },
+        "items": {}
       }
     },
     "DetailMedia": {
       "default": {
         "primary": {}
       }
-    }
+    },
+    "DetailMainText": {
+      "default": {
+        "primary": {
+          "summary": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "moreInfo": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        },
+        "items": {}
+      },
+      "noReadMore": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "DetailMedia1X1": {
+      "default": {
+        "primary": {}
+      },
+      "2Rows": {
+        "primary": {}
+      }
+    },
+    "DetailMedia9X16": {}
   }
 }

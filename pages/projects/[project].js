@@ -6,10 +6,17 @@ export async function getStaticProps({ params, locale, previewData }) {
   const client = createClient({ previewData });
 
   const project = await client.getByUID("project", params.project);
+  const projects = await client.getAllByType("project", {
+    orderings: {
+      field: "document.first_publication_date",
+      direction: "desc",
+    },
+  });
 
   return {
     props: {
       project,
+      projects,
     },
   };
 }
@@ -29,7 +36,7 @@ export async function getStaticPaths() {
   };
 }
 
-const project = ({ router, project }) => {
+const project = ({ router, project, projects }) => {
   return (
     <motion.div
       key={router.route}
@@ -48,7 +55,7 @@ const project = ({ router, project }) => {
       }}
       className="overflow-hidden"
     >
-      <ProjectDetail project={project} />
+      <ProjectDetail project={project} projects={projects} />
     </motion.div>
   );
 };

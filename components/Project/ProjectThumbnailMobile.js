@@ -9,8 +9,12 @@ const ProjectThumbnailMobile = ({ project }) => {
           <div className="w-full overflow-hidden">
             <div className="relative w-[80vw] h-[80vw] mt-10 ">
               <LoadImage
-                src={project.data.thumbnails[0].thumbnail.url}
-                alt={project.data.thumbnails[0].thumbnail.alt}
+                src={
+                  project.data.mobileThumbnail.url
+                    ? project.data.mobileThumbnail.url
+                    : "/shop/test-1/test0.webp"
+                }
+                alt={project.data.mobileThumbnail.alt}
                 priority={true}
                 loading="eager"
                 layout="fill"

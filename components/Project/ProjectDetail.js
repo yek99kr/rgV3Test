@@ -1,9 +1,31 @@
 import Link from "next/link";
-import Vimeo from "@u-wave/react-vimeo";
 import { SliceZone } from "@prismicio/react";
-import Readmore from "./Readmore";
+import { components } from "../../slices";
+import Image from "next/image";
+// import Vimeo from "@u-wave/react-vimeo";
+// import dynamic from "next/dynamic";
+// const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
-const ProjectDetail = ({ project }) => {
+{
+  /* <ReactPlayer
+url="https://vimeo.com/766239520"
+width="100%"
+height="100%"
+></ReactPlayer> */
+}
+
+const ProjectDetail = ({ project, projects }) => {
+  // console.log(project.uid);
+  // console.log(projects);
+
+  const currentIndex = projects.findIndex((x) => x.uid === project.uid);
+  const previousProject = projects[currentIndex - 1]
+    ? projects[currentIndex - 1].uid
+    : null;
+  const nextProject = projects[currentIndex + 1]
+    ? projects[currentIndex + 1].uid
+    : null;
+
   return (
     <div
       style={{
@@ -26,70 +48,44 @@ const ProjectDetail = ({ project }) => {
           </p>
         </div>
 
-        <SliceZone slices={project.data.slices} />
-
-        <div className="col-start-3 md:p-0 w-[90vw] aspect-video rounded">
-          <Vimeo responsive className="video" ligth="true" video="766239520" />
-        </div>
-
-        <Readmore />
-
-        <div className="col-start-3 md:col-start-1 w-[90vw] md:w-[29vw] relative rounded md:place-self-start md:left-[5vw] aspect-square">
-          {/* <Player url="https://vimeo.com/453616618" ratio="square" /> */}
-
-          <Vimeo responsive className="video" ligth="true" video="766239510" />
-        </div>
-        <div className="col-start-3 w-[90vw] md:w-[29vw] rounded aspect-square">
-          <Vimeo responsive className="video" ligth="true" video="766239510" />
-        </div>
-        <div className="col-start-3 md:col-start-5 w-[90vw] md:w-[29vw] relative rounded md:place-self-end md:right-[5vw] aspect-square">
-          <Vimeo responsive className="video" ligth="true" video="766239510" />
-        </div>
-
-        <div className="col-start-3 relative leading-5 md:leading-7 md:text-[22px] text-center w-[90vw] md:w-[700px] lg:w-[800px] mt-[3.5vw] mb-[3.5vw] md:mt-[40px] md:mb-[40px] lg:mt-[50px] lg:mb-[50px] ">
-          <p className="text-left">
-            This is any text we can put between. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in.
-          </p>
-        </div>
-
-        <div className="col-start-3 md:col-start-1 w-[90vw] md:w-[29vw] relative rounded md:place-self-start md:left-[5vw] aspect-[9/16]">
-          {/* <Player url="https://vimeo.com/453616618" ratio="square" /> */}
-          <Vimeo responsive className="video" ligth="true" video="766239501" />
-        </div>
-        <div className="col-start-3 w-[90vw] md:w-[29vw] rounded  aspect-[9/16]">
-          <Vimeo responsive className="video" ligth="true" video="766239501" />
-        </div>
-        <div className="col-start-3 md:col-start-5 w-[90vw] md:w-[29vw] relative rounded md:place-self-end md:right-[5vw]  aspect-[9/16]">
-          <Vimeo responsive className="video" ligth="true" video="766239501" />
-        </div>
-
-        <div className="col-start-3 relative leading-5 md:leading-7 md:text-[22px] text-center w-[90vw] md:w-[700px] lg:w-[800px] mt-[3.5vw] mb-[3.5vw] md:mt-[40px] md:mb-[40px] lg:mt-[50px] lg:mb-[50px] ">
-          <p className="text-left">
-            This is any text we can put between. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua.
-          </p>
-        </div>
-
-        <div className="col-start-3 md:col-start-1 w-[90vw] md:w-[44vw] relative rounded md:place-self-start md:left-[5vw] aspect-square">
-          {/* <Player url="https://vimeo.com/453616618" ratio="square" /> */}
-
-          <Vimeo responsive className="video" ligth="true" video="766239510" />
-        </div>
-        <div className="col-start-3 md:col-start-5 w-[90vw] md:w-[44vw] relative rounded md:place-self-end md:right-[5vw] aspect-square">
-          <Vimeo responsive className="video" ligth="true" video="766239510" />
-        </div>
+        <SliceZone slices={project.data.slices} components={components} />
       </div>
 
-      <div className="flex relative w-screen justify-center items-center text-[2.9vw] sm:text-sm md:text-base pt-[4rem] pb-[2.5rem] md:pb-[4rem]">
+      <div className="flex relative w-screen justify-between items-center text-[2.9vw] sm:text-sm md:text-base pt-[4rem] pb-[2.5rem] md:pb-[4rem] ">
+        {previousProject ? (
+          <Link href={`/projects/${previousProject}`} passHref scroll={false}>
+            <a>
+              <div
+                className={
+                  "bg-white/60 backdrop-blur-sm w-[90vw] lg:w-[400px] xl:w-[100px] rounded text-center p-3 thumbcursor text-black duration-150 hover:opacity-50 ml-[5vw]"
+                }
+              >
+                Previous
+              </div>
+            </a>
+          </Link>
+        ) : (
+          <div
+            className={
+              "bg-white/60 backdrop-blur-sm w-[90vw] lg:w-[400px] xl:w-[100px] rounded text-center p-3 text-black opacity-50 ml-[5vw] pointer-events-none cursor-not-allowed"
+            }
+          >
+            Previous
+          </div>
+        )}
+
         <Link href="/projects" passHref scroll={false}>
           <a>
-            <div className="bg-white/60 backdrop-blur-sm w-[90vw] lg:w-[400px] xl:w-[455px] rounded text-center p-3 thumbcursor text-black">
+            <div className="bg-white/60 backdrop-blur-sm w-[90vw] lg:w-[400px] xl:w-[455px] rounded text-center p-3 thumbcursor text-black duration-150 hover:opacity-50">
               Back to Projects
+            </div>
+          </a>
+        </Link>
+
+        <Link href={`/projects/${nextProject}`} passHref scroll={false}>
+          <a>
+            <div className="bg-white/60 backdrop-blur-sm w-[90vw] lg:w-[400px] xl:w-[100px] rounded text-center p-3 thumbcursor text-black duration-150 hover:opacity-50 mr-[5vw]">
+              Next
             </div>
           </a>
         </Link>
