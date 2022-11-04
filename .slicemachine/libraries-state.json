@@ -25,7 +25,7 @@
                     "label": "Summary",
                     "placeholder": "",
                     "allowTargetBlank": true,
-                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                    "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
                   }
                 },
                 "moreInfo": {
@@ -116,35 +116,27 @@
             "slice_type": "detail_main_text",
             "items": [
               {
-                "creditTitle": "expedite end-to-end infrastructures",
-                "creditName": "brand front-end channels",
+                "creditTitle": "repurpose transparent vortals",
+                "creditName": "optimize holistic interfaces",
                 "creditLink": {
                   "link_type": "Web",
                   "url": "http://google.com"
                 }
               },
               {
-                "creditTitle": "innovate world-class niches",
-                "creditName": "engineer synergistic vortals",
+                "creditTitle": "utilize magnetic users",
+                "creditName": "maximize integrated communities",
                 "creditLink": {
                   "link_type": "Web",
                   "url": "http://twitter.com"
                 }
               },
               {
-                "creditTitle": "implement turn-key infomediaries",
-                "creditName": "redefine one-to-one deliverables",
+                "creditTitle": "synthesize robust relationships",
+                "creditName": "utilize bleeding-edge bandwidth",
                 "creditLink": {
                   "link_type": "Web",
-                  "url": "https://prismic.io"
-                }
-              },
-              {
-                "creditTitle": "monetize seamless e-markets",
-                "creditName": "monetize dynamic e-business",
-                "creditLink": {
-                  "link_type": "Web",
-                  "url": "https://prismic.io"
+                  "url": "https://slicemachine.dev"
                 }
               }
             ],
@@ -152,14 +144,14 @@
               "summary": [
                 {
                   "type": "paragraph",
-                  "text": "Velit eiusmod adipisicing cillum exercitation qui aute aute veniam duis. Commodo irure dolore consequat laboris consectetur incididunt incididunt labore. Sint duis consectetur exercitation.",
+                  "text": "Fugiat do voluptate est ut id consequat anim irure excepteur. Fugiat deserunt officia cupidatat.",
                   "spans": []
                 }
               ],
               "moreInfo": [
                 {
                   "type": "paragraph",
-                  "text": "Deserunt eu Lorem exercitation magna in adipisicing cillum elit dolore sunt. Enim ipsum ullamco ipsum ipsum irure mollit in irure et laborum nulla minim reprehenderit Lorem cillum. Ad aliquip magna labore id irure exercitation cillum excepteur ipsum sint pariatur magna eiusmod.",
+                  "text": "Lorem cupidatat laborum eu nisi.",
                   "spans": []
                 }
               ]
@@ -171,24 +163,16 @@
             "slice_type": "detail_main_text",
             "items": [
               {
-                "creditTitle": "deliver compelling technologies",
-                "creditName": "iterate leading-edge markets",
+                "creditTitle": "engineer transparent supply-chains",
+                "creditName": "brand viral web-readiness",
                 "creditLink": {
                   "link_type": "Web",
                   "url": "http://google.com"
                 }
               },
               {
-                "creditTitle": "engineer compelling convergence",
-                "creditName": "embrace 24/365 interfaces",
-                "creditLink": {
-                  "link_type": "Web",
-                  "url": "https://slicemachine.dev"
-                }
-              },
-              {
-                "creditTitle": "syndicate vertical web-readiness",
-                "creditName": "incentivize enterprise partnerships",
+                "creditTitle": "morph seamless vortals",
+                "creditName": "orchestrate leading-edge architectures",
                 "creditLink": {
                   "link_type": "Web",
                   "url": "http://google.com"
@@ -199,7 +183,7 @@
               "moreInfo": [
                 {
                   "type": "paragraph",
-                  "text": "Reprehenderit ipsum in eiusmod eu quis. Proident cillum minim reprehenderit minim eu ut ex nisi veniam cillum proident incididunt tempor elit.",
+                  "text": "Mollit cupidatat quis fugiat non nostrud voluptate veniam ex anim pariatur elit laboris pariatur consectetur.",
                   "spans": []
                 }
               ]

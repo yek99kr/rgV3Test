@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        mono: ["Roboto Mono"],
+      },
       screens: {
         // prettier-ignore
         "4xs": {'min': '318px', 'max': '350px'},

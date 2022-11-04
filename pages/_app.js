@@ -21,6 +21,12 @@ function MyApp({ Component, pageProps, router }) {
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <title>Real Good Studio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600&display=swap"
+          rel="stylesheet"
+        />
 
         <link
           rel="icon"
