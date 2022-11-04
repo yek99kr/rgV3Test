@@ -51,13 +51,15 @@ const ProjectDetail = ({ project, projects }) => {
         <SliceZone slices={project.data.slices} components={components} />
       </div>
 
-      <div className="flex relative w-screen justify-between items-center text-[2.9vw] sm:text-sm md:text-base pt-[4rem] pb-[2.5rem] md:pb-[4rem] ">
+      {/* Mobile bottom Buttons */}
+
+      <div className="flex lg:hidden relative w-screen justify-between text-[2.9vw] sm:text-sm md:text-base pt-[2rem]">
         {previousProject ? (
           <Link href={`/projects/${previousProject}`} passHref scroll={false}>
             <a>
               <div
                 className={
-                  "bg-white/60 backdrop-blur-sm w-[90vw] lg:w-[400px] xl:w-[100px] rounded text-center p-3 thumbcursor text-black duration-150 hover:opacity-50 ml-[5vw]"
+                  "bg-white/60 backdrop-blur-sm w-[43vw] rounded text-center p-3 thumbcursor text-black duration-150 hover:opacity-50 ml-[5vw]"
                 }
               >
                 Previous
@@ -67,7 +69,55 @@ const ProjectDetail = ({ project, projects }) => {
         ) : (
           <div
             className={
-              "bg-white/60 backdrop-blur-sm w-[90vw] lg:w-[400px] xl:w-[100px] rounded text-center p-3 text-black opacity-50 ml-[5vw] pointer-events-none cursor-not-allowed"
+              "bg-white/60 backdrop-blur-sm w-[43vw] rounded text-center p-3 text-black opacity-50 ml-[5vw] pointer-events-none cursor-not-allowed"
+            }
+          >
+            Previous
+          </div>
+        )}
+
+        {nextProject ? (
+          <Link href={`/projects/${nextProject}`} passHref scroll={false}>
+            <a>
+              <div
+                className={
+                  "bg-white/60 backdrop-blur-sm w-[43vw] rounded text-center p-3 thumbcursor text-black duration-150 hover:opacity-50 mr-[5vw]"
+                }
+              >
+                Next
+              </div>
+            </a>
+          </Link>
+        ) : (
+          <div
+            className={
+              "bg-white/60 backdrop-blur-sm w-[43vw] rounded text-center p-3 text-black opacity-50 mr-[5vw] pointer-events-none cursor-not-allowed"
+            }
+          >
+            Next
+          </div>
+        )}
+      </div>
+
+      {/* Desktop bottom Buttons */}
+
+      <div className="flex relative w-screen justify-between items-center text-[2.9vw] sm:text-sm md:text-base pt-[1rem] lg:pt-[4rem] pb-[1.5rem] md:pb-[4rem] ">
+        {previousProject ? (
+          <Link href={`/projects/${previousProject}`} passHref scroll={false}>
+            <a>
+              <div
+                className={
+                  "bg-white/60 backdrop-blur-sm w-[90vw] lg:w-[400px] xl:w-[100px] rounded text-center p-3 thumbcursor text-black duration-150 hover:opacity-50 ml-[5vw] hidden lg:block"
+                }
+              >
+                Previous
+              </div>
+            </a>
+          </Link>
+        ) : (
+          <div
+            className={
+              "bg-white/60 backdrop-blur-sm w-[90vw] lg:w-[400px] xl:w-[100px] rounded text-center p-3 text-black opacity-50 ml-[5vw] pointer-events-none cursor-not-allowed hidden lg:block"
             }
           >
             Previous
@@ -82,13 +132,27 @@ const ProjectDetail = ({ project, projects }) => {
           </a>
         </Link>
 
-        <Link href={`/projects/${nextProject}`} passHref scroll={false}>
-          <a>
-            <div className="bg-white/60 backdrop-blur-sm w-[90vw] lg:w-[400px] xl:w-[100px] rounded text-center p-3 thumbcursor text-black duration-150 hover:opacity-50 mr-[5vw]">
-              Next
-            </div>
-          </a>
-        </Link>
+        {nextProject ? (
+          <Link href={`/projects/${nextProject}`} passHref scroll={false}>
+            <a>
+              <div
+                className={
+                  "bg-white/60 backdrop-blur-sm lg:w-[400px] xl:w-[100px] rounded text-center p-3 thumbcursor text-black duration-150 hover:opacity-50 mr-[5vw] hidden lg:block"
+                }
+              >
+                Next
+              </div>
+            </a>
+          </Link>
+        ) : (
+          <div
+            className={
+              "bg-white/60 backdrop-blur-sm lg:w-[400px] xl:w-[100px] rounded text-center p-3 text-black opacity-50 mr-[5vw] pointer-events-none cursor-not-allowed hidden lg:block"
+            }
+          >
+            Next
+          </div>
+        )}
       </div>
     </div>
   );
