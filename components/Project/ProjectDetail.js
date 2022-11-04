@@ -62,7 +62,7 @@ const ProjectDetail = ({ project, projects }) => {
           </>
         ) : (
           <>
-            <div className="col-start-3 relative text-center w-[100vw] md:top-[300px] lg:top-[380px] xl:top-[510px] z-[100]">
+            <div className="col-start-3 relative text-center w-[100vw] top-[34vw] xl:top-[31vw] z-[100]">
               <h1 className="text-[6.5vw] sm:text-[40px] lg:text-[55px] xl:text-[60px]">
                 <span className="text-white bg-black"> BMW</span>
               </h1>
