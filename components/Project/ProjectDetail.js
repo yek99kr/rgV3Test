@@ -77,9 +77,9 @@ const ProjectDetail = ({ project, projects }) => {
         )}
 
         <SliceZone slices={project.data.slices} components={components} />
+        {/* <MultiPlayer />
         <MultiPlayer />
-        <MultiPlayer />
-        <MultiPlayer />
+        <MultiPlayer /> */}
 
         {project.uid === "cash-app" && <ReadmoreCredit />}
         {project.uid === "bmw" && <Credit />}
