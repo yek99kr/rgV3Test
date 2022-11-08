@@ -4,7 +4,6 @@ import { components } from "../../slices";
 import ReadmoreCredit from "./ReadmoreCredit";
 import Credit from "./Credit";
 import MultiPlayer from "./MultiPlayer";
-import MultiPlayer2 from "./MultiPlayer2";
 // import Vimeo from "@u-wave/react-vimeo";
 // import dynamic from "next/dynamic";
 // const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
@@ -43,11 +42,6 @@ const ProjectDetail = ({ project, projects }) => {
       >
         {project.uid !== "cash-app" ? (
           <>
-            <div className="col-start-3 relative md:p-0 text-center">
-              <h2 className="relative  bg-white/50  text-[2.5vw] sm:text-[17px] w-[9vw] md:w-[60px] text-center rounded top-[3vw] sm:top-[15px] text-black">
-                {project.data.year}
-              </h2>
-            </div>
             <div className="col-start-3 relative text-center w-[100vw]">
               <h1 className="text-[6.5vw] sm:text-[50px]">
                 {/* <span className="text-white bg-black"> */}{" "}

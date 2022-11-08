@@ -10,8 +10,10 @@ const DetailMedia = ({ slice }) => {
           <div className="col-start-3 md:p-0 w-[90vw] aspect-video">
             <iframe
               className="w-[100%] h-[100%]"
-              src={`${slice.primary.media.url.slice(6)}&loop=1${
-                slice.primary.autoplay && "&autoplay=1&muted=1&controls=0"
+              src={`${slice.primary.media.url.slice(
+                6
+              )}&loop=1&autoplay=1&muted=1${
+                slice.primary.autoplay && "&controls=0"
               }`}
               allowFullScreen
               frameBorder="0"

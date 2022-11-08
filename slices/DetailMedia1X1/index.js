@@ -13,8 +13,10 @@ const DetailMedia1X1 = ({ slice }) => {
               <div className="col-start-3 md:col-start-1 w-[90vw] md:w-[29vw] relative rounded md:place-self-start md:left-[5vw] aspect-square">
                 <iframe
                   className="w-[100%] h-[100%]"
-                  src={`${slice.primary.media1.url.slice(6)}&loop=1${
-                    slice.primary.autoplay1 && "&autoplay=1&muted=1&controls=0"
+                  src={`${slice.primary.media1.url.slice(
+                    6
+                  )}&loop=1&autoplay=1&muted=1${
+                    slice.primary.autoplay1 && "controls=0"
                   }`}
                   allowFullScreen
                 ></iframe>
@@ -40,8 +42,10 @@ const DetailMedia1X1 = ({ slice }) => {
               <div className="col-start-3 w-[90vw] md:w-[29vw] rounded aspect-square">
                 <iframe
                   className="w-[100%] h-[100%]"
-                  src={`${slice.primary.media2.url.slice(6)}&loop=1${
-                    slice.primary.autoplay2 && "&autoplay=1&muted=1&controls=0"
+                  src={`${slice.primary.media2.url.slice(
+                    6
+                  )}&loop=1&autoplay=1&muted=1${
+                    slice.primary.autoplay2 && "&controls=0"
                   }`}
                   allowFullScreen
                 ></iframe>
@@ -67,8 +71,10 @@ const DetailMedia1X1 = ({ slice }) => {
               <div className="col-start-3 md:col-start-5 w-[90vw] md:w-[29vw] relative rounded md:place-self-end md:right-[5vw] aspect-square">
                 <iframe
                   className="w-[100%] h-[100%]"
-                  src={`${slice.primary.media3.url.slice(6)}&loop=1${
-                    slice.primary.autoplay3 && "&autoplay=1&muted=1&controls=0"
+                  src={`${slice.primary.media3.url.slice(
+                    6
+                  )}&loop=1&autoplay=1&muted=1${
+                    slice.primary.autoplay3 && "controls=0"
                   }`}
                   allowFullScreen
                 ></iframe>
@@ -96,8 +102,10 @@ const DetailMedia1X1 = ({ slice }) => {
               <div className="col-start-3 md:col-start-1 w-[90vw] md:w-[44vw] relative rounded md:place-self-start md:left-[5vw] aspect-square">
                 <iframe
                   className="w-[100%] h-[100%]"
-                  src={`${slice.primary.media1.url.slice(6)}&loop=1${
-                    slice.primary.autoplay1 && "&autoplay=1&muted=1&controls=0"
+                  src={`${slice.primary.media1.url.slice(
+                    6
+                  )}&loop=1&autoplay=1&muted=1${
+                    slice.primary.autoplay1 && "&controls=0"
                   }`}
                   allowFullScreen
                 ></iframe>
@@ -123,8 +131,10 @@ const DetailMedia1X1 = ({ slice }) => {
               <div className="col-start-3 md:col-start-5 w-[90vw] md:w-[44vw] relative rounded md:place-self-end md:right-[5vw] aspect-square">
                 <iframe
                   className="w-[100%] h-[100%]"
-                  src={`${slice.primary.media2.url.slice(6)}&loop=1${
-                    slice.primary.autoplay2 && "&autoplay=1&muted=1&controls=0"
+                  src={`${slice.primary.media2.url.slice(
+                    6
+                  )}&loop=1&autoplay=1&muted=1${
+                    slice.primary.autoplay2 && "&controls=0"
                   }`}
                   allowFullScreen
                 ></iframe>
