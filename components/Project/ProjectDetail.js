@@ -3,6 +3,8 @@ import { SliceZone } from "@prismicio/react";
 import { components } from "../../slices";
 import ReadmoreCredit from "./ReadmoreCredit";
 import Credit from "./Credit";
+import MultiPlayer from "./MultiPlayer";
+import MultiPlayer2 from "./MultiPlayer2";
 // import Vimeo from "@u-wave/react-vimeo";
 // import dynamic from "next/dynamic";
 // const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
@@ -75,6 +77,9 @@ const ProjectDetail = ({ project, projects }) => {
         )}
 
         <SliceZone slices={project.data.slices} components={components} />
+        <MultiPlayer />
+        <MultiPlayer />
+        <MultiPlayer />
 
         {project.uid === "cash-app" && <ReadmoreCredit />}
         {project.uid === "bmw" && <Credit />}
