@@ -68,6 +68,9 @@
     "DetailMediaMix": {
       "default": {
         "primary": {}
+      },
+      "11Filter": {
+        "primary": {}
       }
     }
   }
