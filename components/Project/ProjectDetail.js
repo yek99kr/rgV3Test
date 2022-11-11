@@ -2,7 +2,6 @@ import Link from "next/link";
 import { SliceZone } from "@prismicio/react";
 import { components } from "../../slices";
 import Player from "../Player/Player";
-import Image from "next/image";
 import ProjectBtn from "./ProjectBtn";
 
 const ProjectDetail = ({ project, projects }) => {
@@ -17,7 +16,7 @@ const ProjectDetail = ({ project, projects }) => {
         className="relative grid justify-items-center w-[100vw] grid-cols-5 gap-y-[5.6vw] md:gap-y-[2rem]
         "
       >
-        <div className="col-start-3 relative text-center w-[100vw] top-[38vw] sm:top-[36vw] lg:top-[33vw] xl:top-[31vw] z-[100]">
+        <div className="col-start-3 relative text-center w-[70vw] h-[11vw] lg:h-[5vw] top-[35vw] sm:top-[35vw] md:top-[34vw] lg:top-[26vw] xl:top-[28vw] z-[100]">
           <h1 className="text-[6.5vw] sm:text-[40px] lg:text-[55px] xl:text-[60px]">
             <span className="text-white bg-black">{project.data.client}</span>
           </h1>
@@ -26,6 +25,15 @@ const ProjectDetail = ({ project, projects }) => {
             <span className="text-white bg-black">{project.data.title}</span>
           </p>
         </div>
+        {/* <div className="col-start-3 relative text-center w-[100vw] top-[38vw] sm:top-[36vw] lg:top-[33vw] xl:top-[31vw] z-[100]">
+          <h1 className="text-[6.5vw] sm:text-[40px] lg:text-[55px] xl:text-[60px]">
+            <span className="text-white bg-black">{project.data.client}</span>
+          </h1>
+
+          <p className="title relative top-[-8px] text-[4vw] sm:text-[25px] lg:text-[28px] mb-[2vw] md:mb-[30px] font-mono">
+            <span className="text-white bg-black">{project.data.title}</span>
+          </p>
+        </div> */}
 
         <SliceZone slices={project.data.slices} components={components} />
       </div>

@@ -11,7 +11,7 @@ const ProjectBtn = ({ project, projects }) => {
   return (
     <>
       {/* Mobile bottom Buttons */}
-      <div className="flex lg:hidden relative w-screen justify-between text-[2.9vw] sm:text-sm md:text-base pt-[10vw]">
+      <div className="flex lg:hidden relative w-screen justify-between text-[2.9vw] sm:text-sm md:text-base pt-[9vw]">
         {previousProject ? (
           <Link href={`/projects/${previousProject}`} passHref scroll={false}>
             <a>
@@ -57,7 +57,7 @@ const ProjectBtn = ({ project, projects }) => {
         )}
       </div>
       {/* Desktop bottom Buttons */}
-      <div className="flex relative w-screen justify-between items-center text-[2.9vw] sm:text-sm md:text-base pt-[3.5vw] lg:pt-[6rem] pb-[6vw] md:pb-[4rem] ">
+      <div className="flex relative w-screen justify-between items-center text-[2.9vw] sm:text-sm md:text-base pt-[3.3vw] sm:pt-[2vw] lg:pt-[6rem] pb-[6vw] md:pb-[4rem] ">
         {previousProject ? (
           <Link href={`/projects/${previousProject}`} passHref scroll={false}>
             <a>

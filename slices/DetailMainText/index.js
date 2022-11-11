@@ -1,4 +1,3 @@
-import { RichText } from "prismic-reactjs";
 import { useState } from "react";
 
 const DetailMainText = ({ slice }) => {
@@ -7,7 +6,10 @@ const DetailMainText = ({ slice }) => {
   return (
     <>
       {slice.variation !== "noReadMore" ? (
-        <div className="text col-start-3 relative leading-[4.2vw] md:leading-7 text-[3.5vw] md:text-[22px] text-left w-[90vw] mt-[2vw] mb-[2vw] md:mt-[40px] md:mb-[40px] lg:mt-[50px] lg:mb-[50px]">
+        <div className="text col-start-3 relative leading-[4.2vw] sm:leading-7 text-[3.5vw] sm:text-[22px] text-left w-[90vw] mt-[0vw] mb-[1vw] md:mt-[40px] md:mb-[40px] lg:mt-[50px] lg:mb-[50px]">
+          <div className="block md:hidden w-[90%] text-[3.5vw] sm:text-[22px] mb-5 font-mono">
+            {slice.primary.title ? slice.primary.title : "Objective + Approach"}
+          </div>
           <div className="flex w-[100%] justify-between">
             <div className="hidden md:block w-[23%] md:text-[1.3rem] lg:text-[1.4rem] font-mono">
               {slice.primary.title
@@ -44,7 +46,10 @@ const DetailMainText = ({ slice }) => {
           </div>
         </div>
       ) : (
-        <div className="text col-start-3 relative leading-[4.2vw] md:leading-7 text-[3.5vw] md:text-[22px] text-left w-[90vw] mt-[2vw] mb-[2vw] md:mt-[40px] md:mb-[40px] lg:mt-[50px] lg:mb-[50px]">
+        <div className="text col-start-3 relative leading-[4.2vw] sm:leading-7 text-[3.5vw] sm:text-[22px] text-left w-[90vw] mt-[0vw] mb-[1vw] md:mt-[40px] md:mb-[40px] lg:mt-[50px] lg:mb-[50px]">
+          <div className="block md:hidden w-[90%] text-[3.5vw] sm:text-[22px] mb-5 font-mono">
+            {slice.primary.title ? slice.primary.title : "Objective + Approach"}
+          </div>
           <div className="flex w-[100%] justify-between">
             <div className="hidden md:block  w-[23%] text-[1rem] md:text-[1.3rem] lg:text-[1.4rem] font-mono">
               {slice.primary.title
@@ -91,7 +96,7 @@ export default DetailMainText;
 //   });
 // });
 
-// <div className="text col-start-3 relative leading-5 md:leading-7 md:text-[22px] text-left w-[90vw] mt-[3.5vw] mb-[3.5vw] md:mt-[40px] md:mb-[40px] lg:mt-[50px] lg:mb-[50px]">
+// <div className="text col-start-3 relative leading-5 sm:leading-7 md:text-[22px] text-left w-[90vw] mt-[3.5vw] mb-[3.5vw] md:mt-[40px] md:mb-[40px] lg:mt-[50px] lg:mb-[50px]">
 //         <div className="flex w-[100%] justify-between">
 //           <div className="hidden sm:block text-2xl md:text-3xl">Credit</div>
 

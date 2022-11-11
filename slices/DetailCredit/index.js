@@ -19,7 +19,7 @@ const DetailCredit = ({ slice }) => {
   return (
     <>
       {slice.variation !== "noReadMore" ? (
-        <div className="text col-start-3 relative leading-[4.6vw] md:leading-7 text-[3.5vw] sm:text-[18px] text-left w-[90vw] mt-[1vw] mb-[1vw] md:mt-[25px] md:mb-[0px] ">
+        <div className="text col-start-3 relative leading-[4.6vw] sm:leading-7 text-[3.5vw] sm:text-[18px] text-left w-[90vw] mt-[1vw] mb-[1vw] md:mt-[25px] md:mb-[0px] ">
           <div className="flex w-[100%] justify-between">
             <div className="hidden md:block w-[22%] md:text-[1.3rem] lg:text-[1.4rem] font-mono">
               Credit
@@ -83,7 +83,7 @@ const DetailCredit = ({ slice }) => {
           </div>
         </div>
       ) : (
-        <div className="text col-start-3 relative leading-[4.6vw] md:leading-7 text-[3.5vw] sm:text-[18px] text-left w-[90vw] mt-[1vw] mb-[1vw] md:mt-[25px] md:mb-[0px] ">
+        <div className="text col-start-3 relative leading-[4.6vw] sm:leading-7 text-[3.5vw] sm:text-[18px] text-left w-[90vw] mt-[1vw] mb-[1vw] md:mt-[25px] md:mb-[0px] ">
           <div className="flex w-[100%] justify-between">
             <div className="hidden md:block text-[1rem] md:text-[1.3rem] lg:text-[1.4rem] font-mono">
               Credit
