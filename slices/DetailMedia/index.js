@@ -13,7 +13,7 @@ const DetailMedia = ({ slice }) => {
               src={`${slice.primary.media.url.slice(
                 6
               )}&loop=1&autoplay=1&muted=1${
-                slice.primary.autoplay && "&controls=0"
+                slice.primary.controls === false ? "&controls=0" : ""
               }`}
               allowFullScreen
               frameBorder="0"

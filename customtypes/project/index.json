@@ -12,13 +12,6 @@
           "placeholder": ""
         }
       },
-      "year": {
-        "type": "Number",
-        "config": {
-          "label": "Year",
-          "placeholder": ""
-        }
-      },
       "client": {
         "type": "Text",
         "config": {
@@ -86,6 +79,15 @@
               "type": "SharedSlice"
             },
             "detail_media1_x1": {
+              "type": "SharedSlice"
+            },
+            "detail_credit": {
+              "type": "SharedSlice"
+            },
+            "detail_media9_x16": {
+              "type": "SharedSlice"
+            },
+            "detail_media_mix": {
               "type": "SharedSlice"
             }
           }

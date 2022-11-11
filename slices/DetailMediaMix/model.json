@@ -1,0 +1,164 @@
+{
+  "id": "detail_media_mix",
+  "type": "SharedSlice",
+  "name": "DetailMediaMix",
+  "description": "DetailMediaMix",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "DetailMediaMix",
+      "primary": {
+        "media1": {
+          "type": "Link",
+          "config": {
+            "label": "Media1",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "media1Controls": {
+          "type": "Boolean",
+          "config": {
+            "label": "Media1 Controls",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": true
+          }
+        },
+        "media1Width": {
+          "type": "Number",
+          "config": {
+            "label": "Media1 Width",
+            "placeholder": ""
+          }
+        },
+        "media2": {
+          "type": "Link",
+          "config": {
+            "label": "Media2",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "media2Controls": {
+          "type": "Boolean",
+          "config": {
+            "label": "Media2 Controls",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": true
+          }
+        },
+        "media2Width": {
+          "type": "Number",
+          "config": {
+            "label": "Media2 Width",
+            "placeholder": ""
+          }
+        },
+        "media2LeftMargin": {
+          "type": "Number",
+          "config": {
+            "label": "Media2 Left Margin",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    },
+    {
+      "id": "3411",
+      "name": "3/4 + 1/1",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "DetailMediaMix",
+      "primary": {
+        "media1": {
+          "type": "Link",
+          "config": {
+            "label": "Media1",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "media1Controls": {
+          "type": "Boolean",
+          "config": {
+            "label": "Media1 Controls",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": true
+          }
+        },
+        "media2": {
+          "type": "Link",
+          "config": {
+            "label": "Media2",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "media2Controls": {
+          "type": "Boolean",
+          "config": {
+            "label": "Media2 Controls",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": true
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    },
+    {
+      "id": "4545",
+      "name": "4/5 + 4/5",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "DetailMediaMix",
+      "primary": {
+        "media1": {
+          "type": "Link",
+          "config": {
+            "label": "Media1",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "media1Controls": {
+          "type": "Boolean",
+          "config": {
+            "label": "Media1 Controls",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": true
+          }
+        },
+        "media2": {
+          "type": "Link",
+          "config": {
+            "label": "Media2",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "media2Controls": {
+          "type": "Boolean",
+          "config": {
+            "label": "Media2 Controls",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": true
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

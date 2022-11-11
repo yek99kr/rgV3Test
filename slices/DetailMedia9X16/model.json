@@ -11,20 +11,100 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "DetailMedia9X16",
       "primary": {
-        "title": {
-          "type": "StructuredText",
+        "media1": {
+          "type": "Link",
           "config": {
-            "single": "heading1",
-            "label": "Title",
-            "placeholder": "This is where it all begins..."
+            "label": "Media1",
+            "placeholder": "",
+            "select": null
           }
         },
-        "description": {
-          "type": "StructuredText",
+        "media1controls": {
+          "type": "Boolean",
           "config": {
-            "single": "paragraph",
-            "label": "Description",
-            "placeholder": "A nice description of your feature"
+            "label": "Media1 Controls",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": true
+          }
+        },
+        "media2": {
+          "type": "Link",
+          "config": {
+            "label": "Media2",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "media2Controls": {
+          "type": "Boolean",
+          "config": {
+            "label": "Media2 Controls",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": true
+          }
+        },
+        "media3": {
+          "type": "Link",
+          "config": {
+            "label": "Media3",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "media3Controls": {
+          "type": "Boolean",
+          "config": {
+            "label": "Media3 Controls",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": true
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    },
+    {
+      "id": "2Rows",
+      "name": "2Rows",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "DetailMedia9X16",
+      "primary": {
+        "media1": {
+          "type": "Link",
+          "config": {
+            "label": "Media1",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "media1controls": {
+          "type": "Boolean",
+          "config": {
+            "label": "Media1 Controls",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": true
+          }
+        },
+        "media2": {
+          "type": "Link",
+          "config": {
+            "label": "Media2",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "media2Controls": {
+          "type": "Boolean",
+          "config": {
+            "label": "Media2 Controls",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": true
           }
         }
       },

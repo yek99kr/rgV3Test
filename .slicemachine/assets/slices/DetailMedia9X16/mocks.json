@@ -5,20 +5,39 @@
     "slice_type": "detail_media9_x16",
     "items": [],
     "primary": {
-      "title": [
-        {
-          "type": "heading1",
-          "text": "Transition 24/7 communities",
-          "spans": []
-        }
-      ],
-      "description": [
-        {
-          "type": "paragraph",
-          "text": "Est est pariatur fugiat velit excepteur. Non est fugiat consequat voluptate est esse adipisicing laborum.",
-          "spans": []
-        }
-      ]
+      "media1": {
+        "link_type": "Web",
+        "url": "https://slicemachine.dev"
+      },
+      "media1controls": true,
+      "media2": {
+        "link_type": "Web",
+        "url": "https://prismic.io"
+      },
+      "media2Controls": true,
+      "media3": {
+        "link_type": "Web",
+        "url": "http://twitter.com"
+      },
+      "media3Controls": true
+    }
+  },
+  {
+    "variation": "2Rows",
+    "name": "2Rows",
+    "slice_type": "detail_media9_x16",
+    "items": [],
+    "primary": {
+      "media1": {
+        "link_type": "Web",
+        "url": "https://prismic.io"
+      },
+      "media1controls": false,
+      "media2": {
+        "link_type": "Web",
+        "url": "http://google.com"
+      },
+      "media2Controls": false
     }
   }
 ]

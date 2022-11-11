@@ -1,33 +1,11 @@
 import Link from "next/link";
 import { SliceZone } from "@prismicio/react";
 import { components } from "../../slices";
-import ReadmoreCredit from "./ReadmoreCredit";
-import Credit from "./Credit";
-import MultiPlayer from "./MultiPlayer";
-// import Vimeo from "@u-wave/react-vimeo";
-// import dynamic from "next/dynamic";
-// const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
-
-{
-  /* <ReactPlayer
-url="https://vimeo.com/766239520"
-width="100%"
-height="100%"
-></ReactPlayer> */
-}
+import Player from "../Player/Player";
+import Image from "next/image";
+import ProjectBtn from "./ProjectBtn";
 
 const ProjectDetail = ({ project, projects }) => {
-  // console.log(project.uid);
-  // console.log(projects);
-
-  const currentIndex = projects.findIndex((x) => x.uid === project.uid);
-  const previousProject = projects[currentIndex - 1]
-    ? projects[currentIndex - 1].uid
-    : null;
-  const nextProject = projects[currentIndex + 1]
-    ? projects[currentIndex + 1].uid
-    : null;
-
   return (
     <div
       style={{
@@ -36,154 +14,89 @@ const ProjectDetail = ({ project, projects }) => {
       }}
     >
       <div
-        className={`relative grid justify-items-center w-[100vw] grid-cols-5 gap-y-[1rem] pt-[15vw] sm:pt-[70px] md:pt-[80px] ${
-          project.uid === "cash-app" && "top-[-50px] md:pt-0 md:mt-0 "
-        }`}
+        className="relative grid justify-items-center w-[100vw] grid-cols-5 gap-y-[5.6vw] md:gap-y-[2rem]
+        "
       >
-        {project.uid !== "cash-app" ? (
-          <>
-            <div className="col-start-3 relative text-center w-[100vw]">
-              <h1 className="text-[6.5vw] sm:text-[50px]">
-                {/* <span className="text-white bg-black"> */}{" "}
-                {project.data.client}
-                {/* </span> */}
-              </h1>
+        <div className="col-start-3 relative text-center w-[100vw] top-[38vw] sm:top-[36vw] lg:top-[33vw] xl:top-[31vw] z-[100]">
+          <h1 className="text-[6.5vw] sm:text-[40px] lg:text-[55px] xl:text-[60px]">
+            <span className="text-white bg-black">{project.data.client}</span>
+          </h1>
 
-              <p className="title font-mono relative top-[-8px] text-[4vw] sm:text-[25px] mb-[2vw] md:mb-[30px] ">
-                {/* <span className="text-white bg-black"> */}
-                {project.data.title}
-                {/* </span> */}
-              </p>
-            </div>
-          </>
-        ) : (
-          <>
-            <div className="col-start-3 relative text-center w-[100vw] top-[34vw] xl:top-[31vw] z-[100]">
-              <h1 className="text-[6.5vw] sm:text-[40px] lg:text-[55px] xl:text-[60px]">
-                <span className="text-white bg-black"> BMW</span>
-              </h1>
-
-              <p className="title relative top-[-8px] text-[4vw] sm:text-[25px] lg:text-[28px] mb-[2vw] md:mb-[30px]  font-mono">
-                <span className="text-white bg-black">Year of the Tiger</span>
-              </p>
-            </div>
-          </>
-        )}
+          <p className="title relative top-[-8px] text-[4vw] sm:text-[25px] lg:text-[28px] mb-[2vw] md:mb-[30px] font-mono">
+            <span className="text-white bg-black">{project.data.title}</span>
+          </p>
+        </div>
 
         <SliceZone slices={project.data.slices} components={components} />
-        {/* <MultiPlayer />
-        <MultiPlayer />
-        <MultiPlayer /> */}
-
-        {project.uid === "cash-app" && <ReadmoreCredit />}
-        {project.uid === "bmw" && <Credit />}
       </div>
 
-      {/* Mobile bottom Buttons */}
-
-      <div className="flex lg:hidden relative w-screen justify-between text-[2.9vw] sm:text-sm md:text-base pt-[2rem]">
-        {previousProject ? (
-          <Link href={`/projects/${previousProject}`} passHref scroll={false}>
-            <a>
-              <div
-                className={
-                  "bg-white/60 backdrop-blur-sm w-[43vw] rounded text-center p-3 thumbcursor text-black duration-150 hover:opacity-50 ml-[5vw]"
-                }
-              >
-                Previous
-              </div>
-            </a>
-          </Link>
-        ) : (
-          <div
-            className={
-              "bg-white/60 backdrop-blur-sm w-[43vw] rounded text-center p-3 text-black opacity-50 ml-[5vw] pointer-events-none cursor-not-allowed"
-            }
-          >
-            Previous
-          </div>
-        )}
-
-        {nextProject ? (
-          <Link href={`/projects/${nextProject}`} passHref scroll={false}>
-            <a>
-              <div
-                className={
-                  "bg-white/60 backdrop-blur-sm w-[43vw] rounded text-center p-3 thumbcursor text-black duration-150 hover:opacity-50 mr-[5vw]"
-                }
-              >
-                Next
-              </div>
-            </a>
-          </Link>
-        ) : (
-          <div
-            className={
-              "bg-white/60 backdrop-blur-sm w-[43vw] rounded text-center p-3 text-black opacity-50 mr-[5vw] pointer-events-none cursor-not-allowed"
-            }
-          >
-            Next
-          </div>
-        )}
-      </div>
-
-      {/* Desktop bottom Buttons */}
-
-      <div className="flex relative w-screen justify-between items-center text-[2.9vw] sm:text-sm md:text-base pt-[1rem] lg:pt-[4rem] pb-[1.5rem] md:pb-[4rem] ">
-        {previousProject ? (
-          <Link href={`/projects/${previousProject}`} passHref scroll={false}>
-            <a>
-              <div
-                className={
-                  "bg-white/60 backdrop-blur-sm w-[90vw] lg:w-[400px] xl:w-[100px] rounded text-center p-3 thumbcursor text-black duration-150 hover:opacity-50 ml-[5vw] hidden lg:block"
-                }
-              >
-                Previous
-              </div>
-            </a>
-          </Link>
-        ) : (
-          <div
-            className={
-              "bg-white/60 backdrop-blur-sm w-[90vw] lg:w-[400px] xl:w-[100px] rounded text-center p-3 text-black opacity-50 ml-[5vw] pointer-events-none cursor-not-allowed hidden lg:block"
-            }
-          >
-            Previous
-          </div>
-        )}
-
-        <Link href="/projects" passHref scroll={false}>
-          <a>
-            <div className="bg-white/60 backdrop-blur-sm w-[90vw] lg:w-[400px] xl:w-[455px] rounded text-center p-3 thumbcursor text-black duration-150 hover:opacity-50">
-              Back to Projects
-            </div>
-          </a>
-        </Link>
-
-        {nextProject ? (
-          <Link href={`/projects/${nextProject}`} passHref scroll={false}>
-            <a>
-              <div
-                className={
-                  "bg-white/60 backdrop-blur-sm lg:w-[400px] xl:w-[100px] rounded text-center p-3 thumbcursor text-black duration-150 hover:opacity-50 mr-[5vw] hidden lg:block"
-                }
-              >
-                Next
-              </div>
-            </a>
-          </Link>
-        ) : (
-          <div
-            className={
-              "bg-white/60 backdrop-blur-sm lg:w-[400px] xl:w-[100px] rounded text-center p-3 text-black opacity-50 mr-[5vw] pointer-events-none cursor-not-allowed hidden lg:block"
-            }
-          >
-            Next
-          </div>
-        )}
-      </div>
+      <ProjectBtn project={project} projects={projects} />
     </div>
   );
 };
 
 export default ProjectDetail;
+
+{
+  /* <div className="col-start-3 md:col-start-1 w-[90vw] md:w-[55.9vw] relative rounded md:place-self-start md:left-[5vw] aspect-square">
+          <iframe
+            className="w-[100%] h-[100%]"
+            src="//player.vimeo.com/video/767132442?h=d63413b39c&badge=0&autopause=0&player_id=0&app_id=58479/embed"
+            allowFullScreen
+          ></iframe>
+        </div>
+
+        <div className="col-start-3 md:col-start-5 w-[90vw] md:w-[31.5vw] relative rounded md:place-self-end md:right-[5vw] aspect-[9/16]">
+          <iframe
+            className="w-[100%] h-[100%]"
+            src="//player.vimeo.com/video/769589096?h=81776fa621&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+            allowFullScreen
+          ></iframe>
+        </div>
+
+        <div className="col-start-3 relative leading-[3.9vw] md:leading-7 text-[3vw] md:text-[22px] text-center w-[90vw] md:w-[650px] lg:w-[800px] mt-[3.5vw] mb-[3.5vw] md:mt-[40px] md:mb-[40px] lg:mt-[50px] lg:mb-[50px]">
+          <div className="text-left">
+            To further engage fans and amplify the campaign we created the first
+            official Rick and Morty filter, allowing fans to become Rick and
+            Morty and create their own Rick and Morty scenes.
+          </div>
+        </div>
+
+        <div className="col-start-3 md:col-start-1 w-[90vw] md:w-[37.5vw] relative rounded md:place-self-start md:left-[5vw] aspect-[3/4] ">
+          <Image
+            src="/SKOH1.webp"
+            //   alt={thumbnails[0]}
+            priority={true}
+            loading="eager"
+            layout="fill"
+            objectFit="cover"
+          ></Image>
+        </div>
+
+        <div className="col-start-3 md:col-start-5 w-[90vw] md:w-[50vw] relative md:place-self-end md:right-[5vw] aspect-square ">
+          <iframe
+            className="w-[100%] h-[100%]"
+            src="//player.vimeo.com/video/767132475?h=8fc49732ec&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+            allowFullScreen
+          ></iframe>
+        </div>
+
+        <div className="col-start-3 md:col-start-1 w-[90vw] md:w-[43.6vw] relative md:place-self-start md:left-[5vw] aspect-[4/5] ">
+          <iframe
+            className="w-[100%] h-[100%]"
+            src="//player.vimeo.com/video/769662830?h=ea1177e138&badge=0&autopause=0&player_id=0&app_id=58479/embed"
+            allowFullScreen
+          ></iframe>
+        </div>
+
+        <div className="col-start-3 md:col-start-5 w-[90vw] md:w-[43.6vw] relative md:place-self-end md:right-[5vw] aspect-[4/5] ">
+          <Image
+            src="/SKOH2.webp"
+            //   alt={thumbnails[0]}
+            priority={true}
+            loading="eager"
+            layout="fill"
+            objectFit="cover"
+          ></Image>
+        </div> */
+}

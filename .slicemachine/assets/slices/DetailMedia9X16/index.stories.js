@@ -5,5 +5,8 @@ export default {
 }
 
 
-export const _Default = () => <MyComponent slice={{"variation":"default","name":"Default","slice_type":"detail_media9_x16","items":[],"primary":{"title":[{"type":"heading1","text":"Transition 24/7 communities","spans":[]}],"description":[{"type":"paragraph","text":"Est est pariatur fugiat velit excepteur. Non est fugiat consequat voluptate est esse adipisicing laborum.","spans":[]}]},"id":"_Default"}} />
+export const _Default = () => <MyComponent slice={{"variation":"default","name":"Default","slice_type":"detail_media9_x16","items":[],"primary":{"media1":{"link_type":"Web","url":"https://slicemachine.dev"},"media1controls":true,"media2":{"link_type":"Web","url":"https://prismic.io"},"media2Controls":true,"media3":{"link_type":"Web","url":"http://twitter.com"},"media3Controls":true},"id":"_Default"}} />
 _Default.storyName = 'Default'
+
+export const _2Rows = () => <MyComponent slice={{"variation":"2Rows","name":"2Rows","slice_type":"detail_media9_x16","items":[],"primary":{"media1":{"link_type":"Web","url":"https://prismic.io"},"media1controls":false,"media2":{"link_type":"Web","url":"http://google.com"},"media2Controls":false},"id":"_2Rows"}} />
+_2Rows.storyName = '2Rows'

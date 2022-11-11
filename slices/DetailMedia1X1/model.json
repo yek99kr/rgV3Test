@@ -19,13 +19,13 @@
             "select": null
           }
         },
-        "autoplay1": {
+        "media1Controls": {
           "type": "Boolean",
           "config": {
-            "label": "Media1 Autoplay",
+            "label": "Media1 Controls",
             "placeholder_false": "false",
             "placeholder_true": "true",
-            "default_value": false
+            "default_value": true
           }
         },
         "media2": {
@@ -36,13 +36,13 @@
             "select": null
           }
         },
-        "autoplay2": {
+        "media2Controls": {
           "type": "Boolean",
           "config": {
-            "label": "Media2 Autoplay",
+            "label": "Media2 Controls",
             "placeholder_false": "false",
             "placeholder_true": "true",
-            "default_value": false
+            "default_value": true
           }
         },
         "media3": {
@@ -53,13 +53,13 @@
             "select": null
           }
         },
-        "autoplay3": {
+        "media3Controls": {
           "type": "Boolean",
           "config": {
-            "label": "Media3 Autoplay",
+            "label": "Media3 Controls",
             "placeholder_false": "false",
             "placeholder_true": "true",
-            "default_value": false
+            "default_value": true
           }
         }
       },
@@ -81,13 +81,13 @@
             "select": null
           }
         },
-        "autoplay1": {
+        "media1Controls": {
           "type": "Boolean",
           "config": {
-            "label": "Media1 Autoplay",
+            "label": "Media1 Controls",
             "placeholder_false": "false",
             "placeholder_true": "true",
-            "default_value": false
+            "default_value": true
           }
         },
         "media2": {
@@ -98,13 +98,13 @@
             "select": null
           }
         },
-        "autoplay2": {
+        "media2Controls": {
           "type": "Boolean",
           "config": {
-            "label": "Media2 Autoplay",
+            "label": "Media2 Controls",
             "placeholder_false": "false",
             "placeholder_true": "true",
-            "default_value": false
+            "default_value": true
           }
         }
       },

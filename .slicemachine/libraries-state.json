@@ -1,6 +1,117 @@
 {
   "slices": {
     "components": {
+      "detail_credit": {
+        "library": "slices",
+        "id": "detail_credit",
+        "name": "DetailCredit",
+        "description": "DetailCredit",
+        "model": {
+          "id": "detail_credit",
+          "type": "SharedSlice",
+          "name": "DetailCredit",
+          "description": "DetailCredit",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "DetailCredit",
+              "primary": {},
+              "items": {
+                "title": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": ""
+                  }
+                },
+                "name": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Name",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            },
+            {
+              "id": "noReadMore",
+              "name": "noReadMore",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "DetailCredit",
+              "primary": {},
+              "items": {
+                "title": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": ""
+                  }
+                },
+                "name": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Name",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "detail_credit",
+            "items": [
+              {
+                "title": "envisioneer 24/7 systems",
+                "name": "benchmark strategic initiatives"
+              },
+              {
+                "title": "visualize enterprise synergies",
+                "name": "expedite dynamic initiatives"
+              },
+              {
+                "title": "streamline cutting-edge e-commerce",
+                "name": "mesh impactful networks"
+              },
+              {
+                "title": "whiteboard wireless e-services",
+                "name": "brand innovative mindshare"
+              }
+            ],
+            "primary": {}
+          },
+          "noReadMore": {
+            "variation": "noReadMore",
+            "name": "noReadMore",
+            "slice_type": "detail_credit",
+            "items": [
+              {
+                "title": "seize best-of-breed convergence",
+                "name": "monetize B2B markets"
+              },
+              {
+                "title": "brand plug-and-play convergence",
+                "name": "extend synergistic action-items"
+              }
+            ],
+            "primary": {}
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
       "detail_main_text": {
         "library": "slices",
         "id": "detail_main_text",
@@ -19,6 +130,13 @@
               "version": "sktwi1xtmkfgx8626",
               "description": "DetailMainText",
               "primary": {
+                "title": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": ""
+                  }
+                },
                 "summary": {
                   "type": "StructuredText",
                   "config": {
@@ -38,30 +156,7 @@
                   }
                 }
               },
-              "items": {
-                "creditTitle": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Credit Title",
-                    "placeholder": ""
-                  }
-                },
-                "creditName": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Credit Name",
-                    "placeholder": ""
-                  }
-                },
-                "creditLink": {
-                  "type": "Link",
-                  "config": {
-                    "label": "Credit Link",
-                    "placeholder": "",
-                    "select": null
-                  }
-                }
-              },
+              "items": {},
               "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             },
             {
@@ -71,6 +166,13 @@
               "version": "sktwi1xtmkfgx8626",
               "description": "DetailMainText",
               "primary": {
+                "Title": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": ""
+                  }
+                },
                 "moreInfo": {
                   "type": "StructuredText",
                   "config": {
@@ -81,30 +183,7 @@
                   }
                 }
               },
-              "items": {
-                "creditTitle": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Credit Title",
-                    "placeholder": ""
-                  }
-                },
-                "creditName": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Credit Name",
-                    "placeholder": ""
-                  }
-                },
-                "creditLink": {
-                  "type": "Link",
-                  "config": {
-                    "label": "Credit Link",
-                    "placeholder": "",
-                    "select": null
-                  }
-                }
-              },
+              "items": {},
               "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
@@ -114,44 +193,20 @@
             "variation": "default",
             "name": "Default",
             "slice_type": "detail_main_text",
-            "items": [
-              {
-                "creditTitle": "repurpose transparent vortals",
-                "creditName": "optimize holistic interfaces",
-                "creditLink": {
-                  "link_type": "Web",
-                  "url": "http://google.com"
-                }
-              },
-              {
-                "creditTitle": "utilize magnetic users",
-                "creditName": "maximize integrated communities",
-                "creditLink": {
-                  "link_type": "Web",
-                  "url": "http://twitter.com"
-                }
-              },
-              {
-                "creditTitle": "synthesize robust relationships",
-                "creditName": "utilize bleeding-edge bandwidth",
-                "creditLink": {
-                  "link_type": "Web",
-                  "url": "https://slicemachine.dev"
-                }
-              }
-            ],
+            "items": [],
             "primary": {
+              "title": "harness sexy relationships",
               "summary": [
                 {
                   "type": "paragraph",
-                  "text": "Fugiat do voluptate est ut id consequat anim irure excepteur. Fugiat deserunt officia cupidatat.",
+                  "text": "Id incididunt laboris adipisicing et incididunt veniam culpa eu. Nulla qui minim nostrud ea culpa aute sunt adipisicing nisi id Lorem ex eiusmod est. Non labore est non.",
                   "spans": []
                 }
               ],
               "moreInfo": [
                 {
                   "type": "paragraph",
-                  "text": "Lorem cupidatat laborum eu nisi.",
+                  "text": "Do labore ullamco consequat velit dolor sunt.",
                   "spans": []
                 }
               ]
@@ -161,29 +216,13 @@
             "variation": "noReadMore",
             "name": "NoReadMore",
             "slice_type": "detail_main_text",
-            "items": [
-              {
-                "creditTitle": "engineer transparent supply-chains",
-                "creditName": "brand viral web-readiness",
-                "creditLink": {
-                  "link_type": "Web",
-                  "url": "http://google.com"
-                }
-              },
-              {
-                "creditTitle": "morph seamless vortals",
-                "creditName": "orchestrate leading-edge architectures",
-                "creditLink": {
-                  "link_type": "Web",
-                  "url": "http://google.com"
-                }
-              }
-            ],
+            "items": [],
             "primary": {
+              "Title": "empower end-to-end schemas",
               "moreInfo": [
                 {
                   "type": "paragraph",
-                  "text": "Mollit cupidatat quis fugiat non nostrud voluptate veniam ex anim pariatur elit laboris pariatur consectetur.",
+                  "text": "Id enim aute sit voluptate magna velit nisi incididunt occaecat eu minim magna ullamco minim do. Commodo adipisicing est dolore elit irure occaecat magna.",
                   "spans": []
                 }
               ]
@@ -222,13 +261,13 @@
                     "select": null
                   }
                 },
-                "autoplay": {
+                "controls": {
                   "type": "Boolean",
                   "config": {
-                    "label": "Autoplay",
+                    "label": "Controls",
                     "placeholder_false": "false",
                     "placeholder_true": "true",
-                    "default_value": false
+                    "default_value": true
                   }
                 }
               },
@@ -246,9 +285,9 @@
             "primary": {
               "media": {
                 "link_type": "Web",
-                "url": "https://prismic.io"
+                "url": "http://twitter.com"
               },
-              "autoplay": false
+              "controls": false
             }
           }
         },
@@ -256,7 +295,13 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/rachelyeeunkim/Desktop/RealGoodStudio/website/rbwebsiteV2/.slicemachine/assets/slices/DetailMedia/default/preview.png",
+            "width": 800,
+            "height": 405
+          }
+        }
       },
       "detail_media1_x1": {
         "library": "slices",
@@ -284,13 +329,13 @@
                     "select": null
                   }
                 },
-                "autoplay1": {
+                "media1Controls": {
                   "type": "Boolean",
                   "config": {
-                    "label": "Media1 Autoplay",
+                    "label": "Media1 Controls",
                     "placeholder_false": "false",
                     "placeholder_true": "true",
-                    "default_value": false
+                    "default_value": true
                   }
                 },
                 "media2": {
@@ -301,13 +346,13 @@
                     "select": null
                   }
                 },
-                "autoplay2": {
+                "media2Controls": {
                   "type": "Boolean",
                   "config": {
-                    "label": "Media2 Autoplay",
+                    "label": "Media2 Controls",
                     "placeholder_false": "false",
                     "placeholder_true": "true",
-                    "default_value": false
+                    "default_value": true
                   }
                 },
                 "media3": {
@@ -318,13 +363,13 @@
                     "select": null
                   }
                 },
-                "autoplay3": {
+                "media3Controls": {
                   "type": "Boolean",
                   "config": {
-                    "label": "Media3 Autoplay",
+                    "label": "Media3 Controls",
                     "placeholder_false": "false",
                     "placeholder_true": "true",
-                    "default_value": false
+                    "default_value": true
                   }
                 }
               },
@@ -346,13 +391,13 @@
                     "select": null
                   }
                 },
-                "autoplay1": {
+                "media1Controls": {
                   "type": "Boolean",
                   "config": {
-                    "label": "Media1 Autoplay",
+                    "label": "Media1 Controls",
                     "placeholder_false": "false",
                     "placeholder_true": "true",
-                    "default_value": false
+                    "default_value": true
                   }
                 },
                 "media2": {
@@ -363,13 +408,13 @@
                     "select": null
                   }
                 },
-                "autoplay2": {
+                "media2Controls": {
                   "type": "Boolean",
                   "config": {
-                    "label": "Media2 Autoplay",
+                    "label": "Media2 Controls",
                     "placeholder_false": "false",
                     "placeholder_true": "true",
-                    "default_value": false
+                    "default_value": true
                   }
                 }
               },
@@ -387,19 +432,19 @@
             "primary": {
               "media1": {
                 "link_type": "Web",
+                "url": "https://slicemachine.dev"
+              },
+              "media1Controls": false,
+              "media2": {
+                "link_type": "Web",
                 "url": "http://twitter.com"
               },
-              "autoplay1": false,
-              "media2": {
+              "media2Controls": true,
+              "media3": {
                 "link_type": "Web",
                 "url": "https://prismic.io"
               },
-              "autoplay2": false,
-              "media3": {
-                "link_type": "Web",
-                "url": "https://slicemachine.dev"
-              },
-              "autoplay3": true
+              "media3Controls": true
             }
           },
           "2Rows": {
@@ -410,14 +455,14 @@
             "primary": {
               "media1": {
                 "link_type": "Web",
-                "url": "https://prismic.io"
+                "url": "https://slicemachine.dev"
               },
-              "autoplay1": false,
+              "media1Controls": true,
               "media2": {
                 "link_type": "Web",
                 "url": "http://twitter.com"
               },
-              "autoplay2": false
+              "media2Controls": true
             }
           }
         },
@@ -445,20 +490,100 @@
               "version": "sktwi1xtmkfgx8626",
               "description": "DetailMedia9X16",
               "primary": {
-                "title": {
-                  "type": "StructuredText",
+                "media1": {
+                  "type": "Link",
                   "config": {
-                    "single": "heading1",
-                    "label": "Title",
-                    "placeholder": "This is where it all begins..."
+                    "label": "Media1",
+                    "placeholder": "",
+                    "select": null
                   }
                 },
-                "description": {
-                  "type": "StructuredText",
+                "media1controls": {
+                  "type": "Boolean",
                   "config": {
-                    "single": "paragraph",
-                    "label": "Description",
-                    "placeholder": "A nice description of your feature"
+                    "label": "Media1 Controls",
+                    "placeholder_false": "false",
+                    "placeholder_true": "true",
+                    "default_value": true
+                  }
+                },
+                "media2": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Media2",
+                    "placeholder": "",
+                    "select": null
+                  }
+                },
+                "media2Controls": {
+                  "type": "Boolean",
+                  "config": {
+                    "label": "Media2 Controls",
+                    "placeholder_false": "false",
+                    "placeholder_true": "true",
+                    "default_value": true
+                  }
+                },
+                "media3": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Media3",
+                    "placeholder": "",
+                    "select": null
+                  }
+                },
+                "media3Controls": {
+                  "type": "Boolean",
+                  "config": {
+                    "label": "Media3 Controls",
+                    "placeholder_false": "false",
+                    "placeholder_true": "true",
+                    "default_value": true
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            },
+            {
+              "id": "2Rows",
+              "name": "2Rows",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "DetailMedia9X16",
+              "primary": {
+                "media1": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Media1",
+                    "placeholder": "",
+                    "select": null
+                  }
+                },
+                "media1controls": {
+                  "type": "Boolean",
+                  "config": {
+                    "label": "Media1 Controls",
+                    "placeholder_false": "false",
+                    "placeholder_true": "true",
+                    "default_value": true
+                  }
+                },
+                "media2": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Media2",
+                    "placeholder": "",
+                    "select": null
+                  }
+                },
+                "media2Controls": {
+                  "type": "Boolean",
+                  "config": {
+                    "label": "Media2 Controls",
+                    "placeholder_false": "false",
+                    "placeholder_true": "true",
+                    "default_value": true
                   }
                 }
               },
@@ -474,20 +599,279 @@
             "slice_type": "detail_media9_x16",
             "items": [],
             "primary": {
-              "title": [
-                {
-                  "type": "heading1",
-                  "text": "Transition 24/7 communities",
-                  "spans": []
+              "media1": {
+                "link_type": "Web",
+                "url": "https://slicemachine.dev"
+              },
+              "media1controls": true,
+              "media2": {
+                "link_type": "Web",
+                "url": "https://prismic.io"
+              },
+              "media2Controls": true,
+              "media3": {
+                "link_type": "Web",
+                "url": "http://twitter.com"
+              },
+              "media3Controls": true
+            }
+          },
+          "2Rows": {
+            "variation": "2Rows",
+            "name": "2Rows",
+            "slice_type": "detail_media9_x16",
+            "items": [],
+            "primary": {
+              "media1": {
+                "link_type": "Web",
+                "url": "https://prismic.io"
+              },
+              "media1controls": false,
+              "media2": {
+                "link_type": "Web",
+                "url": "http://google.com"
+              },
+              "media2Controls": false
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/rachelyeeunkim/Desktop/RealGoodStudio/website/rbwebsiteV2/.slicemachine/assets/slices/DetailMedia9X16/default/preview.png",
+            "width": 800,
+            "height": 1237
+          }
+        }
+      },
+      "detail_media_mix": {
+        "library": "slices",
+        "id": "detail_media_mix",
+        "name": "DetailMediaMix",
+        "description": "DetailMediaMix",
+        "model": {
+          "id": "detail_media_mix",
+          "type": "SharedSlice",
+          "name": "DetailMediaMix",
+          "description": "DetailMediaMix",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "DetailMediaMix",
+              "primary": {
+                "media1": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Media1",
+                    "placeholder": "",
+                    "select": null
+                  }
+                },
+                "media1Controls": {
+                  "type": "Boolean",
+                  "config": {
+                    "label": "Media1 Controls",
+                    "placeholder_false": "false",
+                    "placeholder_true": "true",
+                    "default_value": true
+                  }
+                },
+                "media1Width": {
+                  "type": "Number",
+                  "config": {
+                    "label": "Media1 Width",
+                    "placeholder": ""
+                  }
+                },
+                "media2": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Media2",
+                    "placeholder": "",
+                    "select": null
+                  }
+                },
+                "media2Controls": {
+                  "type": "Boolean",
+                  "config": {
+                    "label": "Media2 Controls",
+                    "placeholder_false": "false",
+                    "placeholder_true": "true",
+                    "default_value": true
+                  }
+                },
+                "media2Width": {
+                  "type": "Number",
+                  "config": {
+                    "label": "Media2 Width",
+                    "placeholder": ""
+                  }
+                },
+                "media2LeftMargin": {
+                  "type": "Number",
+                  "config": {
+                    "label": "Media2 Left Margin",
+                    "placeholder": ""
+                  }
                 }
-              ],
-              "description": [
-                {
-                  "type": "paragraph",
-                  "text": "Est est pariatur fugiat velit excepteur. Non est fugiat consequat voluptate est esse adipisicing laborum.",
-                  "spans": []
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            },
+            {
+              "id": "3411",
+              "name": "3/4 + 1/1",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "DetailMediaMix",
+              "primary": {
+                "media1": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Media1",
+                    "placeholder": "",
+                    "select": null
+                  }
+                },
+                "media1Controls": {
+                  "type": "Boolean",
+                  "config": {
+                    "label": "Media1 Controls",
+                    "placeholder_false": "false",
+                    "placeholder_true": "true",
+                    "default_value": true
+                  }
+                },
+                "media2": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Media2",
+                    "placeholder": "",
+                    "select": null
+                  }
+                },
+                "media2Controls": {
+                  "type": "Boolean",
+                  "config": {
+                    "label": "Media2 Controls",
+                    "placeholder_false": "false",
+                    "placeholder_true": "true",
+                    "default_value": true
+                  }
                 }
-              ]
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            },
+            {
+              "id": "4545",
+              "name": "4/5 + 4/5",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "DetailMediaMix",
+              "primary": {
+                "media1": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Media1",
+                    "placeholder": "",
+                    "select": null
+                  }
+                },
+                "media1Controls": {
+                  "type": "Boolean",
+                  "config": {
+                    "label": "Media1 Controls",
+                    "placeholder_false": "false",
+                    "placeholder_true": "true",
+                    "default_value": true
+                  }
+                },
+                "media2": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Media2",
+                    "placeholder": "",
+                    "select": null
+                  }
+                },
+                "media2Controls": {
+                  "type": "Boolean",
+                  "config": {
+                    "label": "Media2 Controls",
+                    "placeholder_false": "false",
+                    "placeholder_true": "true",
+                    "default_value": true
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "3411": {
+            "variation": "3411",
+            "name": "3/4 + 1/1",
+            "slice_type": "detail_media_mix",
+            "items": [],
+            "primary": {
+              "media1": {
+                "link_type": "Web",
+                "url": "https://slicemachine.dev"
+              },
+              "media1Controls": true,
+              "media2": {
+                "link_type": "Web",
+                "url": "https://slicemachine.dev"
+              },
+              "media2Controls": false
+            }
+          },
+          "4545": {
+            "variation": "4545",
+            "name": "4/5 + 4/5",
+            "slice_type": "detail_media_mix",
+            "items": [],
+            "primary": {
+              "media1": {
+                "link_type": "Web",
+                "url": "https://prismic.io"
+              },
+              "media1Controls": false,
+              "media2": {
+                "link_type": "Web",
+                "url": "http://twitter.com"
+              },
+              "media2Controls": false
+            }
+          },
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "detail_media_mix",
+            "items": [],
+            "primary": {
+              "media1": {
+                "link_type": "Web",
+                "url": "http://google.com"
+              },
+              "media1Controls": false,
+              "media1Width": 4542,
+              "media2": {
+                "link_type": "Web",
+                "url": "https://prismic.io"
+              },
+              "media2Controls": true,
+              "media2Width": 5970,
+              "media2LeftMargin": 8593
             }
           }
         },

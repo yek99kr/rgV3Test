@@ -9,34 +9,35 @@ import { FiVolume2 } from "react-icons/fi";
 import { FiVolumeX } from "react-icons/fi";
 import { useState, useEffect } from "react";
 
-const Player = ({ width, url, ratio }) => {
+const Player = ({ url, ratio }) => {
   const [hover, setHover] = useState(false);
+
+  const [isPlay, setIsPlay] = useState(true);
+  const [muted, setMuted] = useState(true);
+
+  const playerRef = useRef();
 
   const [player, setPlayer] = useState({
     url: null,
     playing: true,
     controls: false,
-    autoplay: true,
-    volume: 1,
-    light: true,
     muted: true,
+    autoplay: true,
     played: 0,
     loaded: 0,
     duration: 0,
     playbackRate: 1.0,
-    loop: true,
     visible: 0,
   });
 
-  const playerRef = useRef();
+  const handlePlayPause = function () {
+    // setPlayer({ ...player, playing: !player.playing });
+    setIsPlay(!isPlay);
+  };
 
-  const handlePlayPause = () => {
-    setPlayer({ ...player, playing: !player.playing });
-  };
   const handleMuted = () => {
-    setPlayer({ ...player, muted: !player.muted });
+    setMuted(!muted);
   };
-  const handleFullscreen = (e) => {};
 
   const handleSeekMouseDown = (e) => {
     setPlayer({ ...player, seeking: true });
@@ -49,10 +50,12 @@ const Player = ({ width, url, ratio }) => {
   const handleSeekMouseUp = (e) => {
     setPlayer({ ...player, seeking: false });
     playerRef.seekTo(parseFloat(e.target.value));
+    // console.log(playerRef, playerRef.current.retry.seekTo, playerRef.onSeek);
+    // playerRef.seekTo(0);
+    // playerRef.seekTo(parseFloat(e.target.value));
   };
 
   const handleProgress = (state) => {
-    // We only want to update time slider if we are not currently seeking
     if (!player.seeking) {
       setPlayer(state);
     }
@@ -69,19 +72,18 @@ const Player = ({ width, url, ratio }) => {
       }}
     >
       <ReactPlayer
-        className="absolute rounded"
         ref={playerRef}
+        className="absolute rounded"
         width="100%"
         height="100%"
         url={url}
+        volume={1}
         playIcon={<></>}
-        playing={player.playing}
-        loop={player.loop}
+        playing={isPlay}
+        loop={true}
         muted={player.muted}
-        // onProgress={handleProgress}
-        onReady={(e) => {
-          setPlayer({ ...player, visible: 1 });
-        }}
+        onProgress={handleProgress}
+        onSeek={(e) => console.log("onSeek", e)}
       ></ReactPlayer>
 
       <div
@@ -89,7 +91,7 @@ const Player = ({ width, url, ratio }) => {
         onClick={handlePlayPause}
       ></div>
 
-      {!player.playing && (
+      {!isPlay && (
         <BsPlayFill
           onClick={handlePlayPause}
           className="relative w-[8vw] h-[8vw] text-white drop-shadow-md"
@@ -105,18 +107,17 @@ const Player = ({ width, url, ratio }) => {
           type="range"
           min={0}
           max={0.999999}
-          className="w-[80%]"
           step="any"
-          // value={played}
-          // onMouseDown={this.handleSeekMouseDown}
-          // onChange={this.handleSeekChange}
-          // onMouseUp={this.handleSeekMouseUp}
+          value={player.played}
+          onMouseDown={handleSeekMouseDown}
+          onChange={handleSeekChange}
+          onMouseUp={handleSeekMouseUp}
         />
 
-        <TbRectangle
+        {/* <TbRectangle
           onClick={handleFullscreen}
           className="w-[2.5vw] h-[2.5vw] text-white"
-        />
+        /> */}
 
         {!player.muted ? (
           <FiVolume2

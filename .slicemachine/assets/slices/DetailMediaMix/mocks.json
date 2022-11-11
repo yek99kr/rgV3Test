@@ -1,0 +1,59 @@
+[
+  {
+    "variation": "default",
+    "name": "Default",
+    "slice_type": "detail_media_mix",
+    "items": [],
+    "primary": {
+      "media1": {
+        "link_type": "Web",
+        "url": "http://google.com"
+      },
+      "media1Controls": false,
+      "media1Width": 4542,
+      "media2": {
+        "link_type": "Web",
+        "url": "https://prismic.io"
+      },
+      "media2Controls": true,
+      "media2Width": 5970,
+      "media2LeftMargin": 8593
+    }
+  },
+  {
+    "variation": "3411",
+    "name": "3/4 + 1/1",
+    "slice_type": "detail_media_mix",
+    "items": [],
+    "primary": {
+      "media1": {
+        "link_type": "Web",
+        "url": "https://slicemachine.dev"
+      },
+      "media1Controls": true,
+      "media2": {
+        "link_type": "Web",
+        "url": "https://slicemachine.dev"
+      },
+      "media2Controls": false
+    }
+  },
+  {
+    "variation": "4545",
+    "name": "4/5 + 4/5",
+    "slice_type": "detail_media_mix",
+    "items": [],
+    "primary": {
+      "media1": {
+        "link_type": "Web",
+        "url": "https://prismic.io"
+      },
+      "media1Controls": false,
+      "media2": {
+        "link_type": "Web",
+        "url": "http://twitter.com"
+      },
+      "media2Controls": false
+    }
+  }
+]

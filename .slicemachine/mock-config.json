@@ -52,6 +52,23 @@
         "primary": {}
       }
     },
-    "DetailMedia9X16": {}
+    "DetailMedia9X16": {
+      "default": {
+        "primary": {}
+      },
+      "2Rows": {
+        "primary": {}
+      }
+    },
+    "DetailCredit": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "DetailMediaMix": {
+      "default": {
+        "primary": {}
+      }
+    }
   }
 }
