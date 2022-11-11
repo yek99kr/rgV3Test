@@ -15,7 +15,7 @@ const DetailMedia1X1 = ({ slice }) => {
                   className="w-[100%] h-[100%]"
                   src={`${slice.primary.media1.url.slice(
                     6
-                  )}&loop=1&autoplay=1&muted=1${
+                  )}&loop=1&autoplay=1&muted=1?background=1${
                     slice.primary.media1Controls === false ? "controls=0" : ""
                   }`}
                   allowFullScreen
@@ -44,7 +44,7 @@ const DetailMedia1X1 = ({ slice }) => {
                   className="w-[100%] h-[100%]"
                   src={`${slice.primary.media2.url.slice(
                     6
-                  )}&loop=1&autoplay=1&muted=1${
+                  )}&loop=1&autoplay=1&muted=1?background=1${
                     slice.primary.media2Controls && "&controls=0"
                   }`}
                   allowFullScreen
@@ -73,7 +73,7 @@ const DetailMedia1X1 = ({ slice }) => {
                   className="w-[100%] h-[100%]"
                   src={`${slice.primary.media3.url.slice(
                     6
-                  )}&loop=1&autoplay=1&muted=1${
+                  )}&loop=1&autoplay=1&muted=1?background=1${
                     slice.primary.media3Controls === false ? "controls=0" : ""
                   }`}
                   allowFullScreen
@@ -104,7 +104,7 @@ const DetailMedia1X1 = ({ slice }) => {
                   className="w-[100%] h-[100%]"
                   src={`${slice.primary.media1.url.slice(
                     6
-                  )}&loop=1&autoplay=1&muted=1${
+                  )}&loop=1&autoplay=1&muted=1?background=1${
                     slice.primary.media1Controls && "&controls=0"
                   }`}
                   allowFullScreen
@@ -133,7 +133,7 @@ const DetailMedia1X1 = ({ slice }) => {
                   className="w-[100%] h-[100%]"
                   src={`${slice.primary.media2.url.slice(
                     6
-                  )}&loop=1&autoplay=1&muted=1${
+                  )}&loop=1&autoplay=1&muted=1?background=1${
                     slice.primary.media2Controls && "&controls=0"
                   }`}
                   allowFullScreen

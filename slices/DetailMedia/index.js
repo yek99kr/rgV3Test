@@ -12,7 +12,7 @@ const DetailMedia = ({ slice }) => {
               className="w-[100%] h-[100%]"
               src={`${slice.primary.media.url.slice(
                 6
-              )}&loop=1&autoplay=1&muted=1${
+              )}&loop=1&autoplay=1&muted=1?background=1${
                 slice.primary.controls === false ? "&controls=0" : ""
               }`}
               allowFullScreen
