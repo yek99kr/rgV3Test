@@ -7,7 +7,7 @@ const DetailMainText = ({ slice }) => {
   return (
     <>
       {slice.variation !== "noReadMore" ? (
-        <div className="text col-start-3 relative leading-[3.9vw] md:leading-7 text-[3vw] md:text-[22px] text-left w-[90vw] mt-[2vw] mb-[2vw] md:mt-[40px] md:mb-[40px] lg:mt-[50px] lg:mb-[50px]">
+        <div className="text col-start-3 relative leading-[4.2vw] md:leading-7 text-[3.5vw] md:text-[22px] text-left w-[90vw] mt-[2vw] mb-[2vw] md:mt-[40px] md:mb-[40px] lg:mt-[50px] lg:mb-[50px]">
           <div className="flex w-[100%] justify-between">
             <div className="hidden md:block w-[23%] md:text-[1.3rem] lg:text-[1.4rem] font-mono">
               {slice.primary.title
@@ -44,7 +44,7 @@ const DetailMainText = ({ slice }) => {
           </div>
         </div>
       ) : (
-        <div className="text col-start-3 relative leading-[3.9vw] md:leading-7 text-[3vw] md:text-[22px] text-left w-[90vw] mt-[2vw] mb-[2vw] md:mt-[40px] md:mb-[40px] lg:mt-[50px] lg:mb-[50px]">
+        <div className="text col-start-3 relative leading-[4.2vw] md:leading-7 text-[3.5vw] md:text-[22px] text-left w-[90vw] mt-[2vw] mb-[2vw] md:mt-[40px] md:mb-[40px] lg:mt-[50px] lg:mb-[50px]">
           <div className="flex w-[100%] justify-between">
             <div className="hidden md:block  w-[23%] text-[1rem] md:text-[1.3rem] lg:text-[1.4rem] font-mono">
               {slice.primary.title

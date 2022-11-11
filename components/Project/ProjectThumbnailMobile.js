@@ -24,13 +24,8 @@ const ProjectThumbnailMobile = ({ project }) => {
           </div>
         }
 
-        <div className="block mt-10">
-          <h1 className=" center text-center text-[3vw] sm:text-xl">
-            {" "}
-            {project.data.year}
-          </h1>
+        <div className="block mt-4">
           <p className=" text-center  text-[4.2vw] sm:text-xl">
-            {" "}
             {project.data.client}
           </p>
         </div>
