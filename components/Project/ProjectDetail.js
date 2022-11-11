@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { SliceZone } from "@prismicio/react";
 import { components } from "../../slices";
 import Player from "../Player/Player";
