@@ -33,14 +33,14 @@ const ProjectThumbnailDesktop = ({ project }) => {
             style={{ transition: "opacity 0.2s" }}
           >
             <p className="text-center md:text-xl lg:text-2xl m-[-0.1rem]">
-              {/* <span className="bg-black text-white p-1"> */}
-              {project.data.client}
-              {/* </span> */}
+              <span className="bg-black text-white p-1">
+                {project.data.client}
+              </span>
             </p>
-            <p className="text-center md:text-base lg:text-lg m-[0rem]">
-              {/* <span className="bg-black text-white p-1"> */}{" "}
-              {project.data.title}
-              {/* </span> */}
+            <p className="text-center md:text-base lg:text-lg m-[0.5rem]">
+              <span className="bg-black text-white p-1">
+                {project.data.title}
+              </span>
             </p>
           </div>
         </a>
