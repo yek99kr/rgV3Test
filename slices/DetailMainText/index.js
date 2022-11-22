@@ -10,14 +10,14 @@ const DetailMainText = ({ slice }) => {
           <div className="block md:hidden w-[90%] text-[3.4vw] sm:text-[22px] mb-5 font-mono ">
             {slice.primary.title ? slice.primary.title : "Objective + Approach"}
           </div>
-          <div className="flex w-[100%] justify-between">
+          <div className="flex w-[100%] ">
             <div className="hidden md:block w-[23%] md:text-[1.3rem] lg:text-[1.4rem] font-mono ">
               {slice.primary.title
                 ? slice.primary.title
                 : "Objective + Approach"}
             </div>
 
-            <div className="w-[100%] md:w-[73%]">
+            <div className="w-[100%] md:w-[69%]">
               <div className={`mt-0`}>{slice.primary.summary[0].text}</div>
               {slice.primary.summary.slice(1).map((t, i) => (
                 <div key={i} className={`mt-5`}>
@@ -50,8 +50,8 @@ const DetailMainText = ({ slice }) => {
           <div className="block md:hidden w-[94%] text-[3.5vw] sm:text-[22px] mb-5 font-mono">
             {slice.primary.title ? slice.primary.title : "Objective + Approach"}
           </div>
-          <div className="flex w-[100%] justify-between">
-            <div className="hidden md:block  w-[23%] text-[1rem] md:text-[1.3rem] lg:text-[1.4rem] font-mono ">
+          <div className="flex w-[100%]">
+            <div className="hidden md:block  w-[23%] sm:pr-8 text-[1rem] md:text-[1.3rem] lg:text-[1.4rem] font-mono ">
               <span className="">
                 {slice.primary.title
                   ? slice.primary.title
@@ -59,7 +59,7 @@ const DetailMainText = ({ slice }) => {
               </span>
             </div>
 
-            <div className="w-[100%] md:w-[73%]">
+            <div className="w-[100%] md:w-[69%]">
               <div>
                 {slice.primary.moreInfo.map((t, i) => (
                   <div key={i} className={`${i === 0 ? "mt-0" : "mt-5"}`}>
