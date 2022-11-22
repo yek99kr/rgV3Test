@@ -37,7 +37,10 @@ const Nav = () => {
         </div>
 
         <div
-          className={`rotate-[${angle}deg] duration-75 bg-white backdrop-blur rounded p-[1.5vw] pl-0 pr-0 sm:p-[0.45rem] sm:pl-1 sm:pr-1 `}
+          style={{ transform: `rotate(${angle}deg)` }}
+          className={
+            "duration-75 bg-white backdrop-blur rounded p-[1.5vw] pl-0 pr-0 sm:p-[0.45rem] sm:pl-1 sm:pr-1 "
+          }
         >
           <Link href="/projects" passHref scroll={false}>
             <a
