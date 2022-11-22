@@ -1,9 +1,20 @@
 import { SliceZone } from "@prismicio/react";
 import { components } from "../../slices";
-import Player from "../Player/Player";
 import ProjectBtn from "./ProjectBtn";
+import Plyr from "plyr-react";
+import "plyr-react/plyr.css";
 
 const ProjectDetail = ({ project, projects }) => {
+  const videoSrc = {
+    type: "video",
+    sources: [
+      {
+        src: "https://player.vimeo.com/video/772598080?h=2567ba5b25&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&loop=1&autopause=0&muted=1?background=1",
+        provider: "vimeo",
+        res: "1080",
+      },
+    ],
+  };
   return (
     <div
       style={{
@@ -12,18 +23,23 @@ const ProjectDetail = ({ project, projects }) => {
       }}
     >
       <div
-        className="relative grid justify-items-center w-[100vw] grid-cols-5 gap-y-[5.6vw] md:gap-y-[2rem]
+        className="relative grid justify-items-center w-[100vw] grid-cols-5 gap-y-[5.6vw] md:gap-y-[1.5rem]
         "
       >
-        <div className="col-start-3 relative text-center w-[70vw] h-[11vw] lg:h-[5vw] top-[35vw] sm:top-[35vw] md:top-[34vw] lg:top-[26vw] xl:top-[28vw] z-[100]">
-          <h1 className="text-[6.5vw] sm:text-[40px] lg:text-[55px] xl:text-[60px]">
-            <span className="text-white bg-black">{project.data.client}</span>
+        <div className="col-start-3 relative text-center w-[90vw] h-[11vw] lg:h-[5vw] top-[35vw] sm:top-[35vw] md:top-[34vw] lg:top-[26vw] xl:top-[28vw] z-[100]">
+          <h1 className="text-[6vw] sm:text-[40px] lg:text-[55px] xl:text-[60px]">
+            <span className="text-white bg-black p-0.5 pl-3 pr-3 font-bold">
+              {project.data.client}
+            </span>
           </h1>
 
-          <p className="title relative top-[-8px] text-[4vw] sm:text-[25px] lg:text-[28px] mb-[2vw] md:mb-[30px] font-mono">
-            <span className="text-white bg-black">{project.data.title}</span>
+          <p className="title relative text-[3.6vw] sm:text-[25px] lg:text-[28px] mb-[2vw] md:mb-[30px] font-mono">
+            <span className="text-white bg-black p-0.5 pl-2 pr-2">
+              {project.data.title}
+            </span>
           </p>
         </div>
+
         {/* <div className="col-start-3 relative text-center w-[100vw] top-[38vw] sm:top-[36vw] lg:top-[33vw] xl:top-[31vw] z-[100]">
           <h1 className="text-[6.5vw] sm:text-[40px] lg:text-[55px] xl:text-[60px]">
             <span className="text-white bg-black">{project.data.client}</span>
@@ -34,7 +50,38 @@ const ProjectDetail = ({ project, projects }) => {
           </p>
         </div> */}
 
-        <SliceZone slices={project.data.slices} components={components} />
+        <div className="relative col-start-3 md:p-0 w-[90vw] md:w-[96vw] aspect-video">
+          <Plyr
+            // autoPlay={true}
+            options={{
+              loop: { active: true },
+              muted: true,
+              autoplay: true,
+              autopause: false,
+              clickToPlay: true,
+              controls: [],
+            }}
+            source={videoSrc}
+          />
+        </div>
+        <div className="relative col-start-3 md:p-0 w-[90vw] md:w-[96vw] aspect-video">
+          <Plyr
+            options={{
+              loop: { active: true },
+              muted: true,
+              autoplay: true,
+              autopause: false,
+            }}
+            source={videoSrc}
+          />
+        </div>
+
+        {/* <SliceZone slices={project.data.slices} components={components} /> */}
+
+        {/* <div className="relative col-start-3 md:p-0 w-[90vw] md:w-[96vw] aspect-video"> */}
+        {/* <Player ratio="video" /> */}
+        {/* <PlayerUwave /> */}
+        {/* </div> */}
       </div>
 
       <ProjectBtn project={project} projects={projects} />

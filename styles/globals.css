@@ -209,3 +209,7 @@ input[type="range"] {
   width: 90vw;
   aspect-ratio: 16 / 9;
 } */
+
+:root {
+  --plyr-color-main: #e9ebf0;
+}

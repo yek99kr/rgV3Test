@@ -134,7 +134,7 @@
                   "type": "Text",
                   "config": {
                     "label": "Title",
-                    "placeholder": ""
+                    "placeholder": "Objective + Approach"
                   }
                 },
                 "summary": {
@@ -195,18 +195,18 @@
             "slice_type": "detail_main_text",
             "items": [],
             "primary": {
-              "title": "harness sexy relationships",
+              "title": "architect enterprise relationships",
               "summary": [
                 {
                   "type": "paragraph",
-                  "text": "Id incididunt laboris adipisicing et incididunt veniam culpa eu. Nulla qui minim nostrud ea culpa aute sunt adipisicing nisi id Lorem ex eiusmod est. Non labore est non.",
+                  "text": "Dolor et reprehenderit ea duis nisi anim minim cillum magna sint aute sit culpa nulla. Duis dolore mollit sunt consequat voluptate ut deserunt anim. Est sunt qui est laboris aliquip.",
                   "spans": []
                 }
               ],
               "moreInfo": [
                 {
                   "type": "paragraph",
-                  "text": "Do labore ullamco consequat velit dolor sunt.",
+                  "text": "Aliquip cupidatat officia ut officia magna.",
                   "spans": []
                 }
               ]
@@ -218,11 +218,11 @@
             "slice_type": "detail_main_text",
             "items": [],
             "primary": {
-              "Title": "empower end-to-end schemas",
+              "Title": "utilize rich mindshare",
               "moreInfo": [
                 {
                   "type": "paragraph",
-                  "text": "Id enim aute sit voluptate magna velit nisi incididunt occaecat eu minim magna ullamco minim do. Commodo adipisicing est dolore elit irure occaecat magna.",
+                  "text": "Quis sint sunt do non ea enim deserunt ullamco ad duis id laborum. Sit laborum eu eu veniam qui Lorem magna tempor eiusmod.",
                   "spans": []
                 }
               ]
@@ -233,7 +233,18 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/rachelyeeunkim/Desktop/RealGoodStudio/website/rbwebsiteV2/.slicemachine/assets/slices/DetailMainText/default/preview.png",
+            "width": 800,
+            "height": 160
+          },
+          "noReadMore": {
+            "path": "/Users/rachelyeeunkim/Desktop/RealGoodStudio/website/rbwebsiteV2/.slicemachine/assets/slices/DetailMainText/noReadMore/preview.png",
+            "width": 800,
+            "height": 84
+          }
+        }
       },
       "detail_media": {
         "library": "slices",

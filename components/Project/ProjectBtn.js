@@ -17,7 +17,7 @@ const ProjectBtn = ({ project, projects }) => {
             <a>
               <div
                 className={
-                  "bg-white/60 backdrop-blur-sm w-[43.5vw] rounded text-center p-2.5 thumbcursor text-black duration-150 hover:opacity-50 relative left-[5vw]"
+                  "bg-white/60 backdrop-blur-sm w-[47.5vw] rounded text-center p-2.5 thumbcursor text-black duration-150 hover:opacity-50 relative left-[3vw] md:left-[2vw]"
                 }
               >
                 Previous
@@ -27,7 +27,7 @@ const ProjectBtn = ({ project, projects }) => {
         ) : (
           <div
             className={
-              "bg-white/60 backdrop-blur-sm w-[43.5vw] rounded text-center p-2.5 text-black opacity-50  relative left-[5vw] pointer-events-none cursor-not-allowed"
+              "bg-white/60 backdrop-blur-sm w-[47.5vw] rounded text-center p-2.5 text-black opacity-50  relative left-[3vw] md:left-[2vw] pointer-events-none cursor-not-allowed"
             }
           >
             Previous
@@ -39,7 +39,7 @@ const ProjectBtn = ({ project, projects }) => {
             <a>
               <div
                 className={
-                  "bg-white/60 backdrop-blur-sm w-[43.5vw] rounded text-center p-2.5 thumbcursor text-black duration-150 hover:opacity-50  relative right-[5vw]"
+                  "bg-white/60 backdrop-blur-sm w-[43.5vw] rounded text-center p-2.5 thumbcursor text-black duration-150 hover:opacity-50  relative right-[3vw] md:right-[2vw]"
                 }
               >
                 Next
@@ -49,7 +49,7 @@ const ProjectBtn = ({ project, projects }) => {
         ) : (
           <div
             className={
-              "bg-white/60 backdrop-blur-sm w-[43.5vw] rounded text-center p-2.5 text-black opacity-50 pointer-events-none cursor-not-allowed relative right-[5vw]"
+              "bg-white/60 backdrop-blur-sm w-[43.5vw] rounded text-center p-2.5 text-black opacity-50 pointer-events-none cursor-not-allowed relative right-[3vw] md:right-[2vw]"
             }
           >
             Next
@@ -57,13 +57,13 @@ const ProjectBtn = ({ project, projects }) => {
         )}
       </div>
       {/* Desktop bottom Buttons */}
-      <div className="flex relative w-screen justify-between items-center text-[2.9vw] sm:text-sm md:text-base pt-[3.3vw] sm:pt-[2vw] lg:pt-[6rem] pb-[6vw] md:pb-[4rem] ">
+      <div className="flex relative w-screen justify-between items-center text-[2.9vw] sm:text-sm md:text-base pt-[3.3vw] sm:pt-[2vw] lg:pt-[6rem] pb-[6vw] md:pb-[3rem] ">
         {previousProject ? (
           <Link href={`/projects/${previousProject}`} passHref scroll={false}>
             <a>
               <div
                 className={
-                  "bg-white/60 backdrop-blur-sm lg:w-[150px] xl:w-[100px] rounded text-center p-3 thumbcursor text-black duration-150 hover:opacity-50 ml-[5vw] hidden lg:block"
+                  "bg-white/60 backdrop-blur-sm lg:w-[150px] xl:w-[140px] rounded text-center p-3 thumbcursor text-black duration-150 hover:opacity-50 ml-[2vw] hidden lg:block"
                 }
               >
                 Previous
@@ -76,7 +76,7 @@ const ProjectBtn = ({ project, projects }) => {
               <a>
                 <div
                   className={
-                    "bg-white/60 backdrop-blur-sm lg:w-[150px] xl:w-[100px] rounded text-center p-3 text-black opacity-50 ml-[5vw] pointer-events-none cursor-not-allowed hidden lg:block"
+                    "bg-white/60 backdrop-blur-sm lg:w-[150px] xl:w-[140px] rounded text-center p-3 text-black opacity-50 ml-[2vw] pointer-events-none cursor-not-allowed hidden lg:block"
                   }
                 >
                   Previous
@@ -88,7 +88,7 @@ const ProjectBtn = ({ project, projects }) => {
 
         <Link href="/projects" passHref scroll={false}>
           <a>
-            <div className="bg-white/60 backdrop-blur-sm w-[90vw] lg:w-[350px] xl:w-[455px] rounded text-center p-2.5 md:p-3 thumbcursor text-black duration-150 hover:opacity-50">
+            <div className="bg-white/60 backdrop-blur-sm w-[94vw] md:w-[96vw] lg:w-[350px] xl:w-[455px] rounded text-center p-2.5 md:p-3 thumbcursor text-black duration-150 hover:opacity-50">
               Back to Projects
             </div>
           </a>
@@ -99,7 +99,7 @@ const ProjectBtn = ({ project, projects }) => {
             <a>
               <div
                 className={
-                  "bg-white/60 backdrop-blur-sm lg:w-[150px] xl:w-[100px] rounded text-center p-3 thumbcursor text-black duration-150 hover:opacity-50 mr-[5vw] hidden lg:block"
+                  "bg-white/60 backdrop-blur-sm lg:w-[150px] xl:w-[140px] rounded text-center p-3 thumbcursor text-black duration-150 hover:opacity-50 mr-[2vw] hidden lg:block"
                 }
               >
                 Next
@@ -112,7 +112,7 @@ const ProjectBtn = ({ project, projects }) => {
               <a>
                 <div
                   className={
-                    "bg-white/60 backdrop-blur-sm lg:w-[400px] xl:w-[100px] rounded text-center p-3 text-black opacity-50 mr-[5vw] pointer-events-none cursor-not-allowed hidden lg:block"
+                    "bg-white/60 backdrop-blur-sm lg:w-[400px] xl:w-[140px] rounded text-center p-3 text-black opacity-50 mr-[2vw] pointer-events-none cursor-not-allowed hidden lg:block"
                   }
                 >
                   Next

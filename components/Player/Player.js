@@ -76,7 +76,7 @@ const Player = ({ url, ratio }) => {
         className="absolute rounded"
         width="100%"
         height="100%"
-        url={url}
+        url={"https://vimeo.com/772598080/2567ba5b25"}
         volume={1}
         playIcon={<></>}
         playing={isPlay}
@@ -103,7 +103,7 @@ const Player = ({ url, ratio }) => {
           hover && "visible"
         }`}
       >
-        <input
+        {/* <input
           type="range"
           min={0}
           max={0.999999}
@@ -112,7 +112,7 @@ const Player = ({ url, ratio }) => {
           onMouseDown={handleSeekMouseDown}
           onChange={handleSeekChange}
           onMouseUp={handleSeekMouseUp}
-        />
+        /> */}
 
         {/* <TbRectangle
           onClick={handleFullscreen}

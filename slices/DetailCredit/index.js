@@ -19,7 +19,7 @@ const DetailCredit = ({ slice }) => {
   return (
     <>
       {slice.variation !== "noReadMore" ? (
-        <div className="text col-start-3 relative leading-[4.6vw] sm:leading-7 text-[3.5vw] sm:text-[18px] text-left w-[90vw] mt-[1vw] mb-[1vw] md:mt-[25px] md:mb-[0px] ">
+        <div className="text col-start-3 relative leading-[4.3vw] sm:leading-7 text-[3.3vw] sm:text-[18px] text-left w-[94vw] mt-[2vw] mb-[1vw] md:mt-[50px] md:mb-[0px] ">
           <div className="flex w-[100%] justify-between">
             <div className="hidden md:block w-[22%] md:text-[1.3rem] lg:text-[1.4rem] font-mono">
               Credit
@@ -74,7 +74,7 @@ const DetailCredit = ({ slice }) => {
                   onClick={() => {
                     setIsReadMore(!isReadMore);
                   }}
-                  className="thumbcursor block mt-5 underline text-[3.5vw] md:text-[22px] "
+                  className="thumbcursor block mt-5 underline text-[3.3vw] md:text-[22px] "
                 >
                   {isReadMore ? "Read more" : "Show less"}
                 </div>
@@ -83,7 +83,7 @@ const DetailCredit = ({ slice }) => {
           </div>
         </div>
       ) : (
-        <div className="text col-start-3 relative leading-[4.6vw] sm:leading-7 text-[3.5vw] sm:text-[18px] text-left w-[90vw] mt-[1vw] mb-[1vw] md:mt-[25px] md:mb-[0px] ">
+        <div className="text col-start-3 relative leading-[4.3vw] sm:leading-7 text-[3.3vw] sm:text-[18px] text-left w-[94vw] mt-[2vw] mb-[1vw] md:mt-[50px] md:mb-[0px] ">
           <div className="flex w-[100%] justify-between">
             <div className="hidden md:block text-[1rem] md:text-[1.3rem] lg:text-[1.4rem] font-mono">
               Credit

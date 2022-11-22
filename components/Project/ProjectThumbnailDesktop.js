@@ -24,16 +24,6 @@ const ProjectThumbnailDesktop = ({ project }) => {
             }}
           >
             <div className="">
-              {/* <Image
-                src={thumbnails[0]}
-                //   alt={thumbnails[0]}
-                priority={true}
-                loading="eager"
-                placeholder="blur"
-                blurDataURL={`${thumbnails[0]}&blur=200`}
-                layout="fill"
-                objectFit="cover"
-              /> */}
               <MouseAnimation thumbnails={thumbnails} />
             </div>
           </div>
@@ -44,11 +34,15 @@ const ProjectThumbnailDesktop = ({ project }) => {
             } `}
             style={{ transition: "opacity 0.2s" }}
           >
-            <h1 className="mt-0.5 text-center  sm:text-base  m-[-0.1rem]">
-              {project.data.year}
-            </h1>
             <p className="text-center md:text-xl lg:text-2xl m-[-0.1rem]">
+              {/* <span className="bg-black text-white p-1"> */}
               {project.data.client}
+              {/* </span> */}
+            </p>
+            <p className="text-center md:text-base lg:text-lg m-[0rem]">
+              {/* <span className="bg-black text-white p-1"> */}{" "}
+              {project.data.title}
+              {/* </span> */}
             </p>
           </div>
         </a>

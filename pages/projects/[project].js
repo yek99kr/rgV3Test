@@ -37,6 +37,7 @@ export async function getStaticPaths() {
 }
 
 const project = ({ router, project, projects }) => {
+  // console.log(project.uid);
   return (
     <motion.div
       key={router.route}

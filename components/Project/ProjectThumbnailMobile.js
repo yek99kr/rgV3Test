@@ -28,6 +28,9 @@ const ProjectThumbnailMobile = ({ project }) => {
           <p className=" text-center  text-[4.2vw] sm:text-xl">
             {project.data.client}
           </p>
+          <p className=" text-center  text-[3.5vw] sm:text-xl">
+            {project.data.title}
+          </p>
         </div>
       </a>
     </Link>
