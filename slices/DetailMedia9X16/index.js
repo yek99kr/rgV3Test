@@ -90,7 +90,7 @@ const DetailMedia9X16 = ({ slice }) => {
       ) : (
         <>
           {slice.primary.media1.link_type === "Web" ? (
-            <div className="col-start-3 md:col-start-2 w-[70vw] md:w-[26vw] relative rounded md:place-self-end md:left-[3vw] aspect-[9/16] rotate-[-2deg] ">
+            <div className="md:mt-10 col-start-3 md:col-start-2 w-[70vw] md:w-[26vw] relative rounded md:place-self-end md:left-[3vw] aspect-[9/16] rotate-[-2deg] ">
               <iframe
                 className="w-[100%] h-[100%]"
                 src={`${slice.primary.media1.url.slice(
@@ -104,7 +104,7 @@ const DetailMedia9X16 = ({ slice }) => {
               ></iframe>
             </div>
           ) : (
-            <div className="col-start-3 md:col-start-2 w-[94vw] md:w-[26vw] relative rounded md:place-self-end md:left-[3vw] aspect-[9/16] ">
+            <div className="md:mt-10  col-start-3 md:col-start-2 w-[94vw] md:w-[26vw] relative rounded md:place-self-end md:left-[3vw] aspect-[9/16] ">
               <Image
                 src={slice.primary.media1.url}
                 //   alt={thumbnails[0]}
@@ -116,7 +116,7 @@ const DetailMedia9X16 = ({ slice }) => {
             </div>
           )}
           {slice.primary.media2.link_type === "Web" ? (
-            <div className="col-start-3 md:col-start-4 w-[70vw] md:w-[26vw] rounded aspect-[9/16] rotate-[2deg] ">
+            <div className="md:mt-10  col-start-3 md:col-start-4 w-[70vw] md:w-[26vw] rounded aspect-[9/16] rotate-[2deg] ">
               <iframe
                 className="w-[100%] h-[100%]"
                 src={`${slice.primary.media2.url.slice(
@@ -130,7 +130,7 @@ const DetailMedia9X16 = ({ slice }) => {
               ></iframe>
             </div>
           ) : (
-            <div className="col-start-3 md:col-start-4  w-[94vw] md:w-[26vw] rounded aspect-[9/16] rotate-[-2deg]">
+            <div className="md:mt-10  col-start-3 md:col-start-4  w-[94vw] md:w-[26vw] rounded aspect-[9/16] rotate-[-2deg]">
               <Image
                 src={slice.primary.media2.url}
                 //   alt={thumbnails[0]}

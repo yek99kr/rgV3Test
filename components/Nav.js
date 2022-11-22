@@ -18,33 +18,40 @@ const Nav = () => {
     return (cartQuantity += item?.variantQuantity);
   });
 
+  const [angle, setAngle] = useState(0);
+
   return (
     <>
-      <div className="fixed top-0 mt-[3.5vw] 2xs:mt-2 xs:mt-2.5 sm:mt-3 z-[1000] text-[2.9vw] 4xs:text-[2.9vw] sm:text-[15px] md:text-[16px] lg:text-[18px] xl:text-[18.5px] flex justify-center items-center w-screen select-none">
-        <div className=" bg-white/60 backdrop-hue-rotate-180 rounded m-0 mr-[1.8vw] sm:mr-3 p-[2vw] sm:p-[0.69rem] pl-[2.2vw] pr-[2.2vw] sm:pl-3 sm:pr-3 select-none">
+      <div className=" fixed top-0 mt-[2.5vw] sm:mt-3 z-[1000] text-[2.9vw] 4xs:text-[2.9vw] sm:text-[15px] md:text-[16px] lg:text-[18px] xl:text-[18.5px] flex justify-center items-center w-screen select-none">
+        <div className="inline-block rotate-[0deg] bg-white backdrop-blur rounded m-0 mr-[1.8vw] sm:mr-3 p-[2.2vw] sm:p-[0.69rem] pl-[2.2vw] pr-[2.2vw] sm:pl-3 sm:pr-3 select-none">
           <Link href="/" passHref scroll={false}>
             <a className="thumbcursor">
               <img
                 src="/logoShort.png"
                 alt="logo"
-                className="w-[13.5vw] sm:w-[70px] md:w-[76px] lg:w-[87.5px] xl:w-[90px]"
+                className="w-[13.5vw] sm:w-[70px] md:w-[76px] lg:w-[87.5px] xl:w-[93px] "
                 // className="w-[12.5vw] sm:w-[3.8rem] md:w-[4.55rem]"
               />
             </a>
           </Link>
         </div>
 
-        <div className="bg-white/60 rounded p-[1.3vw] sm:p-[0.45rem] sm:pl-1 sm:pr-1 backdrop-hue-rotate-180">
+        <div
+          className={`rotate-[${angle}deg] duration-75 bg-white backdrop-blur rounded p-[1.5vw] pl-0 pr-0 sm:p-[0.45rem] sm:pl-1 sm:pr-1 `}
+        >
           <Link href="/projects" passHref scroll={false}>
             <a
-              className={`p-[0vw] sm:p-0 sm:pl-0.5 sm:pr-1 thumbcursor duration-[0.2s]  hover:opacity-100
+              className={`relative inline-block hover:rotate-[5deg]  p-[0.3vw] sm:p-0 sm:pl-0.5 sm:pr-1 thumbcursor duration-[0.2s]  hover:opacity-100
               ${
                 router.pathname.includes("/projects")
-                  ? "opacity-100"
+                  ? "opacity-100 rotate-[5deg] "
                   : "opacity-50"
               }`}
+              onMouseEnter={() => {
+                setAngle(-3);
+              }}
             >
-              <span className="p-1.5 pr-[2.2vw] pl-[2.2vw] sm:pr-3 sm:pl-3 ">
+              <span className=" p-1.5 pr-[2.2vw] pl-[2.2vw] sm:pr-3 sm:pl-3 ">
                 Projects
               </span>
             </a>
@@ -52,10 +59,15 @@ const Nav = () => {
 
           <Link href="/shop" passHref scroll={false}>
             <a
-              className={`p-[0vw] sm:p-0 sm:pl-0.5 sm:pr-1  thumbcursor   hover:opacity-100 duration-[0.2]
+              className={`inline-block p-[0.3vw] hover:rotate-[-6deg] sm:p-0 sm:pl-0.5 sm:pr-1  thumbcursor   hover:opacity-100 duration-[0.2s] 
             ${
-              router.pathname.includes("/shop") ? "opacity-100" : "opacity-50"
+              router.pathname.includes("/shop")
+                ? "opacity-100 rotate-[-6deg] "
+                : "opacity-50"
             }`}
+              onMouseEnter={() => {
+                setAngle(-2);
+              }}
             >
               <span
                 className={`p-1.5  pr-[2.2vw] pl-[2.2vw] sm:pr-3 sm:pl-3  `}
@@ -69,8 +81,11 @@ const Nav = () => {
             href="https://www.instagram.com/real.good.studio/"
             target="_blank"
             rel="noreferrer"
-            className={`p-[0vw] sm:p-0 sm:pl-0.5 sm:pr-1 thumbcursor duration-[0.2s] opacity-50 hover:opacity-100
+            className={`inline-block hover:rotate-[2deg] p-[0.3vw] sm:p-0 sm:pl-0.5 sm:pr-1 thumbcursor duration-[0.2s] opacity-50 hover:opacity-100
            `}
+            onMouseEnter={() => {
+              setAngle(0);
+            }}
           >
             <span className={`p-1.5 pr-[2.2vw] pl-[2.2vw] sm:pr-3 sm:pl-3  `}>
               Instagram
@@ -82,9 +97,12 @@ const Nav = () => {
               navigator.clipboard.writeText("hello@realgood.tv");
               setCopyed(true);
             }}
+            onMouseEnter={() => {
+              setAngle(2);
+            }}
             // target="_blank"
             // rel="noreferrer"
-            className={`p-[0vw] sm:p-0 sm:pl-0.5 sm:pr-1 thumbcursor duration-[0.2s] opacity-50 hover:opacity-100
+            className={`inline-block hover:rotate-[-4deg] p-[0.3vw] sm:p-0 sm:pl-0.5 sm:pr-1 thumbcursor duration-[0.2s] opacity-50 hover:opacity-100
         `}
           >
             <span className={`p-1.5 pr-[2.2vw] pl-[2.2vw] sm:pr-3 sm:pl-3  `}>
@@ -96,9 +114,12 @@ const Nav = () => {
             onClick={() => {
               setCartOpen(!cartOpen);
             }}
-            className={`p-[0vw] sm:p-0 sm:pl-1 sm:pr-0.5  thumbcursor  hover:opacity-100  ${
+            className={`inline-block hover:rotate-[3deg] p-[0.3vw] sm:p-0 sm:pl-1 sm:pr-0.5  thumbcursor  hover:opacity-100  ${
               cartOpen ? "opacity-100" : "opacity-50"
             }`}
+            onMouseEnter={() => {
+              setAngle(3);
+            }}
           >
             <span className={`p-1.5 pr-[2.2vw] pl-[2.2vw] sm:pr-3 sm:pl-3  `}>
               Cart{" "}
@@ -143,7 +164,7 @@ export default Nav;
 //   return (
 //     <>
 //       <div className="fixed top-0 mt-[3.5vw] 2xs:mt-2 xs:mt-2.5 sm:mt-3 z-[1000] text-[2.9vw] 4xs:text-[2.9vw] sm:text-[15px] md:text-[16px] lg:text-[18.5px] xl:text-[18.5px] flex justify-center items-center w-screen select-none">
-//         <div className=" bg-white backdrop-hue-rotate-180 rounded m-0 mr-[1.8vw] sm:mr-3 p-[1.87vw] sm:p-[0.69rem] pl-[2.5vw] pr-[2.5vw] sm:pl-3 sm:pr-3 select-none">
+//         <div className=" bg-white backdrop-hue-rotate-180  m-0 mr-[1.8vw] sm:mr-3 p-[1.87vw] sm:p-[0.69rem] pl-[2.5vw] pr-[2.5vw] sm:pl-3 sm:pr-3 select-none">
 //           <Link href="/" passHref scroll={false}>
 //             <a className="thumbcursor">
 //               <img
@@ -156,10 +177,10 @@ export default Nav;
 //           </Link>
 //         </div>
 
-//         <div className="bg-white rounded p-[1.3vw] sm:p-[0.45rem] sm:pl-1 sm:pr-1 backdrop-hue-rotate-180">
+//         <div className="bg-white  p-[1.3vw] sm:p-[0.45rem] sm:pl-1 sm:pr-1 backdrop-hue-rotate-180">
 //           <Link href="/projects" passHref scroll={false}>
 //             <a
-//               className={`p-[0vw] sm:p-0 sm:pl-0.5 sm:pr-1 thumbcursor  hover:opacity-100
+//               className={`p-[0.3vw] sm:p-0 sm:pl-0.5 sm:pr-1 thumbcursor  hover:opacity-100
 //               ${
 //                 router.pathname.includes("/projects")
 //                   ? "opacity-100"
@@ -180,7 +201,7 @@ export default Nav;
 
 //           <Link href="/shop" passHref scroll={false}>
 //             <a
-//               className={`p-[0vw] sm:p-0 sm:pl-0.5 sm:pr-1  thumbcursor  hover:opacity-100
+//               className={`p-[0.3vw] sm:p-0 sm:pl-0.5 sm:pr-1  thumbcursor  hover:opacity-100
 //             ${
 //               router.pathname.includes("/shop") ? "opacity-100" : "opacity-100"
 //             }`}
@@ -201,7 +222,7 @@ export default Nav;
 //             href="https://www.instagram.com/real.good.studio/"
 //             target="_blank"
 //             rel="noreferrer"
-//             className="p-[0vw] sm:p-0 sm:pl-0.5 sm:pr-1  thumbcursor"
+//             className="p-[0.3vw] sm:p-0 sm:pl-0.5 sm:pr-1  thumbcursor"
 //           >
 //             <span
 //               className={`p-1.5 pr-[2.2vw] pl-[2.2vw] sm:pr-3 sm:pl-3  hover:bg-black  hover:text-white duration-[0.2s]`}
@@ -217,7 +238,7 @@ export default Nav;
 //             }}
 //             // target="_blank"
 //             // rel="noreferrer"
-//             className="p-[0vw] sm:p-0 sm:pl-0.5 sm:pr-1  thumbcursor "
+//             className="p-[0.3vw] sm:p-0 sm:pl-0.5 sm:pr-1  thumbcursor "
 //           >
 //             <span
 //               className={`p-1.5 pr-[2.2vw] pl-[2.2vw] sm:pr-3 sm:pl-3  hover:bg-black  hover:text-white duration-[0.2s]`}
@@ -230,7 +251,7 @@ export default Nav;
 //             onClick={() => {
 //               setCartOpen(!cartOpen);
 //             }}
-//             className={`p-[0vw] sm:p-0 sm:pl-1 sm:pr-0.5  thumbcursor hover:opacity-100  ${
+//             className={`p-[0.3vw] sm:p-0 sm:pl-1 sm:pr-0.5  thumbcursor hover:opacity-100  ${
 //               cartOpen ? "opacity-100" : "opacity-100"
 //             }`}
 //           >
@@ -295,7 +316,7 @@ export default Nav;
 //         <div className="bg-white rounded p-[1.3vw] sm:p-[0.45rem] sm:pl-1 sm:pr-1 backdrop-hue-rotate-180">
 //           <Link href="/projects" passHref scroll={false}>
 //             <a
-//               className={`p-[0vw] sm:p-0 sm:pl-0.5 sm:pr-1 thumbcursor  hover:opacity-100
+//               className={`p-[0.3vw] sm:p-0 sm:pl-0.5 sm:pr-1 thumbcursor  hover:opacity-100
 //               ${
 //                 router.pathname.includes("/projects")
 //                   ? "opacity-100"
@@ -316,7 +337,7 @@ export default Nav;
 
 //           <Link href="/shop" passHref scroll={false}>
 //             <a
-//               className={`p-[0vw] sm:p-0 sm:pl-0.5 sm:pr-1  thumbcursor  hover:opacity-100
+//               className={`p-[0.3vw] sm:p-0 sm:pl-0.5 sm:pr-1  thumbcursor  hover:opacity-100
 //             ${
 //               router.pathname.includes("/shop") ? "opacity-100" : "opacity-100"
 //             }`}
@@ -337,7 +358,7 @@ export default Nav;
 //             href="https://www.instagram.com/real.good.studio/"
 //             target="_blank"
 //             rel="noreferrer"
-//             className="p-[0vw] sm:p-0 sm:pl-0.5 sm:pr-1  thumbcursor"
+//             className="p-[0.3vw] sm:p-0 sm:pl-0.5 sm:pr-1  thumbcursor"
 //           >
 //             <span
 //               className={`p-1.5 rounded pr-[2.2vw] pl-[2.2vw] sm:pr-3 sm:pl-3  hover:bg-blue-500 duration-[0.2s]`}
@@ -353,7 +374,7 @@ export default Nav;
 //             }}
 //             // target="_blank"
 //             // rel="noreferrer"
-//             className="p-[0vw] sm:p-0 sm:pl-0.5 sm:pr-1  thumbcursor "
+//             className="p-[0.3vw] sm:p-0 sm:pl-0.5 sm:pr-1  thumbcursor "
 //           >
 //             <span
 //               className={`p-1.5 rounded pr-[2.2vw] pl-[2.2vw] sm:pr-3 sm:pl-3  hover:bg-purple-500 duration-[0.2s]`}
@@ -366,7 +387,7 @@ export default Nav;
 //             onClick={() => {
 //               setCartOpen(!cartOpen);
 //             }}
-//             className={`p-[0vw] sm:p-0 sm:pl-1 sm:pr-0.5  thumbcursor hover:opacity-100  ${
+//             className={`p-[0.3vw] sm:p-0 sm:pl-1 sm:pr-0.5  thumbcursor hover:opacity-100  ${
 //               cartOpen ? "opacity-100" : "opacity-100"
 //             }`}
 //           >

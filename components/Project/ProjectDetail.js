@@ -1,6 +1,7 @@
 import { SliceZone } from "@prismicio/react";
 import { components } from "../../slices";
 import ProjectBtn from "./ProjectBtn";
+import EmailSubscribe from "../EmailSubscribe";
 // import Plyr from "plyr-react";
 // import "plyr-react/plyr.css";
 
@@ -27,13 +28,13 @@ const ProjectDetail = ({ project, projects }) => {
         "
       >
         <div className="col-start-3 relative text-center w-[90vw] h-[11vw] lg:h-[5vw] top-[35vw] sm:top-[35vw] md:top-[34vw] lg:top-[26vw] xl:top-[28vw] z-[100]">
-          <h1 className="text-[6vw] sm:text-[40px] lg:text-[55px] xl:text-[60px]">
+          <h1 className="text-[6vw] sm:text-[40px] lg:text-[55px] xl:text-[80px]">
             <span className="text-white bg-black p-0.5 pl-3 pr-3 font-bold">
               {project.data.client}
             </span>
           </h1>
 
-          <p className="title relative text-[3.6vw] sm:text-[25px] lg:text-[28px] mb-[2vw] md:mb-[30px] font-mono">
+          <p className="title relative text-[3.6vw] sm:text-[25px] lg:text-[30px] mb-[2vw] md:mb-[30px] font-mono">
             <span className="text-white bg-black p-0.5 pl-2 pr-2">
               {project.data.title}
             </span>
@@ -77,6 +78,7 @@ const ProjectDetail = ({ project, projects }) => {
         </div> */}
 
         <SliceZone slices={project.data.slices} components={components} />
+        <EmailSubscribe />
 
         {/* <div className="relative col-start-3 md:p-0 w-[90vw] md:w-[96vw] aspect-video"> */}
         {/* <Player ratio="video" /> */}

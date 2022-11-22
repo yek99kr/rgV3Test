@@ -181,7 +181,7 @@ const DetailMediaMix = ({ slice }) => {
         <>
           {slice.primary.media1.link_type === "Web" ? (
             <div
-              className={`col-start-3 md:col-start-1 w-[94vw] md:w-[55.9vw] relative rounded md:place-self-start md:left-[2vw] aspect-square`}
+              className={`col-start-3 md:col-start-1 w-[94vw] md:w-[60.3vw] relative rounded md:place-self-start md:left-[2vw] aspect-square`}
             >
               <iframe
                 className="w-[100%] h-[100%]"
@@ -197,7 +197,7 @@ const DetailMediaMix = ({ slice }) => {
             </div>
           ) : (
             <div
-              className={`col-start-3 md:col-start-1 w-[94vw] md:w-[55.9vw] relative rounded md:place-self-start md:left-[2vw] aspect-square`}
+              className={`col-start-3 md:col-start-1 w-[94vw]  md:w-[60.3vw] relative rounded md:place-self-start md:left-[2vw] aspect-square`}
             >
               <Image
                 src={slice.primary.media1.url}
@@ -211,7 +211,7 @@ const DetailMediaMix = ({ slice }) => {
           )}
           {slice.primary.media2.link_type === "Web" ? (
             <div
-              className={`col-start-3 md:col-start-5 w-[94vw] md:w-[31.5vw] relative rounded md:place-self-end md:right-[2vw] aspect-[9/16]`}
+              className={`col-start-3 md:col-start-5 w-[94vw] md:w-[33.8vw] relative rounded md:place-self-end md:right-[2vw] aspect-[9/16]`}
             >
               <iframe
                 className="w-[100%] h-[100%]"
@@ -227,7 +227,7 @@ const DetailMediaMix = ({ slice }) => {
             </div>
           ) : (
             <div
-              className={`col-start-3 md:col-start-5 w-[94vw] md:w-[31.5vw] relative rounded md:place-self-end md:right-[2vw] aspect-[9/16]`}
+              className={`col-start-3 md:col-start-5 w-[94vw] md:w-[33.8vw] relative rounded md:place-self-end md:right-[2vw] aspect-[9/16]`}
             >
               <Image
                 src={slice.primary.media2.url}
