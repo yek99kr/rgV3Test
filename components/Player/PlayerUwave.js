@@ -1,41 +1,41 @@
-import { useEffect } from "react";
-import Plyr, { SourceInfo, Options } from "plyr";
+// import { useEffect } from "react";
+// import Plyr, { SourceInfo, Options } from "plyr";
 
-import "plyr/dist/plyr.css";
+// import "plyr/dist/plyr.css";
 
-const usePlyr = (id, sources, opts) => {
-  useEffect(() => {
-    const el = document.getElementById(id);
-    const player = new Plyr(el, {
-      autopause: false,
-      autoplay: true,
-      loop: { active: false },
-      muted: true,
-    });
-    player.source = sources;
+// const usePlyr = (id, sources, opts) => {
+//   useEffect(() => {
+//     const el = document.getElementById(id);
+//     const player = new Plyr(el, {
+//       autopause: false,
+//       autoplay: true,
+//       loop: { active: false },
+//       muted: true,
+//     });
+//     player.source = sources;
 
-    return () => player.destroy();
-  }, [sources, opts]);
-};
+//     return () => player.destroy();
+//   }, [sources, opts]);
+// };
 
-// use
-const PlayerUwave = () => {
-  const sources = {
-    type: "video",
+// // use
+// const PlayerUwave = () => {
+//   const sources = {
+//     type: "video",
 
-    sources: [
-      {
-        src: "https://player.vimeo.com/video/772598080?h=2567ba5b25&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&loop=1&autopause=0&muted=1?background=1",
-        provider: "vimeo",
-      },
-    ],
-  };
+//     sources: [
+//       {
+//         src: "https://player.vimeo.com/video/772598080?h=2567ba5b25&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&loop=1&autopause=0&muted=1?background=1",
+//         provider: "vimeo",
+//       },
+//     ],
+//   };
 
-  usePlyr("plyr", sources);
+//   usePlyr("plyr", sources);
 
-  return <video autopause={false} id="plyr" />;
-};
-export default PlayerUwave;
+//   return <video autopause={false} id="plyr" />;
+// };
+// export default PlayerUwave;
 
 // import dynamic from "next/dynamic";
 
