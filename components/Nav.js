@@ -18,12 +18,12 @@ const Nav = () => {
     return (cartQuantity += item?.variantQuantity);
   });
 
-  const [angle, setAngle] = useState(0);
+  const [angle, setAngle] = useState("0");
 
   return (
     <>
       <div className=" fixed top-0 mt-[2.5vw] sm:mt-3 z-[1000] text-[2.9vw] 4xs:text-[2.9vw] sm:text-[15px] md:text-[16px] lg:text-[18px] xl:text-[18.5px] flex justify-center items-center w-screen select-none">
-        <div className="inline-block rotate-[0deg] bg-white backdrop-blur rounded m-0 mr-[1.8vw] sm:mr-3 p-[2.2vw] sm:p-[0.69rem] pl-[2.2vw] pr-[2.2vw] sm:pl-3 sm:pr-3 select-none">
+        <div className=" bg-white backdrop-blur rounded m-0 mr-[1.8vw] sm:mr-3 p-[2.2vw] sm:p-[0.69rem] pl-[2.2vw] pr-[2.2vw] sm:pl-3 sm:pr-3 select-none">
           <Link href="/" passHref scroll={false}>
             <a className="thumbcursor">
               <img
@@ -41,14 +41,14 @@ const Nav = () => {
         >
           <Link href="/projects" passHref scroll={false}>
             <a
-              className={`relative inline-block hover:rotate-[5deg]  p-[0.3vw] sm:p-0 sm:pl-0.5 sm:pr-1 thumbcursor duration-[0.2s]  hover:opacity-100
+              className={`inline-block hover:rotate-[5deg]  p-[0.3vw] sm:p-0 sm:pl-0.5 sm:pr-1 thumbcursor duration-[0.2s]  hover:opacity-100
               ${
                 router.pathname.includes("/projects")
                   ? "opacity-100 rotate-[5deg] "
                   : "opacity-50"
               }`}
               onMouseEnter={() => {
-                setAngle(-3);
+                setAngle("-3");
               }}
             >
               <span className=" p-1.5 pr-[2.2vw] pl-[2.2vw] sm:pr-3 sm:pl-3 ">
@@ -66,7 +66,7 @@ const Nav = () => {
                 : "opacity-50"
             }`}
               onMouseEnter={() => {
-                setAngle(-2);
+                setAngle("-2");
               }}
             >
               <span
@@ -84,7 +84,7 @@ const Nav = () => {
             className={`inline-block hover:rotate-[2deg] p-[0.3vw] sm:p-0 sm:pl-0.5 sm:pr-1 thumbcursor duration-[0.2s] opacity-50 hover:opacity-100
            `}
             onMouseEnter={() => {
-              setAngle(0);
+              setAngle("0");
             }}
           >
             <span className={`p-1.5 pr-[2.2vw] pl-[2.2vw] sm:pr-3 sm:pl-3  `}>
@@ -98,7 +98,7 @@ const Nav = () => {
               setCopyed(true);
             }}
             onMouseEnter={() => {
-              setAngle(2);
+              setAngle("2");
             }}
             // target="_blank"
             // rel="noreferrer"
@@ -118,7 +118,7 @@ const Nav = () => {
               cartOpen ? "opacity-100" : "opacity-50"
             }`}
             onMouseEnter={() => {
-              setAngle(3);
+              setAngle("3");
             }}
           >
             <span className={`p-1.5 pr-[2.2vw] pl-[2.2vw] sm:pr-3 sm:pl-3  `}>
