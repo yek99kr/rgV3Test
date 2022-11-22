@@ -23,7 +23,7 @@ const Nav = () => {
   return (
     <>
       <div className=" fixed top-0 mt-[2.5vw] sm:mt-3 z-[1000] text-[2.9vw] 4xs:text-[2.9vw] sm:text-[15px] md:text-[16px] lg:text-[18px] xl:text-[18.5px] flex justify-center items-center w-screen select-none">
-        <div className=" bg-white backdrop-blur rounded m-0 mr-[1.8vw] sm:mr-3 p-[2.2vw] sm:p-[0.69rem] pl-[2.2vw] pr-[2.2vw] sm:pl-3 sm:pr-3 select-none">
+        <div className=" bg-white/60 backdrop-blur rounded m-0 mr-[1.8vw] sm:mr-3 p-[2.2vw] sm:p-[0.69rem] pl-[2.2vw] pr-[2.2vw] sm:pl-3 sm:pr-3 select-none">
           <Link href="/" passHref scroll={false}>
             <a className="thumbcursor">
               <img
@@ -39,7 +39,7 @@ const Nav = () => {
         <div
           style={{ transform: `rotate(${angle}deg)` }}
           className={
-            "duration-75 bg-white backdrop-blur rounded p-[1.5vw] pl-0 pr-0 sm:p-[0.45rem] sm:pl-1 sm:pr-1 "
+            "duration-75 bg-white/60 backdrop-blur rounded p-[1.5vw] pl-0 pr-0 sm:p-[0.45rem] sm:pl-1 sm:pr-1 "
           }
         >
           <Link href="/projects" passHref scroll={false}>
@@ -51,7 +51,7 @@ const Nav = () => {
                   : "opacity-50"
               }`}
               onMouseEnter={() => {
-                setAngle("-3");
+                setAngle("-1.4");
               }}
             >
               <span className=" p-1.5 pr-[2.2vw] pl-[2.2vw] sm:pr-3 sm:pl-3 ">
@@ -69,7 +69,7 @@ const Nav = () => {
                 : "opacity-50"
             }`}
               onMouseEnter={() => {
-                setAngle("-2");
+                setAngle("-0.7");
               }}
             >
               <span
@@ -101,7 +101,7 @@ const Nav = () => {
               setCopyed(true);
             }}
             onMouseEnter={() => {
-              setAngle("2");
+              setAngle("0.7");
             }}
             // target="_blank"
             // rel="noreferrer"
@@ -121,7 +121,7 @@ const Nav = () => {
               cartOpen ? "opacity-100" : "opacity-50"
             }`}
             onMouseEnter={() => {
-              setAngle("3");
+              setAngle("1.4");
             }}
           >
             <span className={`p-1.5 pr-[2.2vw] pl-[2.2vw] sm:pr-3 sm:pl-3  `}>
