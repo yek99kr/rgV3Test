@@ -44,10 +44,10 @@ const Nav = () => {
         >
           <Link href="/projects" passHref scroll={false}>
             <a
-              className={`inline-block hover:rotate-[5deg]  p-[0.3vw] sm:p-0 sm:pl-0.5 sm:pr-1 thumbcursor duration-[0.2s]  hover:opacity-100
+              className={`inline-block hover:rotate-[3deg]  p-[0.3vw] sm:p-0 sm:pl-0.5 sm:pr-1 thumbcursor duration-[0.2s]  hover:opacity-100
               ${
                 router.pathname.includes("/projects")
-                  ? "opacity-100 rotate-[5deg] "
+                  ? "opacity-100 rotate-[3deg] "
                   : "opacity-50"
               }`}
               onMouseEnter={() => {
@@ -62,10 +62,10 @@ const Nav = () => {
 
           <Link href="/shop" passHref scroll={false}>
             <a
-              className={`inline-block p-[0.3vw] hover:rotate-[-6deg] sm:p-0 sm:pl-0.5 sm:pr-1  thumbcursor   hover:opacity-100 duration-[0.2s] 
+              className={`inline-block p-[0.3vw] hover:rotate-[-3deg] sm:p-0 sm:pl-0.5 sm:pr-1  thumbcursor   hover:opacity-100 duration-[0.2s] 
             ${
               router.pathname.includes("/shop")
-                ? "opacity-100 rotate-[-6deg] "
+                ? "opacity-100 rotate-[-3deg] "
                 : "opacity-50"
             }`}
               onMouseEnter={() => {
