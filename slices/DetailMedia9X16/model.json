@@ -19,13 +19,13 @@
             "select": null
           }
         },
-        "media1controls": {
+        "media1Autoplay": {
           "type": "Boolean",
           "config": {
-            "label": "Media1 Controls",
+            "label": "Media1 Autoplay",
             "placeholder_false": "false",
             "placeholder_true": "true",
-            "default_value": true
+            "default_value": false
           }
         },
         "media2": {
@@ -36,13 +36,13 @@
             "select": null
           }
         },
-        "media2Controls": {
+        "media2Autoplay": {
           "type": "Boolean",
           "config": {
-            "label": "Media2 Controls",
+            "label": "Media2 Autoplay",
             "placeholder_false": "false",
             "placeholder_true": "true",
-            "default_value": true
+            "default_value": false
           }
         },
         "media3": {
@@ -53,13 +53,13 @@
             "select": null
           }
         },
-        "media3Controls": {
+        "media3Autoplay": {
           "type": "Boolean",
           "config": {
-            "label": "Media3 Controls",
+            "label": "Media3 Autoplay",
             "placeholder_false": "false",
             "placeholder_true": "true",
-            "default_value": true
+            "default_value": false
           }
         }
       },
@@ -81,13 +81,13 @@
             "select": null
           }
         },
-        "media1controls": {
+        "media1Autoplay": {
           "type": "Boolean",
           "config": {
-            "label": "Media1 Controls",
+            "label": "Media1 Autoplay",
             "placeholder_false": "false",
             "placeholder_true": "true",
-            "default_value": true
+            "default_value": false
           }
         },
         "media2": {
@@ -98,13 +98,13 @@
             "select": null
           }
         },
-        "media2Controls": {
+        "media2Autoplay": {
           "type": "Boolean",
           "config": {
-            "label": "Media2 Controls",
+            "label": "Media2 Autoplay",
             "placeholder_false": "false",
             "placeholder_true": "true",
-            "default_value": true
+            "default_value": false
           }
         }
       },

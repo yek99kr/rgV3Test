@@ -7,14 +7,14 @@
     "primary": {
       "media1": {
         "link_type": "Web",
-        "url": "https://slicemachine.dev"
-      },
-      "media1Controls": false,
-      "media2": {
-        "link_type": "Web",
         "url": "http://twitter.com"
       },
-      "media2Controls": false
+      "media1Autoplay": true,
+      "media2": {
+        "link_type": "Web",
+        "url": "http://google.com"
+      },
+      "media2Autoplay": true
     }
   },
   {
@@ -27,12 +27,12 @@
         "link_type": "Web",
         "url": "http://twitter.com"
       },
-      "media1Controls": false,
+      "media1Autoplay": false,
       "media2": {
         "link_type": "Web",
-        "url": "http://twitter.com"
+        "url": "http://google.com"
       },
-      "media2Controls": false
+      "media2Autoplay": true
     }
   },
   {
@@ -43,14 +43,14 @@
     "primary": {
       "media1": {
         "link_type": "Web",
-        "url": "http://google.com"
-      },
-      "media1Controls": true,
-      "media2": {
-        "link_type": "Web",
         "url": "http://twitter.com"
       },
-      "media2Controls": false
+      "media1Autoplay": false,
+      "media2": {
+        "link_type": "Web",
+        "url": "https://prismic.io"
+      },
+      "media2Autoplay": false
     }
   },
   {
@@ -61,14 +61,14 @@
     "primary": {
       "media1": {
         "link_type": "Web",
-        "url": "http://twitter.com"
+        "url": "http://google.com"
       },
-      "media1Controls": true,
+      "media1Autoplay": false,
       "media2": {
         "link_type": "Web",
         "url": "https://slicemachine.dev"
       },
-      "media2Controls": false
+      "media2Autoplay": false
     }
   }
 ]

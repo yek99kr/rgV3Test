@@ -272,13 +272,13 @@
                     "select": null
                   }
                 },
-                "controls": {
+                "autoplay": {
                   "type": "Boolean",
                   "config": {
-                    "label": "Controls",
+                    "label": "Autoplay",
                     "placeholder_false": "false",
                     "placeholder_true": "true",
-                    "default_value": true
+                    "default_value": false
                   }
                 }
               },
@@ -296,9 +296,9 @@
             "primary": {
               "media": {
                 "link_type": "Web",
-                "url": "http://twitter.com"
+                "url": "https://slicemachine.dev"
               },
-              "controls": false
+              "autoplay": false
             }
           }
         },
@@ -306,13 +306,7 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {
-          "default": {
-            "path": "/Users/rachelyeeunkim/Desktop/RealGoodStudio/website/rbwebsiteV2/.slicemachine/assets/slices/DetailMedia/default/preview.png",
-            "width": 800,
-            "height": 405
-          }
-        }
+        "screenshotPaths": {}
       },
       "detail_media1_x1": {
         "library": "slices",
@@ -340,13 +334,13 @@
                     "select": null
                   }
                 },
-                "media1Controls": {
+                "media1Autoplay": {
                   "type": "Boolean",
                   "config": {
-                    "label": "Media1 Controls",
+                    "label": "Media1 Autoplay",
                     "placeholder_false": "false",
                     "placeholder_true": "true",
-                    "default_value": true
+                    "default_value": false
                   }
                 },
                 "media2": {
@@ -357,13 +351,13 @@
                     "select": null
                   }
                 },
-                "media2Controls": {
+                "media2Autoplay": {
                   "type": "Boolean",
                   "config": {
-                    "label": "Media2 Controls",
+                    "label": "Media2 Autoplay",
                     "placeholder_false": "false",
                     "placeholder_true": "true",
-                    "default_value": true
+                    "default_value": false
                   }
                 },
                 "media3": {
@@ -374,13 +368,13 @@
                     "select": null
                   }
                 },
-                "media3Controls": {
+                "media3Autoplay": {
                   "type": "Boolean",
                   "config": {
-                    "label": "Media3 Controls",
+                    "label": "Media3 Autoplay",
                     "placeholder_false": "false",
                     "placeholder_true": "true",
-                    "default_value": true
+                    "default_value": false
                   }
                 }
               },
@@ -402,13 +396,13 @@
                     "select": null
                   }
                 },
-                "media1Controls": {
+                "media1Autoplay": {
                   "type": "Boolean",
                   "config": {
-                    "label": "Media1 Controls",
+                    "label": "Media1 Autoplay",
                     "placeholder_false": "false",
                     "placeholder_true": "true",
-                    "default_value": true
+                    "default_value": false
                   }
                 },
                 "media2": {
@@ -419,13 +413,13 @@
                     "select": null
                   }
                 },
-                "media2Controls": {
+                "media2Autoplay": {
                   "type": "Boolean",
                   "config": {
-                    "label": "Media2 Controls",
+                    "label": "Media2 Autoplay",
                     "placeholder_false": "false",
                     "placeholder_true": "true",
-                    "default_value": true
+                    "default_value": false
                   }
                 }
               },
@@ -443,19 +437,19 @@
             "primary": {
               "media1": {
                 "link_type": "Web",
-                "url": "https://slicemachine.dev"
+                "url": "http://google.com"
               },
-              "media1Controls": false,
+              "media1Autoplay": false,
               "media2": {
-                "link_type": "Web",
-                "url": "http://twitter.com"
-              },
-              "media2Controls": true,
-              "media3": {
                 "link_type": "Web",
                 "url": "https://prismic.io"
               },
-              "media3Controls": true
+              "media2Autoplay": false,
+              "media3": {
+                "link_type": "Web",
+                "url": "https://slicemachine.dev"
+              },
+              "media3Autoplay": true
             }
           },
           "2Rows": {
@@ -466,14 +460,14 @@
             "primary": {
               "media1": {
                 "link_type": "Web",
-                "url": "https://slicemachine.dev"
-              },
-              "media1Controls": true,
-              "media2": {
-                "link_type": "Web",
                 "url": "http://twitter.com"
               },
-              "media2Controls": true
+              "media1Autoplay": false,
+              "media2": {
+                "link_type": "Web",
+                "url": "https://slicemachine.dev"
+              },
+              "media2Autoplay": true
             }
           }
         },
@@ -509,13 +503,13 @@
                     "select": null
                   }
                 },
-                "media1controls": {
+                "media1Autoplay": {
                   "type": "Boolean",
                   "config": {
-                    "label": "Media1 Controls",
+                    "label": "Media1 Autoplay",
                     "placeholder_false": "false",
                     "placeholder_true": "true",
-                    "default_value": true
+                    "default_value": false
                   }
                 },
                 "media2": {
@@ -526,13 +520,13 @@
                     "select": null
                   }
                 },
-                "media2Controls": {
+                "media2Autoplay": {
                   "type": "Boolean",
                   "config": {
-                    "label": "Media2 Controls",
+                    "label": "Media2 Autoplay",
                     "placeholder_false": "false",
                     "placeholder_true": "true",
-                    "default_value": true
+                    "default_value": false
                   }
                 },
                 "media3": {
@@ -543,13 +537,13 @@
                     "select": null
                   }
                 },
-                "media3Controls": {
+                "media3Autoplay": {
                   "type": "Boolean",
                   "config": {
-                    "label": "Media3 Controls",
+                    "label": "Media3 Autoplay",
                     "placeholder_false": "false",
                     "placeholder_true": "true",
-                    "default_value": true
+                    "default_value": false
                   }
                 }
               },
@@ -571,13 +565,13 @@
                     "select": null
                   }
                 },
-                "media1controls": {
+                "media1Autoplay": {
                   "type": "Boolean",
                   "config": {
-                    "label": "Media1 Controls",
+                    "label": "Media1 Autoplay",
                     "placeholder_false": "false",
                     "placeholder_true": "true",
-                    "default_value": true
+                    "default_value": false
                   }
                 },
                 "media2": {
@@ -588,13 +582,13 @@
                     "select": null
                   }
                 },
-                "media2Controls": {
+                "media2Autoplay": {
                   "type": "Boolean",
                   "config": {
-                    "label": "Media2 Controls",
+                    "label": "Media2 Autoplay",
                     "placeholder_false": "false",
                     "placeholder_true": "true",
-                    "default_value": true
+                    "default_value": false
                   }
                 }
               },
@@ -612,19 +606,19 @@
             "primary": {
               "media1": {
                 "link_type": "Web",
-                "url": "https://slicemachine.dev"
+                "url": "https://prismic.io"
               },
-              "media1controls": true,
+              "media1Autoplay": false,
               "media2": {
                 "link_type": "Web",
                 "url": "https://prismic.io"
               },
-              "media2Controls": true,
+              "media2Autoplay": false,
               "media3": {
                 "link_type": "Web",
-                "url": "http://twitter.com"
+                "url": "https://prismic.io"
               },
-              "media3Controls": true
+              "media3Autoplay": true
             }
           },
           "2Rows": {
@@ -635,14 +629,14 @@
             "primary": {
               "media1": {
                 "link_type": "Web",
-                "url": "https://prismic.io"
+                "url": "http://twitter.com"
               },
-              "media1controls": false,
+              "media1Autoplay": false,
               "media2": {
                 "link_type": "Web",
                 "url": "http://google.com"
               },
-              "media2Controls": false
+              "media2Autoplay": true
             }
           }
         },
@@ -650,13 +644,7 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {
-          "default": {
-            "path": "/Users/rachelyeeunkim/Desktop/RealGoodStudio/website/rbwebsiteV2/.slicemachine/assets/slices/DetailMedia9X16/default/preview.png",
-            "width": 800,
-            "height": 1237
-          }
-        }
+        "screenshotPaths": {}
       },
       "detail_media_mix": {
         "library": "slices",
@@ -684,13 +672,13 @@
                     "select": null
                   }
                 },
-                "media1Controls": {
+                "media1Autoplay": {
                   "type": "Boolean",
                   "config": {
-                    "label": "Media1 Controls",
+                    "label": "Media1 Autoplay",
                     "placeholder_false": "false",
                     "placeholder_true": "true",
-                    "default_value": true
+                    "default_value": false
                   }
                 },
                 "media2": {
@@ -701,13 +689,13 @@
                     "select": null
                   }
                 },
-                "media2Controls": {
+                "media2Autoplay": {
                   "type": "Boolean",
                   "config": {
-                    "label": "Media2 Controls",
+                    "label": "Media2 Autoplay",
                     "placeholder_false": "false",
                     "placeholder_true": "true",
-                    "default_value": true
+                    "default_value": false
                   }
                 }
               },
@@ -729,13 +717,13 @@
                     "select": null
                   }
                 },
-                "media1Controls": {
+                "media1Autoplay": {
                   "type": "Boolean",
                   "config": {
-                    "label": "Media1 Controls",
+                    "label": "Media1 Autoplay",
                     "placeholder_false": "false",
                     "placeholder_true": "true",
-                    "default_value": true
+                    "default_value": false
                   }
                 },
                 "media2": {
@@ -746,13 +734,13 @@
                     "select": null
                   }
                 },
-                "media2Controls": {
+                "media2Autoplay": {
                   "type": "Boolean",
                   "config": {
-                    "label": "Media2 Controls",
+                    "label": "Media2 Autoplay",
                     "placeholder_false": "false",
                     "placeholder_true": "true",
-                    "default_value": true
+                    "default_value": false
                   }
                 }
               },
@@ -774,13 +762,13 @@
                     "select": null
                   }
                 },
-                "media1Controls": {
+                "media1Autoplay": {
                   "type": "Boolean",
                   "config": {
-                    "label": "Media1 Controls",
+                    "label": "Media1 Autoplay",
                     "placeholder_false": "false",
                     "placeholder_true": "true",
-                    "default_value": true
+                    "default_value": false
                   }
                 },
                 "media2": {
@@ -791,13 +779,13 @@
                     "select": null
                   }
                 },
-                "media2Controls": {
+                "media2Autoplay": {
                   "type": "Boolean",
                   "config": {
-                    "label": "Media2 Controls",
+                    "label": "Media2 Autoplay",
                     "placeholder_false": "false",
                     "placeholder_true": "true",
-                    "default_value": true
+                    "default_value": false
                   }
                 }
               },
@@ -819,13 +807,13 @@
                     "select": null
                   }
                 },
-                "media1Controls": {
+                "media1Autoplay": {
                   "type": "Boolean",
                   "config": {
-                    "label": "Media1 Controls",
+                    "label": "Media1 Autoplay",
                     "placeholder_false": "false",
                     "placeholder_true": "true",
-                    "default_value": true
+                    "default_value": false
                   }
                 },
                 "media2": {
@@ -836,13 +824,13 @@
                     "select": null
                   }
                 },
-                "media2Controls": {
+                "media2Autoplay": {
                   "type": "Boolean",
                   "config": {
-                    "label": "Media2 Controls",
+                    "label": "Media2 Autoplay",
                     "placeholder_false": "false",
                     "placeholder_true": "true",
-                    "default_value": true
+                    "default_value": false
                   }
                 }
               },
@@ -862,12 +850,12 @@
                 "link_type": "Web",
                 "url": "http://twitter.com"
               },
-              "media1Controls": false,
+              "media1Autoplay": false,
               "media2": {
                 "link_type": "Web",
-                "url": "http://twitter.com"
+                "url": "http://google.com"
               },
-              "media2Controls": false
+              "media2Autoplay": true
             }
           },
           "4545": {
@@ -878,14 +866,14 @@
             "primary": {
               "media1": {
                 "link_type": "Web",
-                "url": "http://google.com"
-              },
-              "media1Controls": true,
-              "media2": {
-                "link_type": "Web",
                 "url": "http://twitter.com"
               },
-              "media2Controls": false
+              "media1Autoplay": false,
+              "media2": {
+                "link_type": "Web",
+                "url": "https://prismic.io"
+              },
+              "media2Autoplay": false
             }
           },
           "default": {
@@ -896,14 +884,14 @@
             "primary": {
               "media1": {
                 "link_type": "Web",
-                "url": "https://slicemachine.dev"
-              },
-              "media1Controls": false,
-              "media2": {
-                "link_type": "Web",
                 "url": "http://twitter.com"
               },
-              "media2Controls": false
+              "media1Autoplay": true,
+              "media2": {
+                "link_type": "Web",
+                "url": "http://google.com"
+              },
+              "media2Autoplay": true
             }
           },
           "11Filter": {
@@ -914,14 +902,14 @@
             "primary": {
               "media1": {
                 "link_type": "Web",
-                "url": "http://twitter.com"
+                "url": "http://google.com"
               },
-              "media1Controls": true,
+              "media1Autoplay": false,
               "media2": {
                 "link_type": "Web",
                 "url": "https://slicemachine.dev"
               },
-              "media2Controls": false
+              "media2Autoplay": false
             }
           }
         },
@@ -929,28 +917,7 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {
-          "3411": {
-            "path": "/Users/rachelyeeunkim/Desktop/RealGoodStudio/website/rbwebsiteV2/.slicemachine/assets/slices/DetailMediaMix/3411/preview.png",
-            "width": 800,
-            "height": 800
-          },
-          "4545": {
-            "path": "/Users/rachelyeeunkim/Desktop/RealGoodStudio/website/rbwebsiteV2/.slicemachine/assets/slices/DetailMediaMix/4545/preview.png",
-            "width": 800,
-            "height": 872
-          },
-          "default": {
-            "path": "/Users/rachelyeeunkim/Desktop/RealGoodStudio/website/rbwebsiteV2/.slicemachine/assets/slices/DetailMediaMix/default/preview.png",
-            "width": 800,
-            "height": 871
-          },
-          "11Filter": {
-            "path": "/Users/rachelyeeunkim/Desktop/RealGoodStudio/website/rbwebsiteV2/.slicemachine/assets/slices/DetailMediaMix/11Filter/preview.png",
-            "width": 800,
-            "height": 871
-          }
-        }
+        "screenshotPaths": {}
       },
       "detail_text": {
         "library": "slices",

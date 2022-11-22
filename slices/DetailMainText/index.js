@@ -47,12 +47,12 @@ const DetailMainText = ({ slice }) => {
         </div>
       ) : (
         <div className="text col-start-3 relative leading-[4.2vw] sm:leading-7 text-[3.5vw] sm:text-[22px] text-left w-[94vw] mt-[0vw] mb-[1vw] md:mt-[40px] md:mb-[40px] lg:mt-[50px] lg:mb-[50px]">
-          <div className="block md:hidden w-[90%] text-[3.5vw] sm:text-[22px] mb-5 font-mono">
+          <div className="block md:hidden w-[94%] text-[3.5vw] sm:text-[22px] mb-5 font-mono">
             {slice.primary.title ? slice.primary.title : "Objective + Approach"}
           </div>
           <div className="flex w-[100%] justify-between">
             <div className="hidden md:block  w-[23%] text-[1rem] md:text-[1.3rem] lg:text-[1.4rem] font-mono ">
-              <span className=" bg-black p-1 pr-3 pl-3 text-white">
+              <span className="">
                 {slice.primary.title
                   ? slice.primary.title
                   : "Objective + Approach"}

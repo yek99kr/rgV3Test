@@ -1,5 +1,4 @@
 import Image from "next/image";
-// import Vimeo from "@u-wave/react-vimeo";
 
 const DetailMedia = ({ slice }) => {
   // https://images.prismic.io/realgoodweb/75952b89-745d-4209-85c4-7e66facb4fcb_SKOHTitle.webp?auto=compress,format
@@ -12,8 +11,8 @@ const DetailMedia = ({ slice }) => {
               className="w-[100%] h-[100%]"
               src={`${slice.primary.media.url.slice(
                 6
-              )}?quality=1080p&loop=1&autoplay=1&muted=1?background=1${
-                slice.primary.controls === false ? "&controls=0" : ""
+              )}?quality=1080p&loop=1?background=1${
+                slice.primary.autoplay ? "&autoplay=1&muted=1&controls=0" : ""
               }`}
               allowFullScreen
               allow="autoplay; fullscreen"

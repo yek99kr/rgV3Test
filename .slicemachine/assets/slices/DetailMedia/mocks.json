@@ -7,9 +7,9 @@
     "primary": {
       "media": {
         "link_type": "Web",
-        "url": "http://twitter.com"
+        "url": "https://slicemachine.dev"
       },
-      "controls": false
+      "autoplay": false
     }
   }
 ]

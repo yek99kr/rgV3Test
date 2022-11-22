@@ -19,13 +19,13 @@
             "select": null
           }
         },
-        "controls": {
+        "autoplay": {
           "type": "Boolean",
           "config": {
-            "label": "Controls",
+            "label": "Autoplay",
             "placeholder_false": "false",
             "placeholder_true": "true",
-            "default_value": true
+            "default_value": false
           }
         }
       },

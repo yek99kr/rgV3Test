@@ -23,9 +23,7 @@ const ProjectThumbnailDesktop = ({ project }) => {
               setHovered(false);
             }}
           >
-            <div className="">
-              <MouseAnimation thumbnails={thumbnails} />
-            </div>
+            <MouseAnimation thumbnails={thumbnails} />
           </div>
 
           <div

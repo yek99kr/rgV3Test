@@ -1,6 +1,4 @@
 import Image from "next/image";
-// https://player.vimeo.com/video/766239510?h=d4df5e21f5
-// https://player.vimeo.com/video/766239520?h=d980932e89
 
 const DetailMedia1X1 = ({ slice }) => {
   // {`${slice.primary.media.url.slice(6)}?quality=1080p&loop=1`}
@@ -15,8 +13,10 @@ const DetailMedia1X1 = ({ slice }) => {
                   className="w-[100%] h-[100%]"
                   src={`${slice.primary.media1.url.slice(
                     6
-                  )}?quality=1080p&loop=1&autoplay=1&muted=1?background=1${
-                    slice.primary.media1Controls === false ? "controls=0" : ""
+                  )}?quality=1080p&loop=1?background=1${
+                    slice.primary.media1Autoplay
+                      ? "&autoplay=1&muted=1&controls=0"
+                      : ""
                   }`}
                   allowFullScreen
                 ></iframe>
@@ -44,8 +44,10 @@ const DetailMedia1X1 = ({ slice }) => {
                   className="w-[100%] h-[100%]"
                   src={`${slice.primary.media2.url.slice(
                     6
-                  )}?quality=1080p&loop=1&autoplay=1&muted=1?background=1${
-                    slice.primary.media2Controls && "&controls=0"
+                  )}?quality=1080p&loop=1&?background=1${
+                    slice.primary.media2Autoplay
+                      ? "&autoplay=1&muted=1&controls=0"
+                      : ""
                   }`}
                   allowFullScreen
                 ></iframe>
@@ -73,8 +75,10 @@ const DetailMedia1X1 = ({ slice }) => {
                   className="w-[100%] h-[100%]"
                   src={`${slice.primary.media3.url.slice(
                     6
-                  )}?quality=1080p&loop=1&autoplay=1&muted=1?background=1${
-                    slice.primary.media3Controls === false ? "controls=0" : ""
+                  )}?quality=1080p&loop=1?background=1${
+                    slice.primary.media3Autoplay
+                      ? "&autoplay=1&muted=1&controls=0"
+                      : ""
                   }`}
                   allowFullScreen
                 ></iframe>
@@ -104,8 +108,10 @@ const DetailMedia1X1 = ({ slice }) => {
                   className="w-[100%] h-[100%]"
                   src={`${slice.primary.media1.url.slice(
                     6
-                  )}?quality=1080p&loop=1&autoplay=1&muted=1?background=1${
-                    slice.primary.media1Controls && "&controls=0"
+                  )}?quality=1080p&loop=1?background=1${
+                    slice.primary.media1Autoplay
+                      ? "&autoplay=1&muted=1&controls=0"
+                      : ""
                   }`}
                   allowFullScreen
                 ></iframe>
@@ -133,8 +139,10 @@ const DetailMedia1X1 = ({ slice }) => {
                   className="w-[100%] h-[100%]"
                   src={`${slice.primary.media2.url.slice(
                     6
-                  )}?quality=1080p&loop=1&autoplay=1&muted=1?background=1${
-                    slice.primary.media2Controls && "&controls=0"
+                  )}?quality=1080p&loop=1&?background=1${
+                    slice.primary.media2Autoplay
+                      ? "&autoplay=1&muted=1&controls=0"
+                      : ""
                   }`}
                   allowFullScreen
                 ></iframe>

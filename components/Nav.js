@@ -20,8 +20,8 @@ const Nav = () => {
 
   return (
     <>
-      <div className="fixed top-0 mt-[3.5vw] 2xs:mt-2 xs:mt-2.5 sm:mt-3 z-[1000] text-[2.9vw] 4xs:text-[2.9vw] sm:text-[15px] md:text-[16px] lg:text-[18.5px] xl:text-[18.5px] flex justify-center items-center w-screen select-none">
-        <div className=" bg-white/60 backdrop-hue-rotate-180 rounded m-0 mr-[1.8vw] sm:mr-3 p-[1.87vw] sm:p-[0.69rem] pl-[2.5vw] pr-[2.5vw] sm:pl-3 sm:pr-3 select-none">
+      <div className="fixed top-0 mt-[3.5vw] 2xs:mt-2 xs:mt-2.5 sm:mt-3 z-[1000] text-[2.9vw] 4xs:text-[2.9vw] sm:text-[15px] md:text-[16px] lg:text-[18px] xl:text-[18.5px] flex justify-center items-center w-screen select-none">
+        <div className=" bg-white/60 backdrop-hue-rotate-180 rounded m-0 mr-[1.8vw] sm:mr-3 p-[2vw] sm:p-[0.69rem] pl-[2.2vw] pr-[2.2vw] sm:pl-3 sm:pr-3 select-none">
           <Link href="/" passHref scroll={false}>
             <a className="thumbcursor">
               <img
@@ -44,7 +44,9 @@ const Nav = () => {
                   : "opacity-50"
               }`}
             >
-              <span className="p-1.5  pr-3 pl-3 ">Projects</span>
+              <span className="p-1.5 pr-[2.2vw] pl-[2.2vw] sm:pr-3 sm:pl-3 ">
+                Projects
+              </span>
             </a>
           </Link>
 
@@ -55,7 +57,11 @@ const Nav = () => {
               router.pathname.includes("/shop") ? "opacity-100" : "opacity-50"
             }`}
             >
-              <span className={`p-1.5  pr-3 pl-3 `}>Shop</span>
+              <span
+                className={`p-1.5  pr-[2.2vw] pl-[2.2vw] sm:pr-3 sm:pl-3  `}
+              >
+                Shop
+              </span>
             </a>
           </Link>
 
@@ -66,7 +72,9 @@ const Nav = () => {
             className={`p-[0vw] sm:p-0 sm:pl-0.5 sm:pr-1 thumbcursor duration-[0.2s] opacity-50 hover:opacity-100
            `}
           >
-            <span className={`p-1.5 pr-3 pl-3 `}>Instagram</span>
+            <span className={`p-1.5 pr-[2.2vw] pl-[2.2vw] sm:pr-3 sm:pl-3  `}>
+              Instagram
+            </span>
           </a>
 
           <a
@@ -79,7 +87,9 @@ const Nav = () => {
             className={`p-[0vw] sm:p-0 sm:pl-0.5 sm:pr-1 thumbcursor duration-[0.2s] opacity-50 hover:opacity-100
         `}
           >
-            <span className={`p-1.5 pr-3 pl-3 `}>Contact</span>
+            <span className={`p-1.5 pr-[2.2vw] pl-[2.2vw] sm:pr-3 sm:pl-3  `}>
+              Contact
+            </span>
           </a>
 
           <a
@@ -90,7 +100,7 @@ const Nav = () => {
               cartOpen ? "opacity-100" : "opacity-50"
             }`}
           >
-            <span className={`p-1.5 pr-3 pl-3 `}>
+            <span className={`p-1.5 pr-[2.2vw] pl-[2.2vw] sm:pr-3 sm:pl-3  `}>
               Cart{" "}
               <span className="relative top-[-1.4vw] sm:top-[-0.4rem] md:top-[-0.4rem]  m-[-0.4vw] sm:m-[-2px] text-[1.5vw] sm:text-[7px] md:text-[10px]">
                 ({cartQuantity})
@@ -157,7 +167,7 @@ export default Nav;
 //               }`}
 //             >
 //               <span
-//                 className={`p-1.5  pr-3 pl-3 hover:bg-black  hover:text-white duration-[0.2s]    ${
+//                 className={`p-1.5  pr-[2.2vw] pl-[2.2vw] sm:pr-3 sm:pl-3  hover:bg-black  hover:text-white duration-[0.2s]    ${
 //                   router.pathname.includes("/projects")
 //                     ? "bg-black  text-white"
 //                     : "bg-none"
@@ -176,7 +186,7 @@ export default Nav;
 //             }`}
 //             >
 //               <span
-//                 className={`p-1.5  pr-3 pl-3 hover:bg-black  hover:text-white duration-[0.2s]    ${
+//                 className={`p-1.5  pr-[2.2vw] pl-[2.2vw] sm:pr-3 sm:pl-3  hover:bg-black  hover:text-white duration-[0.2s]    ${
 //                   router.pathname.includes("/shop")
 //                     ? "bg-black  text-white"
 //                     : "bg-none"
@@ -194,7 +204,7 @@ export default Nav;
 //             className="p-[0vw] sm:p-0 sm:pl-0.5 sm:pr-1  thumbcursor"
 //           >
 //             <span
-//               className={`p-1.5 pr-3 pl-3 hover:bg-black  hover:text-white duration-[0.2s]`}
+//               className={`p-1.5 pr-[2.2vw] pl-[2.2vw] sm:pr-3 sm:pl-3  hover:bg-black  hover:text-white duration-[0.2s]`}
 //             >
 //               Instagram
 //             </span>
@@ -210,7 +220,7 @@ export default Nav;
 //             className="p-[0vw] sm:p-0 sm:pl-0.5 sm:pr-1  thumbcursor "
 //           >
 //             <span
-//               className={`p-1.5 pr-3 pl-3 hover:bg-black  hover:text-white duration-[0.2s]`}
+//               className={`p-1.5 pr-[2.2vw] pl-[2.2vw] sm:pr-3 sm:pl-3  hover:bg-black  hover:text-white duration-[0.2s]`}
 //             >
 //               Contact
 //             </span>
@@ -225,7 +235,7 @@ export default Nav;
 //             }`}
 //           >
 //             <span
-//               className={`p-1.5 pr-3 pl-3 hover:bg-black  hover:text-white duration-[0.2s]`}
+//               className={`p-1.5 pr-[2.2vw] pl-[2.2vw] sm:pr-3 sm:pl-3  hover:bg-black  hover:text-white duration-[0.2s]`}
 //             >
 //               Cart{" "}
 //               <span className="relative top-[-1.4vw] sm:top-[-0.4rem] md:top-[-0.4rem]  m-[-0.4vw] sm:m-[-2px] text-[1.5vw] sm:text-[7px] md:text-[10px]">
@@ -293,7 +303,7 @@ export default Nav;
 //               }`}
 //             >
 //               <span
-//                 className={`p-1.5 rounded pr-3 pl-3 hover:bg-pink-500 duration-[0.2s]    ${
+//                 className={`p-1.5 rounded pr-[2.2vw] pl-[2.2vw] sm:pr-3 sm:pl-3  hover:bg-pink-500 duration-[0.2s]    ${
 //                   router.pathname.includes("/projects")
 //                     ? "bg-pink-500"
 //                     : "bg-none"
@@ -312,7 +322,7 @@ export default Nav;
 //             }`}
 //             >
 //               <span
-//                 className={`p-1.5 rounded pr-3 pl-3 hover:bg-yellow-500 duration-[0.2s]    ${
+//                 className={`p-1.5 rounded pr-[2.2vw] pl-[2.2vw] sm:pr-3 sm:pl-3  hover:bg-yellow-500 duration-[0.2s]    ${
 //                   router.pathname.includes("/shop")
 //                     ? "bg-yellow-500"
 //                     : "bg-none"
@@ -330,7 +340,7 @@ export default Nav;
 //             className="p-[0vw] sm:p-0 sm:pl-0.5 sm:pr-1  thumbcursor"
 //           >
 //             <span
-//               className={`p-1.5 rounded pr-3 pl-3 hover:bg-blue-500 duration-[0.2s]`}
+//               className={`p-1.5 rounded pr-[2.2vw] pl-[2.2vw] sm:pr-3 sm:pl-3  hover:bg-blue-500 duration-[0.2s]`}
 //             >
 //               Instagram
 //             </span>
@@ -346,7 +356,7 @@ export default Nav;
 //             className="p-[0vw] sm:p-0 sm:pl-0.5 sm:pr-1  thumbcursor "
 //           >
 //             <span
-//               className={`p-1.5 rounded pr-3 pl-3 hover:bg-purple-500 duration-[0.2s]`}
+//               className={`p-1.5 rounded pr-[2.2vw] pl-[2.2vw] sm:pr-3 sm:pl-3  hover:bg-purple-500 duration-[0.2s]`}
 //             >
 //               Contact
 //             </span>
@@ -361,7 +371,7 @@ export default Nav;
 //             }`}
 //           >
 //             <span
-//               className={`p-1.5 rounded pr-3 pl-3 hover:bg-green-500 duration-[0.2s]`}
+//               className={`p-1.5 rounded pr-[2.2vw] pl-[2.2vw] sm:pr-3 sm:pl-3  hover:bg-green-500 duration-[0.2s]`}
 //             >
 //               Cart{" "}
 //               <span className="relative top-[-1.4vw] sm:top-[-0.4rem] md:top-[-0.4rem]  m-[-0.4vw] sm:m-[-2px] text-[1.5vw] sm:text-[7px] md:text-[10px]">

@@ -17,11 +17,11 @@ const ProjectList = ({ projects }) => {
     "md:mt-[0vw] md:rotate-[10deg] md:col-start-1 ",
     "md:mt-[-3vw] md:rotate-[-8deg] md:col-start-3",
     "md:mt-[-5vw] md:rotate-[9deg] md:col-start-5 md:top-[120px]",
-    "md:mt-[0vw] md:rotate-[3deg] md:col-start-2 md:-ml-20 md:top-[-50px]",
+    "md:mt-[0vw] md:rotate-[3deg] md:col-start-2 md:-ml-20 md:top-[-20px]",
     "md:mt-[-3vw] md:rotate-[-4deg] md:col-start-4 md:-mr-20 ",
-    "md:mt-[2vw] md:rotate-[10deg] md:col-start-1 md:top-[-100px]",
-    "md:mt-[6vw] md:rotate-[-8deg] md:col-start-3 md:top-[-100px]",
-    "md:mt-[0vw] md:rotate-[9deg] md:col-start-5 md:top-[-100px]",
+    "md:mt-[2vw] md:rotate-[10deg] md:col-start-1 md:top-[-50px]",
+    "md:mt-[6vw] md:rotate-[-8deg] md:col-start-3 md:top-[-50px]",
+    "md:mt-[0vw] md:rotate-[0deg] md:col-start-5 md:top-[-50px]",
   ];
 
   return (

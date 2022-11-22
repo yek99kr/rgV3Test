@@ -7,7 +7,7 @@ const ProjectThumbnailMobile = ({ project }) => {
       <a className="group thumbcursor">
         {
           <div className="w-full overflow-hidden">
-            <div className="relative w-[80vw] h-[80vw] mt-10 ">
+            <div className="relative w-[80vw] h-[80vw] mt-10 md:mt-0 md:w-[24vw] md:h-[24vw] xl:w-[23vw] xl:h-[23vw]">
               <LoadImage
                 src={
                   project.data.mobileThumbnail.url
@@ -25,10 +25,10 @@ const ProjectThumbnailMobile = ({ project }) => {
         }
 
         <div className="block mt-4">
-          <p className=" text-center  text-[4.2vw] sm:text-xl">
+          <p className=" text-center  text-[4.2vw] md:text-xl lg:text-2xl">
             {project.data.client}
           </p>
-          <p className=" text-center  text-[3.5vw] sm:text-xl">
+          <p className=" text-center  text-[3.5vw] md:text-base lg:text-lg m-[-0.1rem]">
             {project.data.title}
           </p>
         </div>

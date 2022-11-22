@@ -7,19 +7,19 @@
     "primary": {
       "media1": {
         "link_type": "Web",
-        "url": "https://slicemachine.dev"
+        "url": "https://prismic.io"
       },
-      "media1controls": true,
+      "media1Autoplay": false,
       "media2": {
         "link_type": "Web",
         "url": "https://prismic.io"
       },
-      "media2Controls": true,
+      "media2Autoplay": false,
       "media3": {
         "link_type": "Web",
-        "url": "http://twitter.com"
+        "url": "https://prismic.io"
       },
-      "media3Controls": true
+      "media3Autoplay": true
     }
   },
   {
@@ -30,14 +30,14 @@
     "primary": {
       "media1": {
         "link_type": "Web",
-        "url": "https://prismic.io"
+        "url": "http://twitter.com"
       },
-      "media1controls": false,
+      "media1Autoplay": false,
       "media2": {
         "link_type": "Web",
         "url": "http://google.com"
       },
-      "media2Controls": false
+      "media2Autoplay": true
     }
   }
 ]
