@@ -32,7 +32,11 @@ const ProductThumbnailDesktop = ({ product }) => {
             setHovered(false);
           }}
         >
-          <MouseAnimation thumbnails={thumbnails} />
+          <div
+            className={`relative w-[80vw] h-[80vw] sm:w-[80vw] sm:h-[80vw] md:w-[24vw] md:h-[24vw]`}
+          >
+            <MouseAnimation thumbnails={thumbnails} />
+          </div>
         </div>
 
         <div

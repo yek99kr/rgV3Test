@@ -3,12 +3,16 @@ import { useState } from "react";
 
 import MouseAnimation from "../MouseAnimation";
 
-const ProjectThumbnailDesktop = ({ project }) => {
+const ProjectThumbnailDesktop = ({ project, size }) => {
   const [hovered, setHovered] = useState(false);
 
   const thumbnails = project.data.thumbnails.map((url) => {
     return url.thumbnail.url;
   });
+
+  const wsize = "w-[" + size + "vw]";
+  const hsize = "w-[" + size + "vw]";
+  console.log(wsize);
 
   return (
     <>
@@ -23,7 +27,12 @@ const ProjectThumbnailDesktop = ({ project }) => {
               setHovered(false);
             }}
           >
-            <MouseAnimation thumbnails={thumbnails} />
+            <div
+              style={{ width: `${size}vw`, height: `${size}vw` }}
+              className={`relative w-[80vw] h-[80vw] sm:w-[80vw] sm:h-[80vw] `}
+            >
+              <MouseAnimation thumbnails={thumbnails} size={size} />
+            </div>
           </div>
 
           <div
