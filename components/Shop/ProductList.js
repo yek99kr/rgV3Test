@@ -29,7 +29,7 @@ const ProductList = ({ products }) => {
             key={product.node.id}
           >
             {!mouseAnimation ? (
-              <ProductThumbnailDesktop product={product} size={26} />
+              <ProductThumbnailDesktop product={product} size={24} />
             ) : (
               <ProductThumbnailMobile product={product} />
             )}

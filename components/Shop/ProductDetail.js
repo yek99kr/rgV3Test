@@ -114,10 +114,10 @@ export default function ProductPageContent({ product }) {
 
         <ProductForm product={product} />
       </div>
-      <Recommend
+      {/* <Recommend
         current={product.id}
         products={product.collections.edges[0].node.products.edges}
-      />
+      /> */}
 
       <div className="flex relative w-screen justify-center items-center text-[2.9vw] sm:text-sm md:text-base pb-[2.5rem] md:pb-[4rem]">
         <Link href="/shop" passHref scroll={false}>

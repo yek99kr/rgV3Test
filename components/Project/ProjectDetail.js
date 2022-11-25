@@ -1,7 +1,7 @@
 import { SliceZone } from "@prismicio/react";
 import { components } from "../../slices";
 import ProjectBtn from "./ProjectBtn";
-// import EmailSubscribe from "../EmailSubscribe";
+import EmailSubscribe from "../EmailSubscribe";
 // import Plyr from "plyr-react";
 // import "plyr-react/plyr.css";
 
@@ -78,7 +78,9 @@ const ProjectDetail = ({ project, projects }) => {
         </div> */}
 
         <SliceZone slices={project.data.slices} components={components} />
-        {/* <EmailSubscribe /> */}
+        {/* <div className="relative col-start-3 md:p-0 w-[90vw] md:w-[96vw] aspect-video">
+          <EmailSubscribe />
+        </div> */}
 
         {/* <div className="relative col-start-3 md:p-0 w-[90vw] md:w-[96vw] aspect-video"> */}
         {/* <Player ratio="video" /> */}
