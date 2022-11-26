@@ -13,18 +13,18 @@ const ProjectList = ({ projects }) => {
     "md:mt-[6vw] md:rotate-[-8deg] md:col-start-3",
     "md:mt-[0vw] md:rotate-[9deg] md:col-start-5 ",
     "md:mt-[-5vw] md:rotate-[3deg] md:col-start-2 md:-ml-20 ",
-    "md:mt-[-3vw] md:rotate-[-4deg] md:col-start-4 md:-mr-20 ",
+    "md:mt-[-3vw] md:rotate-[-4deg] md:col-start-4 md:-mr-[10rem] md:top-[-50px]",
     "md:mt-[0vw] md:rotate-[10deg] md:col-start-1 ",
     "md:mt-[-3vw] md:rotate-[-2deg] md:col-start-3",
-    "md:mt-[-5vw] md:rotate-[-5deg] md:col-start-5 md:top-[120px]",
-    "md:mt-[0vw] md:rotate-[3deg] md:col-start-2 md:-ml-[10rem] md:top-[-50px]",
-    "md:mt-[-3vw] md:rotate-[-4deg] md:col-start-4 md:-mr-[12rem] ",
+    "md:mt-[-5vw] md:rotate-[2deg] md:col-start-5 md:top-[120px]",
+    "md:mt-[0vw] md:rotate-[-3deg] md:col-start-2 md:-ml-[10rem] md:top-[-50px]",
+    "md:mt-[-3vw] md:rotate-[4deg] md:col-start-4 md:-mr-[12rem] ",
     "md:mt-[2vw] md:rotate-[10deg] md:col-start-1 md:top-[-50px]",
     "md:mt-[6vw] md:rotate-[-8deg] md:col-start-3 md:top-[-50px]",
     "md:mt-[0vw] md:rotate-[4deg] md:col-start-5 md:top-[-50px]",
   ];
 
-  const sizes = [24, 24, 24, 30, 24, 24, 27, 24, 31, 26, 24, 24, 30];
+  const sizes = [24, 24, 24, 29, 26, 24, 27, 24, 31, 26, 24, 24, 30];
 
   return (
     <div className="mx-auto py-16 px-5 sm:px-6 lg:px-0 sm:mt-[1rem] md:w-[90vw] lg:w-[80vw] xl:w-[75vw] ">
