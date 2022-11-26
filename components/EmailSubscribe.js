@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 
-export default () => {
+const EmailSubscribe = ({ projects }) => {
   const [email, setEmail] = useState("");
   const [state, setState] = useState("IDLE");
   const [errorMessage, setErrorMessage] = useState(null);
@@ -53,6 +53,8 @@ export default () => {
     </div>
   );
 };
+
+export default EmailSubscribe;
 
 // import { useRef } from "react";
 
