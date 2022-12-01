@@ -20,7 +20,7 @@ const store = ({ router, products }) => {
             opacity: 0,
           },
         }}
-        className="overflow-hidden"
+        className="fixed overflow-hidden w-[100vw] h-[100vw]"
       >
         <ProductList products={products} />
       </motion.div>

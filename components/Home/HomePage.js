@@ -15,7 +15,7 @@ const HomePage = ({ router }) => {
   // w214 h379
 
   return (
-    <div className="relative w-[100vw] h-[100vh] overflow-hidden">
+    <div className="fixed w-[100vw] h-[100vh] overflow-hidden">
       {isSmallerHeight || isSmallerWidth || isTouch ? (
         <div className="absolute top-0 left-0 bg-[#e9ebf0] w-[100vw] h-[100vh]"></div>
       ) : (

@@ -95,7 +95,7 @@ const Nav = () => {
             </span>
           </a>
 
-          <a
+          {/* <a
             onClick={() => {
               navigator.clipboard.writeText("hello@realgood.tv");
               setCopyed(true);
@@ -111,7 +111,20 @@ const Nav = () => {
             <span className={`p-1.5 pr-[2.2vw] pl-[2.2vw] sm:pr-3 sm:pl-3  `}>
               Contact
             </span>
-          </a>
+          </a> */}
+          <Link href="/contact" passHref scroll={false}>
+            <a
+              onMouseEnter={() => {
+                setAngle("0.7");
+              }}
+              className={`inline-block hover:rotate-[-4deg] p-[0.3vw] sm:p-0 sm:pl-0.5 sm:pr-1 thumbcursor duration-[0.2s] opacity-50 hover:opacity-100
+        `}
+            >
+              <span className={`p-1.5 pr-[2.2vw] pl-[2.2vw] sm:pr-3 sm:pl-3  `}>
+                Contact
+              </span>
+            </a>
+          </Link>
 
           <a
             onClick={() => {
@@ -135,7 +148,7 @@ const Nav = () => {
         </div>
       </div>
 
-      <div
+      {/* <div
         className={`flex fixed w-screen justify-center items-center mt-[3.3vw] 2xs:mt-[4rem] xs:mt-[4.5rem] sm:mt-[4.5rem] text-[2.9vw] sm:text-sm md:text-base z-[1000] pointer-events-none  ${
           copyed ? "opacity-100" : "opacity-0"
         }`}
@@ -145,7 +158,7 @@ const Nav = () => {
         <div className="bg-white/60 backdrop-blur-md w-[65vw] sm:w-[300px] md:w-[400px] rounded text-center p-2.5 ">
           <span>hello@realgood.tv copyed to clipboard</span>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };
