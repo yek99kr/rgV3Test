@@ -37,7 +37,7 @@ const ProductList = ({ products }) => {
           </div>
         ))}
       </div> */}
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[50%] font-bold ">
+      <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[50%] font-bold ">
         {/* <span className="wiggle1 text-pink-500">s</span>
         <span className="wiggle2 text-sky-400">h</span>
         <span className="wiggle3 text-yellow-500">o</span>
