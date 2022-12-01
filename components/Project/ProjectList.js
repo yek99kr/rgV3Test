@@ -9,7 +9,7 @@ const ProjectList = ({ projects }) => {
   const mouseAnimation = isSmallestHeight || isTouch;
 
   const classes = [
-    "md:mt-[2vw] md:rotate-[10deg] md:col-start-1 ",
+    "md:mt-[2vw] md:rotate-[10deg] md:col-start-1 md:top-[-50px]",
     "md:mt-[6vw] md:rotate-[-8deg] md:col-start-3",
     "md:mt-[0vw] md:rotate-[9deg] md:col-start-5 ",
     "md:mt-[-5vw] md:rotate-[3deg] md:col-start-2 md:-ml-20 ",
@@ -24,7 +24,7 @@ const ProjectList = ({ projects }) => {
     "md:mt-[0vw] md:rotate-[4deg] md:col-start-5 md:top-[-50px]",
   ];
 
-  const sizes = [24, 24, 24, 29, 26, 24, 27, 24, 31, 26, 24, 24, 30];
+  const sizes = [29, 24, 24, 29, 26, 24, 27, 24, 31, 26, 24, 24, 30];
 
   return (
     <div className="mx-auto py-16 px-5 sm:px-6 lg:px-0 sm:mt-[1rem] md:w-[90vw] lg:w-[80vw] xl:w-[75vw] ">

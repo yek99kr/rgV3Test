@@ -19,8 +19,9 @@ const ProductList = ({ products }) => {
     "md:top-[0vw] md:rotate-[9deg] md:col-start-5 ",
   ];
   return (
-    <div className="mx-auto py-16 px-5 sm:px-6 lg:px-0 sm:mt-[1rem] md:w-[90vw] lg:w-[80vw] xl:w-[75vw] ">
-      <div className="grid grid-cols-1 gap-y-0 md:gap-x-1 md:grid-cols-5">
+    <div className="md:w-[90vw] w-[100vw] h-[100vh] text-[4vw] 4xs:text-[4vw] sm:text-[22px] md:text-[22px] lg:text-[24px] xl:text-[25px]">
+      {/* <div className="mx-auto py-16 px-5 sm:px-6 lg:px-0 sm:mt-[1rem] md:w-[90vw] lg:w-[80vw] xl:w-[75vw] "> */}
+      {/* <div className="grid grid-cols-1 gap-y-0 md:gap-x-1 md:grid-cols-5">
         {products.map((product, i) => (
           <div
             className={`relative ${
@@ -35,6 +36,22 @@ const ProductList = ({ products }) => {
             )}
           </div>
         ))}
+      </div> */}
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[50%] font-bold ">
+        {/* <span className="wiggle1 text-pink-500">s</span>
+        <span className="wiggle2 text-sky-400">h</span>
+        <span className="wiggle3 text-yellow-500">o</span>
+        <span className="wiggle4 text-purple-500">p</span>{" "} */}
+        <span className="wiggle1 text-pink-500">c</span>
+        <span className="wiggle2 text-sky-400">o</span>
+        <span className="wiggle3 text-yellow-500">m</span>
+        <span className="wiggle4 text-purple-500">i</span>
+        <span className="wiggle5 text-green-500">n</span>
+        <span className="wiggle6 text-pink-500">g</span>{" "}
+        <span className="wiggle7 text-sky-400">s</span>
+        <span className="wiggle8 text-yellow-500">o</span>
+        <span className="wiggle9 text-purple-500">o</span>
+        <span className="wiggle1 text-pink-500">n</span>
       </div>
     </div>
     // <div className="mx-auto py-16 px-5 sm:py-24 sm:px-6 lg:px-0 lg:-mt-[2rem] md:w-[90vw] lg:w-[80vw] xl:w-[75vw] ">

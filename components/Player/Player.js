@@ -15,7 +15,8 @@
 //   const [isPlay, setIsPlay] = useState(true);
 //   const [muted, setMuted] = useState(true);
 
-//   const playerRef = useRef();
+//   //   const playerRef = useRef( < ReactPlayer >)
+//   const playerRef = useRef(null);
 
 //   const [player, setPlayer] = useState({
 //     url: null,
@@ -103,7 +104,7 @@
 //           hover && "visible"
 //         }`}
 //       >
-//         {/* <input
+//         <input
 //           type="range"
 //           min={0}
 //           max={0.999999}
@@ -112,7 +113,7 @@
 //           onMouseDown={handleSeekMouseDown}
 //           onChange={handleSeekChange}
 //           onMouseUp={handleSeekMouseUp}
-//         /> */}
+//         />
 
 //         {/* <TbRectangle
 //           onClick={handleFullscreen}
