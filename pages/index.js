@@ -32,7 +32,6 @@ export default function Home({ router }) {
         key={router.route}
         initial="pageInitial"
         animate="pageAnimate"
-        className="overflow-hidden"
         exit="pageExit"
         transition={{ delay: 0.3, default: { duration: 0.7 } }}
         variants={{
