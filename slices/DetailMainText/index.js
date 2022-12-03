@@ -6,48 +6,83 @@ const DetailMainText = ({ slice }) => {
   return (
     <>
       {slice.variation !== "noReadMore" ? (
-        <div className="text col-start-3 relative leading-[4vw] sm:leading-7 text-[3.3vw] sm:text-[22px] text-left w-[94vw] mt-[0vw] mb-[1vw] md:mt-[40px] md:mb-[40px] lg:mt-[50px] lg:mb-[50px]">
-          <div className="block md:hidden w-[90%] text-[3.4vw] sm:text-[22px] mb-5 font-mono ">
-            {slice.primary.title ? slice.primary.title : "Objective + Approach"}
-          </div>
-          <div className="flex w-[100%] ">
-            <div className="hidden md:block w-[23%] md:text-[1.3rem] lg:text-[1.4rem] font-mono ">
-              {slice.primary.title
-                ? slice.primary.title
-                : "Objective + Approach"}
-            </div>
+        <div className="col-start-3 relative leading-[4vw] md:leading-7 text-[3.3vw] md:text-[22px] text-center w-[94vw] md:w-[650px] lg:w-[800px] xl:w-[900px] mt-[2vw] mb-[2vw] md:mt-[40px] md:mb-[40px] lg:mt-[50px] lg:mb-[50px]">
+          <div className="text-left">
+            <div className={`mt-0`}>{slice.primary.summary[0].text}</div>
+            {slice.primary.summary.slice(1).map((t, i) => (
+              <div key={i} className={`mt-5`}>
+                {t.text}
+              </div>
+            ))}
 
-            <div className="w-[100%] md:w-[69%]">
-              <div className={`mt-0`}>{slice.primary.summary[0].text}</div>
-              {slice.primary.summary.slice(1).map((t, i) => (
+            <div className={`${isReadMore ? "hidden" : "block"}`}>
+              {slice.primary.moreInfo.map((t, i) => (
                 <div key={i} className={`mt-5`}>
                   {t.text}
                 </div>
               ))}
-
-              <div className={`${isReadMore ? "hidden" : "block"}`}>
-                {slice.primary.moreInfo.map((t, i) => (
-                  <div key={i} className={`mt-5`}>
-                    {t.text}
-                  </div>
-                ))}
-              </div>
-              {slice.primary.moreInfo[0] && (
-                <div
-                  onClick={() => {
-                    setIsReadMore(!isReadMore);
-                  }}
-                  className="thumbcursor block mt-5 underline"
-                >
-                  {isReadMore ? "Read more" : "Show less"}
-                </div>
-              )}
             </div>
+            {slice.primary.moreInfo[0] && (
+              <div
+                onClick={() => {
+                  setIsReadMore(!isReadMore);
+                }}
+                className="thumbcursor block mt-5 underline"
+              >
+                {isReadMore ? "Read more" : "Show less"}
+              </div>
+            )}
           </div>
         </div>
       ) : (
-        <div className="text col-start-3 relative leading-[4.2vw] sm:leading-7 text-[3.5vw] sm:text-[22px] text-left w-[94vw] mt-[0vw] mb-[1vw] md:mt-[40px] md:mb-[40px] lg:mt-[50px] lg:mb-[50px]">
-          <div className="block md:hidden w-[94%] text-[3.5vw] sm:text-[22px] mb-5 font-mono">
+        // <div className="text col-start-3 relative leading-[4vw] sm:leading-7 text-[3.3vw] sm:text-[22px] text-left w-[94vw] mt-[0vw] mb-[1vw] md:mt-[40px] md:mb-[40px] lg:mt-[50px] lg:mb-[50px]">
+        //   <div className="block md:hidden w-[90%] text-[3.4vw] sm:text-[22px] mb-5 font-mono ">
+        //     {slice.primary.title ? slice.primary.title : "Objective + Approach"}
+        //   </div>
+        //   <div className="flex w-[100%] ">
+        //     <div className="hidden md:block w-[23%] md:text-[1.3rem] lg:text-[1.4rem] font-mono ">
+        //       {slice.primary.title
+        //         ? slice.primary.title
+        //         : "Objective + Approach"}
+        //     </div>
+
+        //     <div className="w-[100%] md:w-[69%]">
+        //       <div className={`mt-0`}>{slice.primary.summary[0].text}</div>
+        //       {slice.primary.summary.slice(1).map((t, i) => (
+        //         <div key={i} className={`mt-5`}>
+        //           {t.text}
+        //         </div>
+        //       ))}
+
+        //       <div className={`${isReadMore ? "hidden" : "block"}`}>
+        //         {slice.primary.moreInfo.map((t, i) => (
+        //           <div key={i} className={`mt-5`}>
+        //             {t.text}
+        //           </div>
+        //         ))}
+        //       </div>
+        //       {slice.primary.moreInfo[0] && (
+        //         <div
+        //           onClick={() => {
+        //             setIsReadMore(!isReadMore);
+        //           }}
+        //           className="thumbcursor block mt-5 underline"
+        //         >
+        //           {isReadMore ? "Read more" : "Show less"}
+        //         </div>
+        //       )}
+        //     </div>
+        //   </div>
+        // </div>
+        <div className="col-start-3 relative leading-[4vw] md:leading-7 text-[3.3vw] md:text-[22px] text-center w-[94vw] md:w-[650px] lg:w-[800px] xl:w-[900px] mt-[2vw] mb-[2vw] md:mt-[40px] md:mb-[40px] lg:mt-[50px] lg:mb-[50px]">
+          <div className="text-left">
+            {slice.primary.moreInfo.map((t, i) => (
+              <div key={i} className={`${i === 0 ? "mt-0" : "mt-5"}`}>
+                {t.text}
+              </div>
+            ))}
+          </div>
+          {/* <div className="block md:hidden w-[94%] text-[3.5vw] sm:text-[22px] mb-5 font-mono">
             {slice.primary.title ? slice.primary.title : "Objective + Approach"}
           </div>
           <div className="flex w-[100%]">
@@ -68,8 +103,7 @@ const DetailMainText = ({ slice }) => {
                 ))}
               </div>
             </div>
-            <div></div>
-          </div>
+          </div> */}
         </div>
       )}
     </>

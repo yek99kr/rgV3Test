@@ -138,7 +138,7 @@ const About = (props) => {
 
         <>
           <p className="font-[400] pt-[1.8em] sm:pt-[1.5em]">
-            We have an{" "}
+            Our work can be seen on{" "}
             <a
               href="https://www.instagram.com/real.good.studio/"
               target="_blank"
@@ -156,7 +156,8 @@ const About = (props) => {
                 <span className="wiggle9 text-green-500">m</span>
               </span>
             </a>{" "}
-            with some work <br className="sm:hidden" /> and more work{" "}
+            and <br className="sm:hidden" />
+            we have more work{" "}
             <Link href="/projects">
               <a>
                 <span className="deck inline-block noselect thumbcursor">

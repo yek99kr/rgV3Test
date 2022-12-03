@@ -19,23 +19,26 @@ const DetailCredit = ({ slice }) => {
   return (
     <>
       {slice.variation !== "noReadMore" ? (
-        <div className="text col-start-3 relative leading-[4.3vw] sm:leading-7 text-[3.3vw] sm:text-[18px] text-left w-[94vw] mt-[2vw] mb-[1vw] md:mt-[50px] md:mb-[0px] ">
+        <div className="text col-start-3 relative leading-[4.8vw] sm:leading-7 text-[3.3vw] sm:text-[18px] text-left w-[94vw] mt-[0vw] mb-[1vw] md:mt-[50px] md:mb-[0px] ">
           <div className="flex w-[100%] justify-between">
-            <div className="hidden md:block w-[22%] md:text-[1.3rem] lg:text-[1.4rem] font-mono">
+            <div className="hidden md:block w-[22%] md:text-[1.3rem] lg:text-[1.4rem]">
               Credit
             </div>
 
             <div className="w-[100%] md:w-[74.5%]">
-              <div className={`mt-0 md:w-[80%] `}>
+              <div className={`md:w-[80%]`}>
                 {summaryCredits.map((credit, i) => {
                   return (
                     <div key={i} className=" ">
-                      <span className="font-bold uppercase">
+                      <span className=" font-bold  uppercase text-[2.5vw] sm:text-[14px]">
                         {credit.title} <br />
                       </span>{" "}
                       {credit.name.map((person, i) => {
                         return (
-                          <span key={i}>
+                          <span
+                            key={i}
+                            className="relative bottom-[0.5vw] sm:bottom-1"
+                          >
                             {person}
                             {i !== credit.name.length - 1 && ","}{" "}
                           </span>
@@ -54,12 +57,15 @@ const DetailCredit = ({ slice }) => {
                 {readmoreCredits.map((credit, i) => {
                   return (
                     <div key={i} className=" ">
-                      <span className="font-bold uppercase">
+                      <span className="font-bold uppercase  text-[2.5vw] sm:text-[14px]">
                         {credit.title} <br />
                       </span>{" "}
                       {credit.name.map((person, i) => {
                         return (
-                          <span key={i}>
+                          <span
+                            key={i}
+                            className="relative bottom-[0.5vw] sm:bottom-1"
+                          >
                             {person}
                             {i !== credit.name.length - 1 && ","}{" "}
                           </span>
@@ -83,9 +89,9 @@ const DetailCredit = ({ slice }) => {
           </div>
         </div>
       ) : (
-        <div className="text col-start-3 relative leading-[4.3vw] sm:leading-7 text-[3.3vw] sm:text-[18px] text-left w-[94vw] mt-[2vw] mb-[1vw] md:mt-[50px] md:mb-[0px] ">
+        <div className="text col-start-3 relative leading-[4.8vw] sm:leading-7 text-[3.3vw] sm:text-[18px] text-left w-[94vw] mt-[0vw] mb-[1vw] md:mt-[50px] md:mb-[0px] ">
           <div className="flex w-[100%] justify-between">
-            <div className="hidden md:block text-[1rem] md:text-[1.3rem] lg:text-[1.4rem] font-mono">
+            <div className="hidden md:block text-[1rem] md:text-[1.3rem] lg:text-[1.4rem]">
               Credit
             </div>
 
@@ -94,12 +100,15 @@ const DetailCredit = ({ slice }) => {
                 {allCredits.map((credit, i) => {
                   return (
                     <div key={i} className=" ">
-                      <span className="font-bold uppercase">
+                      <span className="font-bold text-[2.5vw] sm:text-[14px] uppercase">
                         {credit.title} <br />
                       </span>{" "}
                       {credit.name.map((person, i) => {
                         return (
-                          <span key={i}>
+                          <span
+                            key={i}
+                            className="relative bottom-[0.5vw] sm:bottom-1"
+                          >
                             {person}
                             {i !== credit.name.length - 1 && ","}{" "}
                           </span>

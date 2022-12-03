@@ -65,7 +65,7 @@ function MyApp({ Component, pageProps, router }) {
                 ) : (
                   <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[40%] w-[87vw] text-[3.1vw] sm:text-[16px] md:text-[17px] lg:text-[19px] xl:text-[21px] 2xl:text-[24.5px] text-center">
                     <p className="font-[400] select-auto">
-                      Currently taking on select projects{" "}
+                      Currently taking on select projects.{" "}
                       <a
                         href="mailto: hello@realgood.tv"
                         target="_blank"
