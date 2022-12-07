@@ -17,7 +17,7 @@ const ProjectBtn = ({ project, projects }) => {
             <a>
               <div
                 className={
-                  "bg-white/60 backdrop-blur-sm w-[47.5vw] rounded text-center p-2.5 thumbcursor text-black duration-150 hover:opacity-50 relative left-[3vw] md:left-[2vw]"
+                  "bg-white/60 backdrop-blur-sm w-[45.5vw] rounded text-center p-2.5 thumbcursor text-black duration-150 hover:opacity-50 relative left-[3vw] md:left-[2vw]"
                 }
               >
                 Previous
@@ -27,7 +27,7 @@ const ProjectBtn = ({ project, projects }) => {
         ) : (
           <div
             className={
-              "bg-white/60 backdrop-blur-sm w-[47.5vw] rounded text-center p-2.5 text-black opacity-50  relative left-[3vw] md:left-[2vw] pointer-events-none cursor-not-allowed"
+              "bg-white/60 backdrop-blur-sm w-[45.5vw] rounded text-center p-2.5 text-black opacity-50  relative left-[3vw] md:left-[2vw] pointer-events-none cursor-not-allowed"
             }
           >
             Previous
@@ -39,7 +39,7 @@ const ProjectBtn = ({ project, projects }) => {
             <a>
               <div
                 className={
-                  "bg-white/60 backdrop-blur-sm w-[43.5vw] rounded text-center p-2.5 thumbcursor text-black duration-150 hover:opacity-50  relative right-[3vw] md:right-[2vw]"
+                  "bg-white/60 backdrop-blur-sm w-[45.5vw] rounded text-center p-2.5 thumbcursor text-black duration-150 hover:opacity-50  relative right-[3vw] md:right-[2vw]"
                 }
               >
                 Next
@@ -49,7 +49,7 @@ const ProjectBtn = ({ project, projects }) => {
         ) : (
           <div
             className={
-              "bg-white/60 backdrop-blur-sm w-[43.5vw] rounded text-center p-2.5 text-black opacity-50 pointer-events-none cursor-not-allowed relative right-[3vw] md:right-[2vw]"
+              "bg-white/60 backdrop-blur-sm w-[45.5vw] rounded text-center p-2.5 text-black opacity-50 pointer-events-none cursor-not-allowed relative right-[3vw] md:right-[2vw]"
             }
           >
             Next

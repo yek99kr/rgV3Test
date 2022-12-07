@@ -22,7 +22,19 @@ const DetailMedia = ({ slice }) => {
       ) : (
         slice.primary.media.url && (
           <>
-            <div className="relative col-start-3 md:p-0 w-[100vw] md:w-[100vw] aspect-video">
+            <div className="relative col-start-3 md:p-0 w-[100vw] md:w-[100vw] md:h-[45vw] overflow-hidden">
+              <div className="md:p-0 w-[100vw] md:w-[100vw] aspect-video">
+                <Image
+                  src={slice.primary.media.url}
+                  alt={slice.primary.media.alt}
+                  priority={true}
+                  loading="eager"
+                  layout="fill"
+                  objectFit="cover"
+                ></Image>
+              </div>
+            </div>
+            {/* <div className="relative col-start-3 md:p-0 w-[100vw] md:w-[100vw] aspect-video">
               <Image
                 src={slice.primary.media.url}
                 alt={slice.primary.media.alt}
@@ -31,7 +43,7 @@ const DetailMedia = ({ slice }) => {
                 layout="fill"
                 objectFit="cover"
               ></Image>
-            </div>
+            </div> */}
           </>
         )
       )}

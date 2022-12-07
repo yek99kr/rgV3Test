@@ -204,12 +204,3 @@ input[type="range"] {
   /* border: 2px dashed black; */
   filter: blur(0);
 }
-
-/* .video iframe {
-  width: 90vw;
-  aspect-ratio: 16 / 9;
-} */
-
-:root {
-  --plyr-color-main: #e9ebf0;
-}

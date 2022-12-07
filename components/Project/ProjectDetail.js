@@ -23,10 +23,10 @@ const ProjectDetail = ({ project, projects }) => {
       }}
     >
       <div
-        className="relative grid justify-items-center w-[100vw] grid-cols-5 gap-y-[5.6vw] md:gap-y-[1.5rem]
+        className="relative grid justify-items-center w-[100vw] grid-cols-5 gap-y-[5.6vw] md:gap-y-[1.2rem] top-0
         "
       >
-        <div className="col-start-3 relative text-center w-[90vw] h-[11vw] lg:h-[5vw] top-[35vw] sm:top-[35vw] md:top-[34vw] lg:top-[26vw] xl:top-[28vw] z-[100]">
+        {/* <div className="col-start-3 relative text-center w-[90vw] h-[11vw] lg:h-[5vw] top-[35vw] sm:top-[35vw] md:top-[34vw] lg:top-[26vw] xl:top-[28vw] z-[100]">
           <h1 className="text-[6vw] sm:text-[40px] lg:text-[55px] xl:text-[80px]">
             <span className="text-white bg-black p-0.5 pl-3 pr-3 font-bold">
               {project.data.client}
@@ -34,6 +34,20 @@ const ProjectDetail = ({ project, projects }) => {
           </h1>
 
           <p className="title relative text-[3.6vw] sm:text-[25px] lg:text-[30px] mb-[2vw] md:mb-[30px] font-mono">
+            <span className="text-white bg-black p-0.5 pl-2 pr-2">
+              {project.data.title}
+            </span>
+          </p>
+        </div> */}
+
+        <div className="absolute bg-red text-center w-[90vw] h-[11vw] lg:h-[5vw] top-[22vw] md:top-[23vw] lg:top-[21vw] xl:top-[22vw] z-[100]">
+          <h1 className="text-[6.5vw] sm:text-[40px] lg:text-[65px]">
+            <span className="text-white bg-black p-0.5 pl-3 pr-3 font-bold">
+              {project.data.client}
+            </span>
+          </h1>
+
+          <p className="title relative text-[3.1vw] sm:text-[22px] lg:text-[28px] mb-[2vw] md:mb-[30px] font-mono">
             <span className="text-white bg-black p-0.5 pl-2 pr-2">
               {project.data.title}
             </span>

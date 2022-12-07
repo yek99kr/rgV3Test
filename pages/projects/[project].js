@@ -54,7 +54,7 @@ const project = ({ router, project, projects }) => {
           opacity: 0,
         },
       }}
-      className="overflow-hidden"
+      className="absolute top-0 overflow-hidden"
     >
       <ProjectDetail project={project} projects={projects} />
     </motion.div>

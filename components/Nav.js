@@ -22,15 +22,14 @@ const Nav = () => {
 
   return (
     <>
-      <div className=" fixed top-0 mt-[2.5vw] sm:mt-3 z-[1000] text-[2.9vw] 4xs:text-[2.9vw] sm:text-[15px] md:text-[16px] lg:text-[18px] xl:text-[18.5px] flex justify-center items-center w-screen select-none">
-        <div className=" bg-white/60 backdrop-blur-md rounded m-0 mr-[1.8vw] sm:mr-3 p-[2.5vw] sm:p-[0.69rem] md:p-[0.68rem] lg:p-[0.65rem] pl-[2.2vw] pr-[2.2vw] sm:pl-3 sm:pr-3 select-none">
+      <div className="fixed top-0 mt-[2.5vw] sm:mt-3 z-[1000] text-[2.9vw] 4xs:text-[2.9vw] sm:text-[15px] md:text-[16px] lg:text-[18px] xl:text-[18.5px] flex justify-center items-center w-screen select-none">
+        <div className="flex justify-center items-center bg-white/60 backdrop-blur-md rounded m-0 mr-[1.8vw] sm:mr-3 w-[18vw] h-[7.9vw] sm:w-[6rem] sm:h-[2.35rem] md:w-[6.5rem] md:h-[2.4rem] lg:w-[7.5rem] lg:h-[2.6rem] select-none ">
           <Link href="/" passHref scroll={false}>
             <a className="thumbcursor">
               <img
                 src="/logoShort.png"
                 alt="logo"
-                className="w-[13.5vw] sm:w-[70px] md:w-[76px] lg:w-[87.5px] xl:w-[93px] "
-                // className="w-[12.5vw] sm:w-[3.8rem] md:w-[4.55rem]"
+                className="w-[13.5vw] sm:w-[70px] md:w-[76px] lg:w-[87.5px] xl:w-[93px] h-auto"
               />
             </a>
           </Link>
