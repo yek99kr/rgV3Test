@@ -68,7 +68,7 @@ export default function ProductPageContent({ product }) {
           <div>
             <div
               ref={sliderRef}
-              className="keen-slider max-w-[90vw] w-[90vw] h-[90vw] lg:max-w-[45vw] lg:w-[45vw] lg:h-[45vw] rounded block"
+              className="keen-slider max-w-[90vw] w-[90vw] h-[90vw] lg:max-w-[45vw] lg:w-[45vw] lg:h-[42vw] rounded block"
             >
               {product.images.edges.map((image, i) => {
                 return (
