@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps, router }) {
 
   return (
     <>
-      <Head>
+      {/* <Head>
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <title>Real Good Studio</title>
@@ -38,7 +38,7 @@ function MyApp({ Component, pageProps, router }) {
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
         />
-      </Head>
+      </Head> */}
       {/* <GoogleAnalytics strategy="lazyOnload" /> */}
       <ShopProvider>
         <PrismicProvider

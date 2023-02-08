@@ -22,7 +22,7 @@ const DetailCredit = ({ slice }) => {
         <div className="text col-start-3 relative leading-[4.8vw] sm:leading-7 text-[3.3vw] sm:text-[18px] text-left w-[94vw] mt-[0vw] mb-[1vw] md:mt-[50px] md:mb-[0px] ">
           <div className="flex w-[100%] justify-between">
             <div className="hidden md:block w-[22%] md:text-[1.3rem] lg:text-[1.4rem]">
-              Credit
+              Credits
             </div>
 
             <div className="w-[100%] md:w-[74.5%]">

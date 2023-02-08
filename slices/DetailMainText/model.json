@@ -11,13 +11,6 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "DetailMainText",
       "primary": {
-        "title": {
-          "type": "Text",
-          "config": {
-            "label": "Title",
-            "placeholder": "Objective + Approach"
-          }
-        },
         "summary": {
           "type": "StructuredText",
           "config": {
@@ -47,13 +40,6 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "DetailMainText",
       "primary": {
-        "Title": {
-          "type": "Text",
-          "config": {
-            "label": "Title",
-            "placeholder": ""
-          }
-        },
         "moreInfo": {
           "type": "StructuredText",
           "config": {

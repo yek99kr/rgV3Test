@@ -1,6 +1,4 @@
 import Image from "next/image";
-import { RichText } from "prismic-reactjs";
-
 const DetailMedia9X16 = ({ slice }) => {
   return (
     <>
@@ -12,9 +10,9 @@ const DetailMedia9X16 = ({ slice }) => {
                 className="w-[100%] h-[100%]"
                 src={`${slice.primary.media1.url.slice(
                   6
-                )}?quality=1080p&loop=1?background=1${
+                )}?quality=1080p&loop=1${
                   slice.primary.media1Autoplay
-                    ? "&autoplay=1&muted=1&controls=0"
+                    ? "&background=1&autoplay=1&muted=1&controls=0"
                     : ""
                 }`}
                 allowFullScreen
@@ -39,9 +37,9 @@ const DetailMedia9X16 = ({ slice }) => {
                 className="w-[100%] h-[100%]"
                 src={`${slice.primary.media2.url.slice(
                   6
-                )}?quality=1080p&loop=1?background=1${
+                )}?quality=1080p&loop=1${
                   slice.primary.media2Autoplay
-                    ? "&autoplay=1&muted=1&controls=0"
+                    ? "&background=1&autoplay=1&muted=1&controls=0"
                     : ""
                 }`}
                 allowFullScreen
@@ -66,9 +64,9 @@ const DetailMedia9X16 = ({ slice }) => {
                 className="w-[100%] h-[100%]"
                 src={`${slice.primary.media3.url.slice(
                   6
-                )}?quality=1080p&loop=1?background=1${
+                )}?quality=1080p&loop=1${
                   slice.primary.media3Autoplay
-                    ? "&autoplay=1&muted=1&controls=0"
+                    ? "&background=1&autoplay=1&muted=1&controls=0"
                     : ""
                 }`}
                 allowFullScreen
@@ -95,9 +93,9 @@ const DetailMedia9X16 = ({ slice }) => {
                 className="w-[100%] h-[100%]"
                 src={`${slice.primary.media1.url.slice(
                   6
-                )}?quality=1080p&loop=1?background=1${
+                )}?quality=1080p&loop=1${
                   slice.primary.media1Autoplay
-                    ? "&autoplay=1&muted=1&controls=0"
+                    ? "&background=1&autoplay=1&muted=1&controls=0"
                     : ""
                 }`}
                 allowFullScreen
@@ -121,9 +119,9 @@ const DetailMedia9X16 = ({ slice }) => {
                 className="w-[100%] h-[100%]"
                 src={`${slice.primary.media2.url.slice(
                   6
-                )}?quality=1080p&loop=1?background=1${
+                )}?quality=1080p&loop=1${
                   slice.primary.media2Autoplay
-                    ? "&autoplay=1&muted=1&controls=0"
+                    ? "&background=1&autoplay=1&muted=1&controls=0"
                     : ""
                 }`}
                 allowFullScreen

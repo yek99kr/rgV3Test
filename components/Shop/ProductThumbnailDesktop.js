@@ -1,15 +1,16 @@
 import Link from "next/link";
 import { useState } from "react";
 import { formatter } from "../../utils/helpers";
-import MouseAnimation from "../MouseAnimation";
+import Image from "next/image";
+// import MouseAnimation from "../MouseAnimation";
 
-const ProductThumbnailDesktop = ({ product }) => {
+const ProductThumbnailDesktop = ({ product, size }) => {
   const [hovered, setHovered] = useState(false);
 
   const { handle, title } = product.node;
   const price = product.node.priceRange.minVariantPrice.amount;
 
-  // const { altText, originalSrc } = product.node.images.edges[0].node;
+  const { altText, originalSrc } = product.node.images.edges[0].node;
   const thumbnails = [
     `/shop/${handle}/test0.webp`,
     `/shop/${handle}/test1.webp`,
@@ -33,11 +34,36 @@ const ProductThumbnailDesktop = ({ product }) => {
           }}
         >
           <div
-            className={`relative w-[80vw] h-[80vw] sm:w-[80vw] sm:h-[80vw] md:w-[24vw] md:h-[24vw]`}
+            className={`relative md:w-[40vw] md:h-[40vw] lg:w-[30vw] lg:h-[30vw] xl:w-[25vw] xl:h-[25vw]`}
           >
-            <MouseAnimation thumbnails={thumbnails} />
+            {/* <MouseAnimation thumbnails={thumbnails} /> */}
+
+            <Image
+              src={originalSrc}
+              priority={true}
+              loading="eager"
+              layout="fill"
+              objectFit="cover"
+              placeholder="blur"
+              blurDataURL={`/_next/image?url=${originalSrc}&w=16&q=1`}
+            />
           </div>
         </div>
+
+        {/* <div
+          className={`opacity-0 ${
+            hovered ? "md:opacity-100" : "md:opacity-0"
+          } `}
+          style={{ transition: "opacity 0.2s" }}
+        >
+          <h1 className="mt-0.5 text-center  md:text-xl lg:text-2xl">
+            {title}
+          </h1>
+         
+          <p className=" text-center m-[-0.2rem]  sm:text-base  m-[-0.1rem]">
+            {formatter.format(price)}
+          </p>
+        </div> */}
 
         <div
           className={`opacity-0 ${
@@ -45,31 +71,17 @@ const ProductThumbnailDesktop = ({ product }) => {
           } `}
           style={{ transition: "opacity 0.2s" }}
         >
-          <h1 className="mt-0.5 text-center  sm:text-base  m-[-0.1rem]">
+          <p className="text-center md:text-xl lg:text-2xl m-[-0.1rem]">
+            {/* <span className="bg-black text-white p-1"> */}
             {title}
-          </h1>
-          <p className="stroke-cyan-500 text-center sm:text-base  m-[-0.1rem]">
-            Real Good X Person
+            {/* </span> */}
           </p>
-          <p className=" text-center m-[-0.2rem] md:text-xl lg:text-2xl">
+          <p className="text-center md:text-base lg:text-lg m-[0rem]">
+            {/* <span className="bg-black text-white p-1"> */}{" "}
             {formatter.format(price)}
+            {/* </span> */}
           </p>
         </div>
-
-        {/* <div
-          className={`flex justify-center items-center opacity-100 ${
-            hovered ? "lg:opacity-100" : "lg:opacity-0"
-          }`}
-        >
-          <div className="w-[30%] bg-white/60 backdrop-blur-sm rounded">
-            <h1 className="mt-0.5  center text-center text-[2.5vw] sm:text-sm ">
-              {title}
-            </h1>
-            <p className="text-center text-[2.9vw] sm:text-sm ">
-              {formatter.format(price)}
-            </p>
-          </div>
-        </div> */}
       </a>
     </Link>
   );

@@ -1,7 +1,6 @@
 import ProductForm from "./ProductForm";
 import Link from "next/link";
 import LoadImage from "../LoadImage";
-
 import { useKeenSlider } from "keen-slider/react";
 
 import Recommend from "./Recommend";
@@ -114,15 +113,15 @@ export default function ProductPageContent({ product }) {
 
         <ProductForm product={product} />
       </div>
-      {/* <Recommend
+      <Recommend
         current={product.id}
         products={product.collections.edges[0].node.products.edges}
-      /> */}
+      />
 
-      <div className="flex relative w-screen justify-center items-center text-[2.9vw] sm:text-sm md:text-base pb-[2.5rem] md:pb-[4rem]">
+      <div className="flex relative w-screen justify-center items-center text-[2.9vw] sm:text-sm md:text-base pt-[3.3vw] sm:pt-[2vw] lg:pt-[1vw] pb-[6vw] md:pb-[3rem] ">
         <Link href="/shop" passHref scroll={false}>
           <a>
-            <div className="bg-white/60 backdrop-blur-sm w-[90vw] lg:w-[400px] xl:w-[455px] rounded text-center p-3  thumbcursor">
+            <div className="bg-white/60 backdrop-blur-sm w-[90vw] lg:w-[400px] xl:w-[455px] rounded text-center p-3  thumbcursor text-black duration-150 hover:opacity-50">
               Back to Shop
             </div>
           </a>

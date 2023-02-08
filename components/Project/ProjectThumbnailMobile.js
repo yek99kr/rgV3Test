@@ -3,7 +3,7 @@ import LoadImage from "../LoadImage";
 
 const ProjectThumbnailMobile = ({ project }) => {
   return (
-    <Link href={`/projects/${project.uid}`} passHref scroll={false}>
+    <Link href={`/work/${project.uid}`} passHref scroll={false}>
       <a className="group thumbcursor">
         {
           <div className="w-full overflow-hidden">

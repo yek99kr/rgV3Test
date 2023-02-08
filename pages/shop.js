@@ -5,7 +5,7 @@ import { getProductsInCollection } from "../lib/shopify";
 const store = ({ router, products }) => {
   return (
     <>
-      <motion.div
+      {/* <motion.div
         key={router.route}
         initial="pageInitial"
         animate="pageAnimate"
@@ -21,6 +21,14 @@ const store = ({ router, products }) => {
           },
         }}
         className="fixed overflow-hidden w-[100vw] h-[100vw]"
+      > */}
+      <motion.div
+        key={router.route}
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 100 }}
+        transition={{ duration: 0.5 }}
+        className="overflow-hidden"
       >
         <ProductList products={products} />
       </motion.div>
