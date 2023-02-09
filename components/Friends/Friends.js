@@ -48,7 +48,7 @@ const About = (props) => {
             frameBorder="0"
           ></iframe> */}
           <Lottie
-            className="absolute hidden sm:block left-[-3vw] top-[-16vw] md:top-[-18vw] lg:top-[-16vw] xl:left-[-2vw] xl:top-[-15vw]  ml-0 w-[100%] aspect-video"
+            className="absolute z-[-5] hidden sm:block left-[-3vw] top-[-16vw] md:top-[-18vw] lg:top-[-16vw] xl:left-[-2vw] xl:top-[-15vw]  ml-0 w-[100%] aspect-video"
             animationData={animationData}
             interactivity={interactivity}
           />
