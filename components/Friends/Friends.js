@@ -35,14 +35,15 @@ const About = (props) => {
         className="absolute z-[-5] left-1/2 -translate-x-1/2 hidden sm:block bottom-[-5%] w-[63vw] pointer-events-none"
         src="/billboard.png"
       ></img> */}
-      <div className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[64.5%] leading-[1.6] md:leading-[1.5] w-[93vw] sm:w-[120vw] md:w-[110vw] lg:w-[95vw] xl:w-[86vw] max-w-[1400px] text-[3.1vw] 4xs:text-[2.9vw] sm:text-[15px] md:text-[16px] lg:text-[18.5px] xl:text-[19.5px] 2xl:text-[23px] text-center  p-5">
+
+      <div className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[77%] sm:-translate-y-[60%] leading-[1.6] md:leading-[1.5] w-[93vw] sm:w-[120vw] md:w-[110vw] lg:w-[95vw] xl:w-[86vw] max-w-[1400px] text-[3.1vw] 4xs:text-[2.9vw] sm:text-[15px] md:text-[16px] lg:text-[18.5px] xl:text-[19.5px] 2xl:text-[23px] text-center  p-5">
         <div className="flex justify-center items-center">
           <img
-            className="block sm:hidden mb-[2.5vw] pointer-events-none"
+            className="block sm:hidden mb-[1vw] w-[65%] pointer-events-none select-none"
             src="/handshakesMobile.png"
           ></img>
           <img
-            className="absolute z-[-5] hidden sm:block left-[-2vw]  xl:left-[-1vw] top-1/2  -translate-y-[46%] ml-0 w-[100%] aspect-video pointer-events-none"
+            className="absolute z-[-5] hidden sm:block left-[-2vw]  xl:left-[-1vw] top-1/2  -translate-y-[46%] ml-0 w-[100%] aspect-video pointer-events-none select-none"
             src="/handshakes.png"
           ></img>
 
@@ -81,8 +82,9 @@ const About = (props) => {
         </p>
 
         <p className="pt-[0.8em] sm:pt-[1.3em]">
-          Hit us up if a brand or agency asks you to make something <br /> for
-          them and you need production support to make it happen.
+          Hit us up if a brand or agency asks you to make something{" "}
+          <br className="hidden sm:block" /> for them and you need production
+          support to make it happen.
         </p>
         {/* <p className="font-[400] z-10">
           We provide <AboutDropDown madWords={madWords1} /> for creators.
