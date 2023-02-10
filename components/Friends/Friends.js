@@ -31,6 +31,10 @@ const About = (props) => {
 
   return (
     <>
+      {/* <img
+        className="absolute z-[-5] left-1/2 -translate-x-1/2 hidden sm:block bottom-[-5%] w-[63vw] pointer-events-none"
+        src="/billboard.png"
+      ></img> */}
       <div className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[64.5%] leading-[2] md:leading-[2.2] lg:leading-[1.9] w-[93vw] sm:w-[117vw] md:w-[110vw] lg:w-[95vw] xl:w-[86vw] max-w-[1400px] text-[3.1vw] 4xs:text-[2.9vw] sm:text-[15px] md:text-[16px] lg:text-[18.5px] xl:text-[19.5px] 2xl:text-[23px] text-center  p-5">
         <div className="flex justify-center items-center">
           <img
@@ -41,6 +45,7 @@ const About = (props) => {
             className="absolute z-[-5] hidden sm:block left-[-2vw]  xl:left-[-1vw] top-1/2  -translate-y-[47%] ml-0 w-[100%] aspect-video pointer-events-none"
             src="/handshakes.png"
           ></img>
+
           {/* <iframe
             className="absolute z-[-5] hidden sm:block left-[-2vw] top-[-13vw] md:top-[-14.5vw] lg:top-[-14vw] xl:left-[-1vw] xl:top-[-12.5vw]  ml-0 w-[100%] aspect-video"
             src="https://player.vimeo.com/video/797721674?h=fc10f44377&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479?loop=1&background=1&autoplay=1&muted=1&controls=0&quality=1080p&transparent=1"
@@ -53,6 +58,7 @@ const About = (props) => {
             interactivity={interactivity}
           /> */}
         </div>
+
         <p className="font-[400] ">
           Hi. We&apos;re{" "}
           <img
@@ -74,9 +80,9 @@ const About = (props) => {
         <p className="">
           We help creators with things like bidding, producing, insurance,
           payroll, etc, <br className="hidden sm:block" /> quickly and at scale.
-          If a brand or agency hits you up to make something
-          <br className="hidden sm:block" /> and you need additional resources
-          for the project we can help.
+          Hit us up if a brand or agency asks you to make something{" "}
+          <br className="hidden sm:block" /> for them and you need production
+          support to make it happen.
         </p>
         {/* <p className="font-[400] z-10">
           We provide <AboutDropDown madWords={madWords1} /> for creators.
