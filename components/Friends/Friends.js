@@ -31,29 +31,54 @@ const About = (props) => {
 
   return (
     <>
-      <div className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[64.5%] leading-[2] md:leading-[2.2] lg:leading-[1.9] w-[93vw] sm:w-[100vw] md:w-[100vw] lg:w-[85vw] xl:w-[75vw] text-[3.1vw] 4xs:text-[2.9vw] sm:text-[15px] md:text-[16px] lg:text-[18.5px] xl:text-[19.5px] 2xl:text-[23px] text-center  p-5">
+      <div className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[64.5%] leading-[2] md:leading-[2.2] lg:leading-[1.9] w-[93vw] sm:w-[117vw] md:w-[110vw] lg:w-[90vw] xl:w-[82vw] max-w-[1400px] text-[3.1vw] 4xs:text-[2.9vw] sm:text-[15px] md:text-[16px] lg:text-[18.5px] xl:text-[19.5px] 2xl:text-[23px] text-center  p-5">
         <div className="flex justify-center items-center">
           <img
-            className="block sm:hidden top-[-16vw]  mb-[7vw] pointer-events-none"
+            className="block sm:hidden mb-[3vw] pointer-events-none"
             src="/handshakesMobile.png"
           ></img>
-          {/* <img
-            className="absolute hidden sm:block top-[-16vw] md:top-[-14vw] lg:top-[-13vw] xl:top-[-12.5vw] ml-8 w-[100%]  pointer-events-none"
+          <img
+            className="absolute z-[-5] hidden sm:block left-[-2vw] top-[-17vw] md:top-[-17vw] lg:top-[-14vw] xl:left-[-1vw]  ml-0 w-[100%] aspect-video pointer-events-none"
             src="/handshakes.png"
-          ></img> */}
+          ></img>
           {/* <iframe
-            
-            src="https://player.vimeo.com/video/797178083?h=2b892cbf35&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479?loop=1&background=1&autoplay=1&muted=1&controls=0&quality=1080p&transparent=1"
+            className="absolute z-[-5] hidden sm:block left-[-2vw] top-[-13vw] md:top-[-14.5vw] lg:top-[-14vw] xl:left-[-1vw] xl:top-[-12.5vw]  ml-0 w-[100%] aspect-video"
+            src="https://player.vimeo.com/video/797721674?h=fc10f44377&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479?loop=1&background=1&autoplay=1&muted=1&controls=0&quality=1080p&transparent=1"
             allowFullScreen
             frameBorder="0"
           ></iframe> */}
-          <Lottie
+          {/* <Lottie
             className="absolute z-[-5] hidden sm:block left-[-3vw] top-[-16vw] md:top-[-18vw] lg:top-[-16vw] xl:left-[-2vw] xl:top-[-15vw]  ml-0 w-[100%] aspect-video"
             animationData={animationData}
             interactivity={interactivity}
-          />
+          /> */}
         </div>
-        <p className="font-[400] z-10">
+        <p className="font-[400] ">
+          Hi. We&apos;re{" "}
+          <img
+            src="/logoShort.png"
+            alt="logo"
+            className="inline w-[13.5vw] sm:w-[70px] md:w-[76px] lg:w-[87.5px] xl:w-[96px] 2xl:w-[103px] ml-0.5 mr-0.5"
+          />{" "}
+          Friends.
+        </p>
+        <p className="">
+          We&apos;re part of{" "}
+          <img
+            src="/logoShort.png"
+            alt="logo"
+            className="inline w-[13.5vw] sm:w-[70px] md:w-[76px] lg:w-[87.5px] xl:w-[96px] 2xl:w-[103px] ml-0.5 mr-0.5"
+          />{" "}
+          Studio but also a separate thing.
+        </p>
+        <p className="">
+          We help creators with things like bidding, producing, insurance,
+          payroll, etc, <br className="hidden sm:block" /> quickly and at scale.
+          If a brand or agency hits you up to make something
+          <br className="hidden sm:block" /> and you need additional resources
+          for the project we can help.
+        </p>
+        {/* <p className="font-[400] z-10">
           We provide <AboutDropDown madWords={madWords1} /> for creators.
         </p>
         <p className="font-[400] pt-[1.8em] sm:pt-[1.5em] z-10">
@@ -61,7 +86,7 @@ const About = (props) => {
           <AboutDropDown madWords={madWords3} />{" "}
           <br className="block sm:hidden" />
           to agencies and brands.
-        </p>
+        </p> */}
       </div>
       {/* <div className="absolute top-0 left-0 w-[100vw] h-[100vh] bg-black z-[0]"></div> */}
     </>

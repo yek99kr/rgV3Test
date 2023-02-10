@@ -109,12 +109,13 @@ const About = (props) => {
     <>
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[61%] leading-[2] md:leading-[2.2] lg:leading-[1.9] w-[85vw] sm:w-[85vw] md:w-[85vw] lg:w-[75vw] xl:w-[63vw] 2xl:w-[60vw] text-[3.1vw] 4xs:text-[2.9vw] sm:text-[15px] md:text-[16px] lg:text-[18.5px] xl:text-[19.5px] 2xl:text-[23px] text-center bg-[#e9ebf0]/40 p-5">
         <p className="font-[400]">
+          We&apos;re{" "}
           <img
             src="/logoShort.png"
             alt="logo"
             className="inline w-[13.5vw] sm:w-[70px] md:w-[76px] lg:w-[87.5px] xl:w-[96px] 2xl:w-[103px] ml-0.5 mr-0.5"
-          />{" "}
-          is a <AboutDropDown madWords={madWords1} /> creative studio
+          />
+          . We&apos;re a <AboutDropDown madWords={madWords1} /> creative studio
           specializing in{" "}
           <span style={{ whiteSpace: "nowrap" }}>
             <AboutDropDown madWords={madWords2} />.
@@ -128,7 +129,7 @@ const About = (props) => {
           </span>
         </p>
         <p className="font-[400] pt-[1.8em] sm:pt-[1.5em]">
-          Our work <AboutDropDown madWords={madWords6} /> the{" "}
+          We make work that <AboutDropDown madWords={madWords6} /> the{" "}
           <AboutDropDown madWords={madWords7} /> between{" "}
           <AboutDropDown madWords={madWords8} /> and{" "}
           <span style={{ whiteSpace: "nowrap" }}>
