@@ -35,14 +35,14 @@ const About = (props) => {
         className="absolute z-[-5] left-1/2 -translate-x-1/2 hidden sm:block bottom-[-5%] w-[63vw] pointer-events-none"
         src="/billboard.png"
       ></img> */}
-      <div className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[64.5%] leading-[1.8] md:leading-[2] w-[93vw] sm:w-[117vw] md:w-[110vw] lg:w-[95vw] xl:w-[86vw] max-w-[1400px] text-[3.1vw] 4xs:text-[2.9vw] sm:text-[15px] md:text-[16px] lg:text-[18.5px] xl:text-[19.5px] 2xl:text-[23px] text-center  p-5">
+      <div className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[64.5%] leading-[1.6] md:leading-[1.5] w-[93vw] sm:w-[117vw] md:w-[110vw] lg:w-[95vw] xl:w-[86vw] max-w-[1400px] text-[3.1vw] 4xs:text-[2.9vw] sm:text-[15px] md:text-[16px] lg:text-[18.5px] xl:text-[19.5px] 2xl:text-[23px] text-center  p-5">
         <div className="flex justify-center items-center">
           <img
-            className="block sm:hidden mb-[3vw] pointer-events-none"
+            className="block sm:hidden mb-[2.5vw] pointer-events-none"
             src="/handshakesMobile.png"
           ></img>
           <img
-            className="absolute z-[-5] hidden sm:block left-[-2vw]  xl:left-[-1vw] top-1/2  -translate-y-[47%] ml-0 w-[100%] aspect-video pointer-events-none"
+            className="absolute z-[-5] hidden sm:block left-[-2vw]  xl:left-[-1vw] top-1/2  -translate-y-[46.5%] ml-0 w-[100%] aspect-video pointer-events-none"
             src="/handshakes.png"
           ></img>
 
@@ -59,27 +59,28 @@ const About = (props) => {
           /> */}
         </div>
 
-        <p className=" ">
-          Hi. We&apos;re{" "}
+        <p className="pt-[0.8em] sm:pt-[1.3em]">
+          We&apos;re{" "}
           <img
             src="/logoShort.png"
             alt="logo"
             className="inline w-[13.5vw] sm:w-[70px] md:w-[76px] lg:w-[87.5px] xl:w-[96px] 2xl:w-[103px] ml-0.5 mr-0.5"
           />{" "}
-          Friends.
-        </p>
-        <p className="">
-          We&apos;re part of{" "}
+          Friends. We&apos;re part of{" "}
           <img
             src="/logoShort.png"
             alt="logo"
             className="inline w-[13.5vw] sm:w-[70px] md:w-[76px] lg:w-[87.5px] xl:w-[96px] 2xl:w-[103px] ml-0.5 mr-0.5"
           />{" "}
-          Studio but also a separate thing.
+          Studio <br />
+          but also a separate thing.
         </p>
-        <p className="">
-          We help creators with things like bidding, producing, insurance,
-          payroll, etc, <br className="hidden sm:block" /> quickly and at scale.
+        <p className="pt-[0.8em] sm:pt-[1.3em]">
+          We help creators with things like bidding, producing, insurance,{" "}
+          <br className="hidden sm:block" />
+          payroll, quickly and at scale.
+        </p>
+        <p className="pt-[0.8em] sm:pt-[1.3em]">
           Hit us up if a brand or agency asks you to make something{" "}
           <br className="hidden sm:block" /> for them and you need production
           support to make it happen.
