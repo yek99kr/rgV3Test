@@ -82,9 +82,11 @@ const About = (props) => {
         </p>
 
         <p className="pt-[0.8em] sm:pt-[1.3em]">
-          Hit us up if a brand or agency asks you to make something{" "}
-          <br className="hidden sm:block" /> for them and you need production
-          support to make it happen.
+          Hit us up if a brand or agency asks you to make{" "}
+          <br className="block sm:hidden" />
+          something <br className="hidden sm:block" /> for them and you need
+          production support <br className="block sm:hidden" />
+          to make it happen.
         </p>
         {/* <p className="font-[400] z-10">
           We provide <AboutDropDown madWords={madWords1} /> for creators.
