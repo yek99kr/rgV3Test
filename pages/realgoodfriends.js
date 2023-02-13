@@ -21,7 +21,6 @@ const realgoodfriends = ({ router }) => {
             opacity: 0,
           },
         }}
-        // className="fixed w-[100vw] h-[100vw]"
       >
         <FriendsPage router={router} />
       </motion.div>
