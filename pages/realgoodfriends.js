@@ -6,7 +6,7 @@ const realgoodfriends = ({ router }) => {
     <>
       {/* <Hands router={router} /> */}
       <motion.div
-        className="absolute top-0 w-[100vw] h-[100vh] overflow-hidden"
+        className="absolute top-0 w-[100vw] h-[100%] overflow-hidden"
         key={router.route}
         initial="pageInitial"
         animate="pageAnimate"
