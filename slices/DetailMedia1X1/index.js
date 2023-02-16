@@ -2,13 +2,18 @@ import Image from "next/image";
 
 const DetailMedia1X1 = ({ slice }) => {
   // {`${slice.primary.media.url.slice(6)}?quality=1080p&loop=1`}
+  // slice.primary.onMobile
   return (
     <>
       {slice.variation === "2Rows" ? (
         <>
           {slice.primary.media1.link_type === "Web" ? (
             <>
-              <div className="col-start-3 md:col-start-1 w-[94vw] md:w-[47.1vw] relative rounded md:place-self-start md:left-[2vw] aspect-square">
+              <div
+                className={`col-start-3 md:col-start-1 w-[94vw] md:w-[47.1vw] relative rounded md:place-self-start md:left-[2vw] aspect-square ${
+                  slice.primary.onMobile === false && "hidden sm:block"
+                }`}
+              >
                 <iframe
                   className="w-[100%] h-[100%]"
                   src={`${slice.primary.media1.url.slice(
@@ -25,7 +30,11 @@ const DetailMedia1X1 = ({ slice }) => {
             </>
           ) : (
             <>
-              <div className="col-start-3 md:col-start-1 w-[94vw] md:w-[47.1vw] relative rounded md:place-self-start md:left-[2vw] aspect-square">
+              <div
+                className={`col-start-3 md:col-start-1 w-[94vw] md:w-[47.1vw] relative rounded md:place-self-start md:left-[2vw] aspect-square ${
+                  slice.primary.onMobile === false && "hidden sm:block"
+                }`}
+              >
                 <Image
                   src={slice.primary.media1.url}
                   alt={slice.primary.media1.alt}
@@ -40,7 +49,11 @@ const DetailMedia1X1 = ({ slice }) => {
 
           {slice.primary.media2.link_type === "Web" ? (
             <>
-              <div className="col-start-3 md:col-start-5 w-[94vw] md:w-[47.1vw] relative rounded md:place-self-end md:right-[2vw] aspect-square">
+              <div
+                className={`col-start-3 md:col-start-5 w-[94vw] md:w-[47.1vw] relative rounded md:place-self-end md:right-[2vw] aspect-square ${
+                  slice.primary.onMobile === false && "hidden sm:block"
+                }`}
+              >
                 <iframe
                   className="w-[100%] h-[100%]"
                   src={`${slice.primary.media2.url.slice(
@@ -57,7 +70,11 @@ const DetailMedia1X1 = ({ slice }) => {
             </>
           ) : (
             <>
-              <div className="col-start-3 md:col-start-5 w-[94vw] md:w-[47.1vw] relative rounded md:place-self-end md:right-[2vw] aspect-square">
+              <div
+                className={`col-start-3 md:col-start-5 w-[94vw] md:w-[47.1vw] relative rounded md:place-self-end md:right-[2vw] aspect-square ${
+                  slice.primary.onMobile === false && "hidden sm:block"
+                }`}
+              >
                 <Image
                   src={slice.primary.media2.url}
                   alt={slice.primary.media2.alt}
