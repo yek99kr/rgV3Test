@@ -9,15 +9,12 @@ const DetailMediaMix = ({ slice }) => {
             <div className="col-start-3 md:col-start-1 w-[94vw] md:w-[40.2vw] relative rounded md:place-self-start md:left-[2vw] aspect-[3/4] ">
               <iframe
                 className="w-[100%] h-[100%]"
-                src={`${slice.primary.media1.url.slice(
-                  6
-                )}?quality=1080p&loop=1${
+                src={`${slice.primary.media1.url.slice(6)}?quality=1080p${
                   slice.primary.media1Autoplay
-                    ? "&background=1&autoplay=1&muted=1&controls=0"
+                    ? "&autopause=0&loop=1&background=1&autoplay=1&muted=1&controls=0"
                     : ""
                 }`}
                 allowFullScreen
-                autoPlay="1"
               ></iframe>
             </div>
           ) : (
@@ -37,15 +34,12 @@ const DetailMediaMix = ({ slice }) => {
             <div className="col-start-3 md:col-start-5 w-[94vw] md:w-[53.5vw] relative md:place-self-end md:right-[2vw] aspect-square ">
               <iframe
                 className="w-[100%] h-[100%]"
-                src={`${slice.primary.media2.url.slice(
-                  6
-                )}?quality=1080p&loop=1${
+                src={`${slice.primary.media2.url.slice(6)}?quality=1080p${
                   slice.primary.media2Autoplay
-                    ? "&background=1&autoplay=1&muted=1&controls=0"
+                    ? "&autopause=0&loop=1&background=1&autoplay=1&muted=1&controls=0"
                     : ""
                 }`}
                 allowFullScreen
-                autoPlay="1"
               ></iframe>
             </div>
           ) : (
@@ -67,15 +61,12 @@ const DetailMediaMix = ({ slice }) => {
             <div className="col-start-3 md:col-start-1 w-[94vw] md:w-[46.8vw] relative md:place-self-start md:left-[2vw] aspect-[4/5] ">
               <iframe
                 className="w-[100%] h-[100%]"
-                src={`${slice.primary.media1.url.slice(
-                  6
-                )}?quality=1080p&loop=1${
+                src={`${slice.primary.media1.url.slice(6)}?quality=1080p${
                   slice.primary.media1Autoplay
-                    ? "&background=1&autoplay=1&muted=1&controls=0"
+                    ? "&autopause=0&loop=1&background=1&autoplay=1&muted=1&controls=0"
                     : ""
                 }`}
                 allowFullScreen
-                autoPlay="1"
               ></iframe>
             </div>
           ) : (
@@ -94,15 +85,12 @@ const DetailMediaMix = ({ slice }) => {
             <div className="col-start-3 md:col-start-5 w-[94vw] md:w-[46.8vw] relative md:place-self-end md:right-[2vw] aspect-[4/5]">
               <iframe
                 className="w-[100%] h-[100%]"
-                src={`${slice.primary.media2.url.slice(
-                  6
-                )}?quality=1080p&loop=1${
+                src={`${slice.primary.media2.url.slice(6)}?quality=1080p${
                   slice.primary.media2Autoplay
-                    ? "&background=1&autoplay=1&muted=1&controls=0"
+                    ? "&autopause=0&loop=1&background=1&autoplay=1&muted=1&controls=0"
                     : ""
                 }`}
                 allowFullScreen
-                autoPlay="1"
               ></iframe>
             </div>
           ) : (
@@ -126,15 +114,12 @@ const DetailMediaMix = ({ slice }) => {
             >
               <iframe
                 className="w-[100%] h-[100%]"
-                src={`${slice.primary.media1.url.slice(
-                  6
-                )}?quality=1080p&loop=1${
+                src={`${slice.primary.media1.url.slice(6)}?quality=1080p${
                   slice.primary.media1Autoplay
-                    ? "&background=1&autoplay=1&muted=1&controls=0"
+                    ? "&autopause=0&loop=1&background=1&autoplay=1&muted=1&controls=0"
                     : ""
                 }`}
                 allowFullScreen
-                autoPlay="1"
               ></iframe>
             </div>
           ) : (
@@ -157,15 +142,12 @@ const DetailMediaMix = ({ slice }) => {
             >
               <iframe
                 className="w-[100%] h-[100%]"
-                src={`${slice.primary.media2.url.slice(
-                  6
-                )}?quality=1080p&loop=1${
+                src={`${slice.primary.media2.url.slice(6)}?quality=1080p${
                   slice.primary.media2Autoplay
-                    ? "&background=1&autoplay=1&muted=1&controls=0"
+                    ? "&autopause=0&loop=1&background=1&autoplay=1&muted=1&controls=0"
                     : ""
                 }`}
                 allowFullScreen
-                autoPlay="1"
               ></iframe>
             </div>
           ) : (
@@ -191,15 +173,12 @@ const DetailMediaMix = ({ slice }) => {
             >
               <iframe
                 className="w-[100%] h-[100%]"
-                src={`${slice.primary.media1.url.slice(
-                  6
-                )}?quality=1080p&loop=1${
+                src={`${slice.primary.media1.url.slice(6)}?quality=1080p${
                   slice.primary.media1Autoplay
-                    ? "&background=1&autoplay=1&muted=1&controls=0"
+                    ? "&autopause=0&loop=1&background=1&autoplay=1&muted=1&controls=0"
                     : ""
                 }`}
                 allowFullScreen
-                autoPlay="1"
               ></iframe>
             </div>
           ) : (
@@ -222,15 +201,12 @@ const DetailMediaMix = ({ slice }) => {
             >
               <iframe
                 className="w-[100%] h-[100%]"
-                src={`${slice.primary.media2.url.slice(
-                  6
-                )}?quality=1080p&loop=1${
+                src={`${slice.primary.media2.url.slice(6)}?quality=1080p${
                   slice.primary.media2Autoplay
-                    ? "&background=1&autoplay=1&muted=1&controls=0"
+                    ? "&autopause=0&loop=1&background=1&autoplay=1&muted=1&controls=0"
                     : ""
                 }`}
                 allowFullScreen
-                autoPlay="1"
               ></iframe>
             </div>
           ) : (
@@ -256,15 +232,12 @@ const DetailMediaMix = ({ slice }) => {
             >
               <iframe
                 className="w-[100%] h-[100%]"
-                src={`${slice.primary.media1.url.slice(
-                  6
-                )}?quality=1080p&loop=1${
+                src={`${slice.primary.media1.url.slice(6)}?quality=1080p${
                   slice.primary.media1Autoplay
-                    ? "&background=1&autoplay=1&muted=1&controls=0"
+                    ? "&autopause=0&loop=1&background=1&autoplay=1&muted=1&controls=0"
                     : ""
                 }`}
                 allowFullScreen
-                autoPlay="1"
               ></iframe>
             </div>
           ) : (
@@ -287,15 +260,12 @@ const DetailMediaMix = ({ slice }) => {
             >
               <iframe
                 className="w-[100%] h-[100%]"
-                src={`${slice.primary.media2.url.slice(
-                  6
-                )}?quality=1080p&loop=1${
+                src={`${slice.primary.media2.url.slice(6)}?quality=1080p${
                   slice.primary.media2Autoplay
-                    ? "&background=1&autoplay=1&muted=1&controls=0"
+                    ? "&autopause=0&loop=1&background=1&autoplay=1&muted=1&controls=0"
                     : ""
                 }`}
                 allowFullScreen
-                autoPlay="1"
               ></iframe>
             </div>
           ) : (
@@ -321,15 +291,12 @@ const DetailMediaMix = ({ slice }) => {
             >
               <iframe
                 className="w-[100%] h-[100%]"
-                src={`${slice.primary.media1.url.slice(
-                  6
-                )}?quality=1080p&loop=1${
+                src={`${slice.primary.media1.url.slice(6)}?quality=1080p${
                   slice.primary.media1Autoplay
-                    ? "&background=1&autoplay=1&muted=1&controls=0"
+                    ? "&autopause=0&loop=1&background=1&autoplay=1&muted=1&controls=0"
                     : ""
                 }`}
                 allowFullScreen
-                autoPlay="1"
               ></iframe>
             </div>
           ) : (
@@ -352,15 +319,12 @@ const DetailMediaMix = ({ slice }) => {
             >
               <iframe
                 className="w-[100%] h-[100%]"
-                src={`${slice.primary.media2.url.slice(
-                  6
-                )}?quality=1080p&loop=1${
+                src={`${slice.primary.media2.url.slice(6)}?quality=1080p${
                   slice.primary.media2Autoplay
-                    ? "&background=1&autoplay=1&muted=1&controls=0"
+                    ? "&autopause=0&loop=1&background=1&autoplay=1&muted=1&controls=0"
                     : ""
                 }`}
                 allowFullScreen
-                autoPlay="1"
               ></iframe>
             </div>
           ) : (
@@ -386,15 +350,12 @@ const DetailMediaMix = ({ slice }) => {
             >
               <iframe
                 className="w-[100%] h-[100%]"
-                src={`${slice.primary.media1.url.slice(
-                  6
-                )}?quality=1080p&loop=1${
+                src={`${slice.primary.media1.url.slice(6)}?quality=1080p${
                   slice.primary.media1Autoplay
-                    ? "&background=1&autoplay=1&muted=1&controls=0"
+                    ? "&autopause=0&loop=1&background=1&autoplay=1&muted=1&controls=0"
                     : ""
                 }`}
                 allowFullScreen
-                autoPlay="1"
               ></iframe>
             </div>
           ) : (
@@ -417,15 +378,12 @@ const DetailMediaMix = ({ slice }) => {
             >
               <iframe
                 className="w-[100%] h-[100%]"
-                src={`${slice.primary.media2.url.slice(
-                  6
-                )}?quality=1080p&loop=1${
+                src={`${slice.primary.media2.url.slice(6)}?quality=1080p${
                   slice.primary.media2Autoplay
-                    ? "&background=1&autoplay=1&muted=1&controls=0"
+                    ? "&autopause=0&loop=1&background=1&autoplay=1&muted=1&controls=0"
                     : ""
                 }`}
                 allowFullScreen
-                autoPlay="1"
               ></iframe>
             </div>
           ) : (
@@ -451,15 +409,12 @@ const DetailMediaMix = ({ slice }) => {
             >
               <iframe
                 className="w-[100%] h-[100%]"
-                src={`${slice.primary.media1.url.slice(
-                  6
-                )}?quality=1080p&loop=1${
+                src={`${slice.primary.media1.url.slice(6)}?quality=1080p${
                   slice.primary.media1Autoplay
-                    ? "&background=1&autoplay=1&muted=1&controls=0"
+                    ? "&autopause=0&loop=1&background=1&autoplay=1&muted=1&controls=0"
                     : ""
                 }`}
                 allowFullScreen
-                autoPlay="1"
               ></iframe>
             </div>
           ) : (
@@ -482,15 +437,12 @@ const DetailMediaMix = ({ slice }) => {
             >
               <iframe
                 className="w-[100%] h-[100%]"
-                src={`${slice.primary.media2.url.slice(
-                  6
-                )}?quality=1080p&loop=1${
+                src={`${slice.primary.media2.url.slice(6)}?quality=1080p${
                   slice.primary.media2Autoplay
-                    ? "&background=1&autoplay=1&muted=1&controls=0"
+                    ? "&autopause=0&loop=1&background=1&autoplay=1&muted=1&controls=0"
                     : ""
                 }`}
                 allowFullScreen
-                autoPlay="1"
               ></iframe>
             </div>
           ) : (
